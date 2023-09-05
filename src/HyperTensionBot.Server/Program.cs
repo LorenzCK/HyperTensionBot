@@ -1,18 +1,16 @@
 using HyperTensionBot.Server;
+using HyperTensionBot.Server.Services;
 using Newtonsoft.Json;
-using System.Collections.Concurrent;
 using Telegram.Bot.Types;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.ConfigureTelegramBot();
+builder.Services.AddSingleton<Memory>();
 
 var app = builder.Build();
 app.SetupTelegramBot();
 
-ConcurrentDictionary<long, UserInformation> userMemory = new();
-ConcurrentDictionary<long, ConversationInformation> chatMemory = new();
-
-app.MapPost("/webhook", async (HttpContext context, ILogger<Program> logger) => {
+app.MapPost("/webhook", async (HttpContext context, Memory memory, ILogger<Program> logger) => {
     if(!context.Request.HasJsonContentType()) {
         throw new BadHttpRequestException("HTTP request must be of type application/json");
     }
@@ -23,40 +21,22 @@ app.MapPost("/webhook", async (HttpContext context, ILogger<Program> logger) => 
         throw new BadHttpRequestException("Could not deserialize JSON payload as Telegram bot update");
     }
 
-    await HandleUpdate(update, logger);
+    logger.LogDebug("Received update {0} of type {1}", update.Id, update.Type);
+
+    if (update.Message == null) {
+        logger.LogDebug("Ignoring update without message");
+        return Results.Ok();
+    }
+    if (update.Message.From == null) {
+        logger.LogDebug("Ignoring message update without user information");
+        return Results.Ok();
+    }
+
+    memory.HandleUpdate(update.Message);
+
+    // Handle direct data updates
 
     return Results.Ok();
 });
-
-async Task HandleUpdate(Update update, ILogger<Program> logger) {
-    logger.LogDebug("Received update {0} of type {1}", update.Id, update.Type);
-
-    if(update.Message == null) {
-        logger.LogDebug("Ignoring update without message");
-        return;
-    }
-    if(update.Message.From == null) {
-        logger.LogDebug("Ignoring message update without user information");
-        return;
-    }
-
-    UpdateMemory(update.Message);
-}
-
-void UpdateMemory(Message message) {
-    if(!userMemory.TryGetValue(message.From!.Id, out var userInformation)) {
-        userInformation = new UserInformation(message.From!.Id);
-    }
-    userInformation.FirstName = message.From!.FirstName;
-    userInformation.LastName = message.From!.LastName;
-    userInformation.LastConversationUpdate = DateTime.UtcNow;
-    userMemory.AddOrUpdate(message.From!.Id, userInformation, (_, _) => userInformation);
-
-    if(!chatMemory.TryGetValue(message.Chat.Id, out var chatInformation)) {
-        chatInformation = new ConversationInformation(message.Chat.Id);
-    }
-    chatInformation.LastConversationUpdate = DateTime.UtcNow;
-    chatMemory.AddOrUpdate(message.Chat.Id, chatInformation, (_, _) => chatInformation);
-}
 
 app.Run();
