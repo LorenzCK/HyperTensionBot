@@ -25,7 +25,7 @@ namespace HyperTensionBot.Server {
                 var finalUrl = botWebhookUrl + "/webhook";
                 logger.LogInformation("Setting Telegram bot webhook to URL {0}", finalUrl);
 
-                client.SetWebhookAsync(finalUrl, allowedUpdates: new UpdateType[] { UpdateType.Message }).Wait();
+                client.SetWebhookAsync(finalUrl, allowedUpdates: new UpdateType[] { UpdateType.Message, UpdateType.CallbackQuery }).Wait();
             }
 
             return app;
