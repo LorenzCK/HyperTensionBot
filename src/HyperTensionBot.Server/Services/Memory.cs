@@ -1,5 +1,4 @@
 using System.Collections.Concurrent;
-using System.Diagnostics.Metrics;
 using Telegram.Bot.Types;
 
 namespace HyperTensionBot.Server.Services {

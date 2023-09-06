@@ -121,6 +121,8 @@ Task HandleConfirmRegisterMeasurement(User from, Chat chat, TelegramBotClient bo
 }
 
 Task HandleRefuseRegisterMeasurement(Chat chat, TelegramBotClient bot, Memory memory, ILogger<Program> logger) {
+    memory.SetState(chat, ConversationState.Idle);
+
     return bot.SendTextMessageAsync(chat.Id,
         new string[] {
             "No? Mandami pure i dati corretti allora\\.\nInvia le misure rilevate in un *unico messaggio di testo*, separando *pressione minima*, *massima* e *frequenza cardiaca* con uno spazio\\.",
