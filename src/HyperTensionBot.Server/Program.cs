@@ -213,6 +213,17 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
         return Results.Ok();
     }
 
+    // Default
+    await bot.SendTextMessageAsync(chat.Id,
+        new string[] {
+            "Come scusa? Non ho capito\\.\n\n🩺 Inviami le tue misure come messaggio di testo, separando *pressione minima*, *massima* e *frequenza cardiaca* con uno spazio\\.",
+            "Non credo di aver capito\\.\n\n🩺 Inviami le tue misure come messaggio di testo, separando *pressione minima*, *massima* e *frequenza cardiaca* con uno spazio\\.",
+            "Puoi ripetere?\n\n🩺 Inviami le tue misure come messaggio di testo, separando *pressione minima*, *massima* e *frequenza cardiaca* con uno spazio\\.",
+            "Scusami, non ho capito\\.\n\n🩺 Inviami le tue misure come messaggio di testo, separando *pressione minima*, *massima* e *frequenza cardiaca* con uno spazio\\."
+        }.PickRandom(),
+        parseMode: ParseMode.MarkdownV2
+    );
+
     return Results.Ok();
 });
 
