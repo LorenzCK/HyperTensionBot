@@ -29,3 +29,25 @@ The bot is available at the following link: [HyperTension Bot](https://t.me/a_hy
 - The project uses the [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow.
 - The project uses [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 - Technical discussions should be done via [issues](https://github.com/LorenzCK/HyperTensionBot/issues).
+
+### Architecture
+The system is composed of three main components (plus the user):
+- Telegram bot
+- Database
+- Large Language Model
+
+#### Telegram bot
+The Telegram bot is the main component of the system.
+It is responsible for interacting with the user and for sending him reminders.
+
+#### Database
+The database is responsible for storing the user's data.
+It is also responsible for providing the data to the Telegram bot when requested.
+
+#### Large Language Model
+It is responsible for interpreting the user's messages and for generating possible answers.
+
+### Communication between components
+Sequence diagram of the communication between the components.
+
+![Communication between components](https://www.plantuml.com/plantuml/svg/bPF1JiCm38RlUOfmsoJs0fD0e-ouIGW15xI3rVvgAzAqsEvWRqzQWfIozR13Buu_VuxTR4I9jM-SkT4A3MpdgFR6l0hOhkxjOqMQjRgs0b_i8K8b5esKIsFYaLs5jDrklxPVLPrNCUVbrCKyohK-acB8CU6pgxco6fYbAJ0X33crmuczimKfMSPd3z4v_qE0Mp-eRwshHTzf31okQUGNEMlbil29c1eeM19fznUyoZkYHt8zv71cd-YtsTeob6iSiGZpu5FYsMPccyrR6D8xdTGFX84Jn477IVUTQwb8n6b5V2i7_ctiTjpqMOEr5x0cjmgNcchoG6ZjomlBBE71f7Y6TAsNgtycZjpy5bCohv1_H5NA6lX_0nWUnfp9c4s8zutx0G00)
