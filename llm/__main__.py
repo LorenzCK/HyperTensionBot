@@ -1,5 +1,6 @@
 import sys
 from llm import enable_logging
+from llm.ai import MAX_TOKENS
 from llm.strategies import *
 
 
@@ -24,14 +25,30 @@ class ItalianTemplates:
         f"Quale azione è più idonea per la richiesta: '{USER_INPUT}'"
     ]
 
+    just_chatting_template = [
+        f"Rispondi alla richiesta dell'utente in modo conciso (numero massimo token {MAX_TOKENS*0.8}): '{USER_INPUT}'."
+    ]
 
-italian_request_types_list = [
-    "richiesta dati",
-    "inserimento dati",
-    "conversazione"
-]
 
-italian_request_types = ','.join(italian_request_types_list)
+class ItalianRequestTypes:
+
+    DATA_REQUEST = "richiesta dati"
+    DATA_INSERTION = "inserimento dati"
+    CONVERSATION = "conversazione"
+
+    request_types_map = {
+        DATA_REQUEST: 0,
+        DATA_INSERTION: 1,
+        CONVERSATION: 2
+    }
+
+    request_types_list = [
+        DATA_REQUEST,
+        DATA_INSERTION,
+        CONVERSATION
+    ]
+
+    request_types = ','.join(request_types_list)
 
 
 # user_input = sys.argv[1]
@@ -40,8 +57,21 @@ user_inputs = [
     "Mi dici la media dei valori dell'ultima settimana?",
     "Come si misura la pressione?"
 ]
-# Which message type
+
 for user_input in user_inputs:
-    query_processor = which_message_type(user_input, italian_request_types, ItalianTemplates.request_type_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
-    logger.info(query_processor.message)
+    # Which message type
+    query_processor = which_message_type(user_input, ItalianRequestTypes.request_types, ItalianTemplates.request_type_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
+    message_type_response = query_processor.result.lower()
+    logger.info(message_type_response)
+    if message_type_response == ItalianRequestTypes.DATA_REQUEST:
+        pass
+    elif message_type_response == ItalianRequestTypes.DATA_INSERTION:
+        pass
+    elif message_type_response == ItalianRequestTypes.CONVERSATION:
+        query_processor = just_chatting(user_input, ItalianTemplates.just_chatting_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
+        logger.info(query_processor.result)
+    else:
+        raise NotImplementedError("Out of scope request type")
+
+
 

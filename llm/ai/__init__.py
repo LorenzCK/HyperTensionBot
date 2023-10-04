@@ -16,7 +16,7 @@ DEFAULT_TEMPERATURE = 0.2
 WAIT_AFTER_FAILURE = 5  # seconds
 WAIT_FOR_COMPLETION = 30  # seconds
 GPT_MODEL = "gpt-3.5-turbo"  # good tradeoff between speed and accuracy
-MAX_TOKENS = 100  # maximum number of tokens in the response
+MAX_TOKENS = 200  # maximum number of tokens in the response
 
 
 openai.api_key = os.environ["OPENAI_API_KEY"] if "OPENAI_API_KEY" in os.environ else None

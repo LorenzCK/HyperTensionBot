@@ -22,6 +22,10 @@ class QueryProcessor:
         self.message = ""
         self.description = ""
 
+    @property
+    def result(self) -> str:
+        raise NotImplementedError()
+
     def final_message(self, query: AiQuery, *results) -> str:
         raise NotImplementedError()
 
@@ -75,6 +79,10 @@ class MultipleResultsQueryProcessor(QueryProcessor):
                 results.append(r)
         return results
 
+    @property
+    def result(self) -> str:
+        return first_or_none(self._results)
+
     def process_result(self, query: AiQuery, result: Item) -> typing.Any:
         raise NotImplementedError()
 
@@ -97,6 +105,10 @@ class SingleResultQueryProcessor(QueryProcessor):
     def process(self, query: AiQuery):
         self.describe(f"Query: {query.question}.\nAnswer:\n\t{query.result_text}")
         return [self.process_result(query, self._result)]
+
+    @property
+    def result(self) -> str:
+        return self._result
 
     def process_result(self, query: AiQuery, result: typing.Any) -> typing.Any:
         raise NotImplementedError()
@@ -150,5 +162,28 @@ def which_message_type(user_input: str,
         USER_INPUT: user_input,
         REQUEST_TYPES: request_types,
     }
+
     return _make_queries(queries, FindTypeQueryProcessor(), max_retries=max_retries, temperature=temperature, **replacements)
 
+
+def just_chatting(user_input: str,
+                  queries: typing.List[str],
+                  max_retries: int = MAX_TRIALS,
+                  temperature: float = DEFAULT_TEMPERATURE) -> QueryProcessor:
+
+    class CreateResponseProcessor(SingleResultQueryProcessor):
+        def parse_result(self, query: AiQuery) -> typing.Any:
+            return query.result_text
+
+        def final_message(self, query: AiQuery, *results) -> str:
+            return f"reply to user query: '{user_input}'."
+
+        def process_result(self, query: AiQuery, result: Item):
+            self.describe(f"- {result} => reply to user query: '{query.question}'.")
+            return result
+
+    replacements = {
+        USER_INPUT: user_input,
+    }
+
+    return _make_queries(queries, CreateResponseProcessor(), max_retries=max_retries, temperature=temperature, **replacements)
