@@ -25,6 +25,11 @@ class ItalianTemplates:
         f"Quale azione è più idonea per la richiesta: '{USER_INPUT}'"
     ]
 
+    data_insertion_template = [
+        f"Nel seguente messaggio ci sono 3 dati da inserire. "
+        f"Sii conciso e dimmi solo i valori numerici (no parole) di sistolica, diastolica e pulsazioni nel formato '#, #, #' : '{USER_INPUT}'."
+    ]
+
     just_chatting_template = [
         f"Rispondi alla richiesta dell'utente in modo conciso (numero massimo token {MAX_TOKENS*0.8}): '{USER_INPUT}'."
     ]
@@ -66,7 +71,8 @@ for user_input in user_inputs:
     if message_type_response == ItalianRequestTypes.DATA_REQUEST:
         pass
     elif message_type_response == ItalianRequestTypes.DATA_INSERTION:
-        pass
+        query_processor = data_to_insert(user_input, ItalianTemplates.data_insertion_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
+        logger.info(query_processor.result)
     elif message_type_response == ItalianRequestTypes.CONVERSATION:
         query_processor = just_chatting(user_input, ItalianTemplates.just_chatting_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
         logger.info(query_processor.result)

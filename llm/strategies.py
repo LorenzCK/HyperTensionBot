@@ -146,7 +146,6 @@ def which_message_type(user_input: str,
                        queries: typing.List[str],
                        max_retries: int = MAX_TRIALS,
                        temperature: float = DEFAULT_TEMPERATURE) -> QueryProcessor:
-
     class FindTypeQueryProcessor(SingleResultQueryProcessor):
         def parse_result(self, query: AiQuery) -> typing.Any:
             return query.result_text
@@ -163,14 +162,14 @@ def which_message_type(user_input: str,
         REQUEST_TYPES: request_types,
     }
 
-    return _make_queries(queries, FindTypeQueryProcessor(), max_retries=max_retries, temperature=temperature, **replacements)
+    return _make_queries(queries, FindTypeQueryProcessor(), max_retries=max_retries, temperature=temperature,
+                         **replacements)
 
 
 def just_chatting(user_input: str,
                   queries: typing.List[str],
                   max_retries: int = MAX_TRIALS,
                   temperature: float = DEFAULT_TEMPERATURE) -> QueryProcessor:
-
     class CreateResponseProcessor(SingleResultQueryProcessor):
         def parse_result(self, query: AiQuery) -> typing.Any:
             return query.result_text
@@ -186,4 +185,28 @@ def just_chatting(user_input: str,
         USER_INPUT: user_input,
     }
 
-    return _make_queries(queries, CreateResponseProcessor(), max_retries=max_retries, temperature=temperature, **replacements)
+    return _make_queries(queries, CreateResponseProcessor(), max_retries=max_retries, temperature=temperature,
+                         **replacements)
+
+
+def data_to_insert(user_input: str,
+                   queries: typing.List[str],
+                   max_retries: int = MAX_TRIALS,
+                   temperature: float = DEFAULT_TEMPERATURE) -> QueryProcessor:
+    class DataProcessor(SingleResultQueryProcessor):
+        def parse_result(self, query: AiQuery) -> typing.Any:
+            return query.result_text
+
+        def final_message(self, query: AiQuery, *results) -> str:
+            return f"acquiring data from user input: '{user_input}'."
+
+        def process_result(self, query: AiQuery, result: Item):
+            self.describe(f"- {result} => reply to user query: '{query.question}'.")
+            return result
+
+    replacements = {
+        USER_INPUT: user_input,
+    }
+
+    return _make_queries(queries, DataProcessor(), max_retries=max_retries, temperature=temperature,
+                         **replacements)
