@@ -201,7 +201,7 @@ def data_to_insert(user_input: str,
             return f"acquiring data from user input: '{user_input}'."
 
         def process_result(self, query: AiQuery, result: Item):
-            self.describe(f"- {result} => reply to user query: '{query.question}'.")
+            self.describe(f"- {result} => acquired data: '{query.question}'.")
             return result
 
     replacements = {
@@ -209,4 +209,27 @@ def data_to_insert(user_input: str,
     }
 
     return _make_queries(queries, DataProcessor(), max_retries=max_retries, temperature=temperature,
+                         **replacements)
+
+
+def generate_query(user_input: str,
+                     queries: typing.List[str],
+                     max_retries: int = MAX_TRIALS,
+                     temperature: float = DEFAULT_TEMPERATURE) -> QueryProcessor:
+    class QueryGeneratorProcessor(SingleResultQueryProcessor):
+        def parse_result(self, query: AiQuery) -> typing.Any:
+            return query.result_text
+
+        def final_message(self, query: AiQuery, *results) -> str:
+            return f"generating SQL query from user input: '{user_input}'."
+
+        def process_result(self, query: AiQuery, result: Item):
+            self.describe(f"- {result} => generated query: '{query.question}'.")
+            return result
+
+    replacements = {
+        USER_INPUT: user_input,
+    }
+
+    return _make_queries(queries, QueryGeneratorProcessor(), max_retries=max_retries, temperature=temperature,
                          **replacements)

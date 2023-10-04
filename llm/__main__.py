@@ -1,4 +1,7 @@
 import sys
+
+import sqlvalidator
+
 from llm import enable_logging
 from llm.ai import MAX_TOKENS
 from llm.strategies import *
@@ -6,6 +9,9 @@ from llm.strategies import *
 
 enable_logging()
 
+
+SCHEMA = "MEASURES(user_id, timestamp, systolic, diastolic, pulse)"
+USER_ID = "e67b2c7a2"
 
 class ItalianTemplates:
 
@@ -32,6 +38,10 @@ class ItalianTemplates:
 
     just_chatting_template = [
         f"Rispondi alla richiesta dell'utente in modo conciso (numero massimo token {MAX_TOKENS*0.8}): '{USER_INPUT}'."
+    ]
+
+    request_query_template = [
+        f"Dato lo schema '{SCHEMA}', genera la query SQL per la richiesta dell'utente {USER_ID}: '{USER_INPUT}'."
     ]
 
 
@@ -69,10 +79,13 @@ for user_input in user_inputs:
     message_type_response = query_processor.result.lower()
     logger.info(message_type_response)
     if message_type_response == ItalianRequestTypes.DATA_REQUEST:
-        pass
+        query_processor = generate_query(user_input, ItalianTemplates.request_query_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
+        logger.info(query_processor.result)
     elif message_type_response == ItalianRequestTypes.DATA_INSERTION:
         query_processor = data_to_insert(user_input, ItalianTemplates.data_insertion_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
         logger.info(query_processor.result)
+        diastolic, systolic, pulse = [int(x) for x in query_processor.result.split(',')]
+        logger.info(f"systolic: {systolic}, diastolic: {diastolic}, pulse: {pulse}")
     elif message_type_response == ItalianRequestTypes.CONVERSATION:
         query_processor = just_chatting(user_input, ItalianTemplates.just_chatting_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
         logger.info(query_processor.result)
