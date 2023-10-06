@@ -1,7 +1,3 @@
-import sys
-
-import sqlvalidator
-
 from llm import enable_logging
 from llm.ai import MAX_TOKENS
 from llm.strategies import *
@@ -78,15 +74,20 @@ for user_input in user_inputs:
     query_processor = which_message_type(user_input, ItalianRequestTypes.request_types, ItalianTemplates.request_type_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
     message_type_response = query_processor.result.lower()
     logger.info(message_type_response)
+    # Behave accordingly to the message type
     if message_type_response == ItalianRequestTypes.DATA_REQUEST:
+        # The user is requesting data
         query_processor = generate_query(user_input, ItalianTemplates.request_query_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
         logger.info(query_processor.result)
+        # TODO: instead of generating a SQL query, we can directly return the functions that the bot exposes
     elif message_type_response == ItalianRequestTypes.DATA_INSERTION:
+        # The user is inserting data, detect the three values
         query_processor = data_to_insert(user_input, ItalianTemplates.data_insertion_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
         logger.info(query_processor.result)
         diastolic, systolic, pulse = [int(x) for x in query_processor.result.split(',')]
         logger.info(f"systolic: {systolic}, diastolic: {diastolic}, pulse: {pulse}")
     elif message_type_response == ItalianRequestTypes.CONVERSATION:
+        # The user is just chatting
         query_processor = just_chatting(user_input, ItalianTemplates.just_chatting_template, MAX_TRIALS, DEFAULT_TEMPERATURE)
         logger.info(query_processor.result)
     else:
