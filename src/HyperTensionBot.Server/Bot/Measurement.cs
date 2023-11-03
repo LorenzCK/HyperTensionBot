@@ -1,4 +1,4 @@
-namespace HyperTensionBot.Server {
+namespace HyperTensionBot.Server.Bot {
     public class Measurement {
         public int SystolicPressure { get; init; }
 

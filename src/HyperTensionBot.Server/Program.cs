@@ -1,4 +1,4 @@
-using HyperTensionBot.Server;
+using HyperTensionBot.Server.Bot;
 using HyperTensionBot.Server.Services;
 using Newtonsoft.Json;
 using System.Text;

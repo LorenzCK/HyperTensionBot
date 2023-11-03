@@ -1,7 +1,7 @@
 using Telegram.Bot;
 using Telegram.Bot.Types.Enums;
 
-namespace HyperTensionBot.Server {
+namespace HyperTensionBot.Server.Bot {
     public static class TelegramBotClientExtensions {
         public static WebApplicationBuilder ConfigureTelegramBot(this WebApplicationBuilder builder) {
             var confBot = builder.Configuration.GetSection("Bot");
@@ -17,7 +17,7 @@ namespace HyperTensionBot.Server {
 
             var confBot = app.Configuration.GetSection("Bot");
             var botWebhookUrl = confBot["WebhookUrlBase"];
-            if(botWebhookUrl == null) {
+            if (botWebhookUrl == null) {
                 logger.LogInformation("Configuration element Bot:WebhookUrlBase not set, not setting webhook");
             }
             else {

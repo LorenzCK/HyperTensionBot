@@ -1,4 +1,4 @@
-namespace HyperTensionBot.Server {
+namespace HyperTensionBot.Server.Bot {
     public class ConversationInformation {
         public ConversationInformation(long telegramChatId) {
             TelegramChatId = telegramChatId;
@@ -15,7 +15,7 @@ namespace HyperTensionBot.Server {
         public Measurement? TemporaryMeasurement { get; set; }
 
         public override bool Equals(object? obj) {
-            if(obj is ConversationInformation conversationInformation) {
+            if (obj is ConversationInformation conversationInformation) {
                 return TelegramChatId == conversationInformation.TelegramChatId;
             }
 

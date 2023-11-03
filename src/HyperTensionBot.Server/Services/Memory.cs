@@ -1,3 +1,4 @@
+using HyperTensionBot.Server.Bot;
 using System.Collections.Concurrent;
 using Telegram.Bot.Types;
 

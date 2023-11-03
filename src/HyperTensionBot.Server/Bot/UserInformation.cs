@@ -1,4 +1,4 @@
-namespace HyperTensionBot.Server {
+namespace HyperTensionBot.Server.Bot {
     public class UserInformation {
         public UserInformation(long telegramId) {
             TelegramId = telegramId;
@@ -22,7 +22,7 @@ namespace HyperTensionBot.Server {
 
         public Measurement? LastMeasurement {
             get {
-                if(Measurements.Count == 0) {
+                if (Measurements.Count == 0) {
                     return null;
                 }
 
@@ -33,7 +33,7 @@ namespace HyperTensionBot.Server {
         public DateTime LastConversationUpdate { get; set; }
 
         public override bool Equals(object? obj) {
-            if(obj is UserInformation userInformation) {
+            if (obj is UserInformation userInformation) {
                 return TelegramId == userInformation.TelegramId;
             }
 
