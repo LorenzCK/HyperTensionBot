@@ -21,5 +21,6 @@ namespace HyperTensionBot.Server.Model {
         saluti = 18,
         fuoriCont = 19,
         spiegazioni = 20,
+        fuoriContMed = 21,
     }
 }

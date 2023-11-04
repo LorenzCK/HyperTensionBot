@@ -9,6 +9,6 @@ namespace HyperTensionBot.Server.Model {
 
         [LoadColumn(1)]
         [ColumnName(@"Label")]
-        public float Label { get; set; }
+        public string Label { get; set; }
     }
 }

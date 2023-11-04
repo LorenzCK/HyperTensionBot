@@ -12,7 +12,7 @@ namespace HyperTensionBot.Server.Model {
         public float[] Features { get; set; }
 
         [ColumnName(@"PredictedLabel")]
-        public float PredictedLabel { get; set; }
+        public string PredictedLabel { get; set; }
 
         [ColumnName(@"Score")]
         public float[] Score { get; set; }
