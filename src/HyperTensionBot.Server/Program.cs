@@ -1,5 +1,6 @@
 using HyperTensionBot.Server.Bot;
-using HyperTensionBot.Server.Model;
+using HyperTensionBot.Server.LLM;
+using HyperTensionBot.Server.ModelML;
 using HyperTensionBot.Server.Services;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
@@ -8,20 +9,15 @@ using System.Text.RegularExpressions;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
-using Telegram.Bot.Types.ReplyMarkups;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.ConfigureTelegramBot();
 builder.Services.AddSingleton<Memory>();
 
-// training model
-var confModel = builder.Configuration.GetSection("ClassificationModel");
+// add model and GPT 
+builder.Services.AddSingleton(new ClassificationModel(builder));
+builder.Services.AddSingleton(new GPTService(builder));
 
-if (!confModel.Exists() && string.IsNullOrEmpty(confModel["trainingData"]) && string.IsNullOrEmpty(confModel["model"])) 
-    return;
-var modelTrainer = new ModelTrainer();
-modelTrainer.Train(confModel["trainingData"], confModel["model"]);
-builder.Services.AddSingleton(new ClassificationModel(Path.Combine(confModel["model"], "model.zip")));
 var app = builder.Build();
 
 // add model to service
@@ -162,7 +158,7 @@ Task HandleCouldNotUnderstand(Chat chat, TelegramBotClient bot, Memory memory, I
 
 var measurementRegex = new Regex("(?<v1>[0-9]{2,3})[^0-9]{1,10}(?<v2>[0-9]{2,3})([^0-9]{1,10}(?<v3>[0-9]{2,3}))?", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.Multiline | RegexOptions.CultureInvariant);
 
-app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memory memory, ILogger<Program> logger, ClassificationModel model) => {
+app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memory memory, ILogger<Program> logger, ClassificationModel model, GPTService gpt) => {
     if (!context.Request.HasJsonContentType()) {
         throw new BadHttpRequestException("HTTP request must be of type application/json");
     }
@@ -232,11 +228,15 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
     */
     // Default
 
-    await bot.SendTextMessageAsync(chat.Id,
-        text: $"Il messaggio matcha con {result.ToString()}",
-        parseMode: ParseMode.MarkdownV2
+    await bot.SendTextMessageAsync(
+        chat.Id,
+        text: $"Il messaggio matcha con {result.ToString()}"
     );
 
+    await bot.SendTextMessageAsync(
+        chat.Id,
+        text: await gpt.CallGptService(messageText)
+    );
     return Results.Ok();
 });
 

@@ -1,13 +1,13 @@
 using Microsoft.ML;
 using Microsoft.ML.Trainers;
 
-namespace HyperTensionBot.Server.Model {
+namespace HyperTensionBot.Server.ModelML {
     public class ModelTrainer {
         private MLContext mlContext;
         private ITransformer model;
 
-        public ModelTrainer() {
-            this.mlContext = new MLContext();
+        public ModelTrainer(MLContext ml) {
+            mlContext = ml;
         }
 
         public void Train(string pathFile, string pathModel) {
@@ -36,10 +36,9 @@ namespace HyperTensionBot.Server.Model {
                     Directory.CreateDirectory(pathModel);
                 else
                     File.Delete(Path.Combine(pathModel, "model.zip"));
-            }catch(ArgumentNullException) { } finally { mlContext.Model.Save(model, dataView.Schema, Path.Combine(pathModel, "model.zip")); }
-            
-            
-
+            }
+            catch (ArgumentNullException) { }
+            finally { mlContext.Model.Save(model, dataView.Schema, Path.Combine(pathModel, "model.zip")); }
         }
     }
 }

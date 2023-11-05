@@ -1,6 +1,6 @@
 using Microsoft.ML.Data;
 
-namespace HyperTensionBot.Server.Model {
+namespace HyperTensionBot.Server.ModelML {
     public class ModelInput {
 
         [LoadColumn(0)]

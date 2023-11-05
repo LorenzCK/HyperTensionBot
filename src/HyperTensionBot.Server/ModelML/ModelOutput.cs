@@ -1,6 +1,6 @@
 using Microsoft.ML.Data;
 
-namespace HyperTensionBot.Server.Model {
+namespace HyperTensionBot.Server.ModelML {
     public class ModelOutput {
         [ColumnName(@"Sentence")]
         public float[] Sentence { get; set; }

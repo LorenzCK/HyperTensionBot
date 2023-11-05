@@ -1,4 +1,4 @@
-using HyperTensionBot.Server.Model;
+using HyperTensionBot.Server.ModelML;
 
 namespace HyperTensionBot.Server.Bot {
     public static class Context {

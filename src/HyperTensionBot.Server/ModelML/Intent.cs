@@ -1,11 +1,11 @@
-namespace HyperTensionBot.Server.Model {
+namespace HyperTensionBot.Server.ModelML {
     public enum Intent {
         richiestaStatsGenerTotale = 0,
         richiestaStatsGenerMens = 1,
         richiestaStatsGenerSett = 2,
         richiestaStatsGenerRece = 3,
         richiestaStatsPressTot = 4,
-        richiestaStatsPressMens = 5, 
+        richiestaStatsPressMens = 5,
         richiestaStatsPressSett = 6,
         richiestaStatsPressRece = 7,
         richiestaStatsFreqTot = 8,
