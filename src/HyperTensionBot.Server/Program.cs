@@ -13,19 +13,17 @@ using Telegram.Bot.Types.ReplyMarkups;
 var builder = WebApplication.CreateBuilder(args);
 builder.ConfigureTelegramBot();
 builder.Services.AddSingleton<Memory>();
-builder.Services.AddSingleton<ModelTrainer>();
 
 // training model
 var confModel = builder.Configuration.GetSection("ClassificationModel");
 
-
 if (!confModel.Exists() && string.IsNullOrEmpty(confModel["trainingData"]) && string.IsNullOrEmpty(confModel["model"])) 
     return;
-
+var modelTrainer = new ModelTrainer();
+modelTrainer.Train(confModel["trainingData"], confModel["model"]);
 builder.Services.AddSingleton(new ClassificationModel(Path.Combine(confModel["model"], "model.zip")));
 var app = builder.Build();
-var modelTrainer = app.Services.GetRequiredService<ModelTrainer>();
-modelTrainer.Train(confModel["trainingData"], confModel["model"]);
+
 // add model to service
 app.SetupTelegramBot();
 
@@ -187,7 +185,10 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
         _ => "update of unhandled type"
     });
     var messageText = update.Message?.Text;
+
+    // add message to model input and predict intent
     var input = new ModelInput { Sentence = messageText };
+    var result = model.Predict(input);
     /*
     await HandleCallbacks(update, bot, memory, state, logger);
     await HandleConversation(update, bot, memory, state, logger);
@@ -230,9 +231,9 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
     }
     */
     // Default
-    
+
     await bot.SendTextMessageAsync(chat.Id,
-        text: $"Il messaggio matcha con {model.Predict(input)}",
+        text: $"Il messaggio matcha con {result.ToString()}",
         parseMode: ParseMode.MarkdownV2
     );
 

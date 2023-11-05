@@ -13,9 +13,9 @@ namespace HyperTensionBot.Server.Model {
         }
 
         // method for predict
-        public string Predict(ModelInput input) {
+        public Intent Predict(ModelInput input) {
             var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(model);
-            return predictionEngine.Predict(input).PredictedLabel;
+            return (Intent)Enum.Parse(typeof(Intent), predictionEngine.Predict(input).PredictedLabel);
         }
     }
 }

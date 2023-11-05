@@ -30,9 +30,15 @@ namespace HyperTensionBot.Server.Model {
             // training 
             var model = pipeline.Fit(dataView);
 
-            // save model 
-            Directory.CreateDirectory(pathModel);
-            mlContext.Model.Save(model, dataView.Schema, Path.Combine(pathModel, "model.zip"));
+            // save model
+            try {
+                if (!Directory.Exists(pathModel))
+                    Directory.CreateDirectory(pathModel);
+                else
+                    File.Delete(Path.Combine(pathModel, "model.zip"));
+            }catch(ArgumentNullException) { } finally { mlContext.Model.Save(model, dataView.Schema, Path.Combine(pathModel, "model.zip")); }
+            
+            
 
         }
     }
