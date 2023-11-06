@@ -4,7 +4,6 @@ using Microsoft.ML.Trainers;
 namespace HyperTensionBot.Server.ModelML {
     public class ModelTrainer {
         private MLContext mlContext;
-        private ITransformer model;
 
         public ModelTrainer(MLContext ml) {
             mlContext = ml;

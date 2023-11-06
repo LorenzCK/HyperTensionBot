@@ -5,18 +5,9 @@ namespace HyperTensionBot.Server.Bot {
 
         public static void controlFlow(Intent context) {
             switch (context) {
-                case Intent.richiestaStatsGenerTotale:
-                case Intent.richiestaStatsGenerMens:
-                case Intent.richiestaStatsGenerSett:
-                case Intent.richiestaStatsGenerRece:
-                case Intent.richiestaStatsPressTot:
-                case Intent.richiestaStatsPressMens:
-                case Intent.richiestaStatsPressSett:
-                case Intent.richiestaStatsPressRece:
-                case Intent.richiestaStatsFreqTot:
-                case Intent.richiestaStatsFreqMens:
-                case Intent.richiestaStatsFreqSett:
-                case Intent.richiestaStatsFreqRece:
+                case Intent.richiestaStatsFreq:
+                case Intent.richiestaStatsPress:
+                case Intent.richiestaStatsGener:
                 case Intent.inserDatiGener:
                 case Intent.inserDatiPress:
                 case Intent.inserDatiFreq:

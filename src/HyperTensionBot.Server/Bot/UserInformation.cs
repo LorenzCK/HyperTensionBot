@@ -32,6 +32,8 @@ namespace HyperTensionBot.Server.Bot {
 
         public DateTime LastConversationUpdate { get; set; }
 
+        public List<string> GeneralInfo { get; set; }
+
         public override bool Equals(object? obj) {
             if (obj is UserInformation userInformation) {
                 return TelegramId == userInformation.TelegramId;
