@@ -162,11 +162,7 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
     }
 
     using var sr = new StreamReader(context.Request.Body);
-    var update = JsonConvert.DeserializeObject<Update>(await sr.ReadToEndAsync());
-    if (update == null) {
-        throw new BadHttpRequestException("Could not deserialize JSON payload as Telegram bot update");
-    }
-
+    var update = JsonConvert.DeserializeObject<Update>(await sr.ReadToEndAsync()) ?? throw new BadHttpRequestException("Could not deserialize JSON payload as Telegram bot update");
     logger.LogDebug("Received update {0} of type {1}", update.Id, update.Type);
 
     User? from = update.Message?.From ?? update.CallbackQuery?.From;
@@ -178,11 +174,27 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
         UpdateType.CallbackQuery => $"callback with data: {update.CallbackQuery?.Data}",
         _ => "update of unhandled type"
     });
-    var messageText = update.Message?.Text;
+    if (update.Message?.Text is not null) {
+        var messageText = update.Message?.Text;
+        if (messageText != null) {
+            // add message to model input and predict intent
+            var input = new ModelInput { Sentence = messageText };
+            var result = model.Predict(input);
 
-    // add message to model input and predict intent
-    var input = new ModelInput { Sentence = messageText };
-    var result = model.Predict(input);
+            await bot.SendTextMessageAsync(
+                chat.Id,
+                text: $"Il messaggio matcha con {result.ToString()}"
+            );
+
+            // manage operations 
+            await Context.ControlFlow(bot, gpt, result, messageText, chat.Id);
+        }
+        
+    }
+    else if (update.CallbackQuery?.Data != null) {
+
+        } else return Results.NotFound();
+
     /*
     await HandleCallbacks(update, bot, memory, state, logger);
     await HandleConversation(update, bot, memory, state, logger);
@@ -226,15 +238,6 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
     */
     // Default
 
-    await bot.SendTextMessageAsync(
-        chat.Id,
-        text: $"Il messaggio matcha con {result.ToString()}"
-    );
-
-    await bot.SendTextMessageAsync(
-        chat.Id,
-        text: await gpt.CallGptService(messageText)
-    );
     return Results.Ok();
 });
 
