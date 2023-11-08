@@ -66,6 +66,7 @@ AffirmativeReplyType DetermineAffirmativeReply(string text) {
     return AffirmativeReplyType.Unknown;
 }
 
+/*
 async Task HandleCallbacks(Update update, TelegramBotClient bot, Memory memory, ConversationState state, ILogger<Program> logger) {
     if (update.CallbackQuery?.Data == null || update.CallbackQuery?.Message?.Chat == null) {
         return;
@@ -112,32 +113,9 @@ async Task HandleConversation(Update update, TelegramBotClient bot, Memory memor
     }
 }
 
-Task HandleConfirmRegisterMeasurement(User from, Chat chat, TelegramBotClient bot, Memory memory, ILogger<Program> logger) {
-    memory.PersistMeasurement(from, chat);
 
-    return bot.SendTextMessageAsync(chat.Id,
-        new string[] {
-            "Perfetto, tutto chiaro\\! Inserisco subito i tuoi dati\\. Ricordati di inviarmi una nuova misurazione domani\\. ⌚",
-            "Il dottore sarà impaziente di vedere i tuoi dati\\. Ricordati di inviarmi una nuova misurazione domani\\. ⌚",
-            "I dati sono stati inseriti, spero solo che il dottore capisca la mia calligrafia\\! Ricordati di inviarmi una nuova misurazione domani\\. ⌚",
-            "Perfetto, grazie\\! Ricordati di inviarmi una nuova misurazione domani\\. ⌚"
-        }.PickRandom(),
-        parseMode: ParseMode.MarkdownV2
-    );
-}
 
-Task HandleRefuseRegisterMeasurement(Chat chat, TelegramBotClient bot, Memory memory, ILogger<Program> logger) {
-    memory.SetState(chat, ConversationState.Idle);
 
-    return bot.SendTextMessageAsync(chat.Id,
-        new string[] {
-            "No? Mandami pure i dati corretti allora\\.\nInvia le misure rilevate in un *unico messaggio di testo*, separando *pressione minima*, *massima* e *frequenza cardiaca* con uno spazio\\.",
-            "Devo aver capito male, puoi ripetere i dati della misurazione?\nInvia le misure rilevate in un *unico messaggio di testo*, separando *pressione minima*, *massima* e *frequenza cardiaca* con uno spazio\\.",
-            "Forse ho capito male, puoi ripetere?\nInvia le misure rilevate in un *unico messaggio di testo*, separando *pressione minima*, *massima* e *frequenza cardiaca* con uno spazio\\.",
-        }.PickRandom(),
-        parseMode: ParseMode.MarkdownV2
-    );
-}
 
 Task HandleCouldNotUnderstand(Chat chat, TelegramBotClient bot, Memory memory, ILogger<Program> logger) {
     return bot.SendTextMessageAsync(chat.Id,
@@ -155,7 +133,7 @@ Task HandleCouldNotUnderstand(Chat chat, TelegramBotClient bot, Memory memory, I
 }
 
 var measurementRegex = new Regex("(?<v1>[0-9]{2,3})[^0-9]{1,10}(?<v2>[0-9]{2,3})([^0-9]{1,10}(?<v3>[0-9]{2,3}))?", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.Multiline | RegexOptions.CultureInvariant);
-
+*/
 app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memory memory, ILogger<Program> logger, ClassificationModel model, GPTService gpt) => {
     if (!context.Request.HasJsonContentType()) {
         throw new BadHttpRequestException("HTTP request must be of type application/json");
@@ -187,12 +165,12 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
             );
 
             // manage operations 
-            await Context.ControlFlow(bot, gpt, result, messageText, chat.Id);
+            await Context.ControlFlow(bot, gpt, memory, result, messageText, chat);
         }
         
     }
-    else if (update.CallbackQuery?.Data != null) {
-
+    else if (update.CallbackQuery?.Data != null && update.CallbackQuery?.Message?.Chat != null) {
+        await Context.ValuteMeasurement(update.CallbackQuery.Data, update.CallbackQuery.From, update.CallbackQuery.Message.Chat, bot, memory);
         } else return Results.NotFound();
 
     /*
@@ -210,28 +188,7 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
         var systolic = Math.Max(v1, v2);
         var diastolic = Math.Min(v1, v2);
 
-        memory.SetTemporaryMeasurement(update.Message!.Chat, new Measurement {
-            SystolicPressure = systolic,
-            DiastolicPressure = diastolic,
-            HeartRate = v3
-        });
-
-        memory.SetState(update.Message!.Chat, ConversationState.NewMeasurementReceived);
-
-        var sb = new StringBuilder();
-        sb.Append($"Grazie per avermi inviato la tua misurazione\\.\n\n🔺 Pressione sistolica: *{systolic}* mmHg\n🔻 Pressione diastolica: *{diastolic}* mmHg\n");
-        if(v3.HasValue) {
-            sb.Append($"🩺 Frequenza cardiaca: *{v3}* bpm\n");
-        }
-        sb.Append("\nHo capito bene?");
-
-        await bot.SendTextMessageAsync(update.Message!.Chat.Id, sb.ToString(),
-            parseMode: ParseMode.MarkdownV2,
-            replyMarkup: new InlineKeyboardMarkup(new InlineKeyboardButton[] {
-                new InlineKeyboardButton("Sì, registra!") { CallbackData = "yes" },
-                new InlineKeyboardButton("No") { CallbackData = "no" },
-            })
-        );
+       y
 
         return Results.Ok();
     }

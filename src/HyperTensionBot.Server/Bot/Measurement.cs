@@ -1,9 +1,9 @@
 namespace HyperTensionBot.Server.Bot {
     public class Measurement {
-        public int SystolicPressure { get; init; }
+        public double? SystolicPressure { get; init; }
 
-        public int DiastolicPressure { get; init; }
+        public double? DiastolicPressure { get; init; }
 
-        public int? HeartRate { get; init; }
+        public double? HeartRate { get; init; }
     }
 }

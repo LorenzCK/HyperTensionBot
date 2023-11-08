@@ -11,7 +11,9 @@ namespace HyperTensionBot.Server.ModelML {
 
         public void Train(string pathFile, string pathModel) {
 
-            // Loading data training 
+            // Loading data training
+            ControlFile(pathFile);
+
             IDataView dataView = mlContext.Data.LoadFromTextFile<ModelInput>(
                 pathFile,
                 separatorChar: '\t',
@@ -38,6 +40,19 @@ namespace HyperTensionBot.Server.ModelML {
             }
             catch (ArgumentNullException) { }
             finally { mlContext.Model.Save(model, dataView.Schema, Path.Combine(pathModel, "model.zip")); }
+        }
+
+        private void ControlFile(string pathFile) {
+            using (var sr = new StreamReader(pathFile)) {
+                string? line;
+                while ((line = sr.ReadLine()) != null) {
+                    string[] columns = line.Split('\t');
+                    if (columns.Length < 2 || string.IsNullOrWhiteSpace(columns[1])) {
+                        throw new Exception("training data is not complete");
+                    }
+                }
+            }
+            
         }
     }
 }

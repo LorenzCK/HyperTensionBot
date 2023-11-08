@@ -1,5 +1,4 @@
 using Microsoft.ML;
-using System.IO;
 
 namespace HyperTensionBot.Server.ModelML {
     // model for classification a user message
@@ -42,6 +41,11 @@ namespace HyperTensionBot.Server.ModelML {
         // method for predict
         public Intent Predict(ModelInput input) {
             var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(model);
+            // update training set with new input
+            if (pathFile != null) {
+                using (StreamWriter file = new StreamWriter(pathFile, true))
+                    file.WriteLine(input.Sentence);
+            }
             return (Intent)Enum.Parse(typeof(Intent), predictionEngine.Predict(input).PredictedLabel);
         }
     }

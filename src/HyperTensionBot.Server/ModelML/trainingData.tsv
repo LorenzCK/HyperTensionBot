@@ -1,866 +1,841 @@
 Sentence	Label
-la mia alimentazione non è mai stata curata.	inserDatiGener
-pressione di A su B.	inserDatiPress
-Vorrei una torta per colazione	fuoriCont
-mi sento molto sereno riguardo alla mia ipertensione.	pazienteSereno
-Vorrei dare un’occhiata a tutte le letture che ho inserito.	richiestaStatsGener
-Ho avuto mal di testa frequenti.	fuoriContMed
-la mia pressione sanguigna è 135/85.	inserDatiPress
-La mia pressione oggi è .../...e la mia frequenza cardiaca è ... bpm.	inserDatiTot
-ciao, assistente! sono pronto per affrontare la mia ipertensione con il tuo aiuto.	saluti
-Aiutami, c'è qualcosa che non va	pazienAllarmato
-Quali sono i fattori di rischio per l’ipertensione?	spiegazioni
-ho appena controllato, la mia pressione è 140/85.	inserDatiPress
-Desidero visualizzare le mie letture dell’ultima settimana.	richiestaStatsGener
-la mia pressione sanguigna è 140/90 e il mio battito cardiaco è 75.	inserDatiTot
-Vorrei i dati dell’ultima settimana	richiestaStatsGener
-ho avuto un episodio di tachicardia la scorsa notte.	inserDatiGener
-Ho paura che la mia pressione alta possa causare un attacco di cuore.	pazienAllarmato
-Qual è l'ultimo dato sulla pressione sanguigna?	richiestaStatsPress
-Ho bisogno di inserire i miei ultimi valori di pressione arteriosa.	richiestaInsDati
-ho iniziato una nuova dieta povera di grassi saturi.	inserDatiGener
-Ho smesso di fumare da un mese.	inserDatiGener
-Sei stato molto preciso	saluti
-come la genetica può influenzare il mio rischio di cancro?	fuoriContMed
-Quali sono i rischi per la salute associati all’ipertensione?	spiegazioni
-Vorrei vedere le letture più recenti della pressione che ho registrato.	richiestaStatsPress
-Posso aggiungere i dati della mia pressione sanguigna di questa settimana?	richiestaInsDati
-Sai che oggi ho visto un film molto bello?	fuoriCont
-Ho notato che la mia pressione sanguigna scende quando dormo bene.	inserDatiGener
-ho appena controllato, la mia frequenza cardiaca è 75 battiti al minuto.	inserDatiFreq
-come il fumo può influenzare le mie malattie cardiache?	fuoriContMed
-come viene diagnosticata l’ipertensione?	spiegazioni
-Desidero consultare le registrazioni degli ultimi 7 giorni.	richiestaStatsGener
-Potrei vedere tutte le misurazioni che ho fatto?	richiestaStatsGener
-Sto cercando di limitare la caffeina per evitare picchi di pressione sanguigna.	inserDatiGener
-ho smesso di bere bevande energetiche da un mese.	inserDatiGener
-La mia pressione sanguigna è 130/80.	inserDatiPress
-Ho notato che la mia pressione sanguigna scende quando mi rilasso.	inserDatiGener
-buonanotte, assistente! sono pronto per riposare e ricaricarmi per un altro giorno di gestione della mia ipertensione.	saluti
-Misurazioni della pressione dell’ultimo mese?	richiestaStatsPress
-Quali sono i fattori di rischio per l’ipertensione?	spiegazioni
-ho appena misurato la mia frequenza cardiaca, è 75 battiti al minuto.	inserDatiFreq
-come il sesso può influenzare il mio rischio di osteoporosi?	fuoriContMed
-la mia pressione sanguigna è 135/85 e la mia frequenza cardiaca è 72.	inserDatiTot
-Vorrei dare un’occhiata alle ultime letture della pressione che ho inserito nell’ultima settimana.	richiestaStatsPress
-Quali sono le opzioni di trattamento farmacologico per l’ansia?	fuoriContMed
-sono molto nervoso per i miei livelli di pressione sanguigna.	pazienAllarmato
-Qual è il tuo museo d’arte preferito?	fuoriCont
-la mia pressione sanguigna è 135/85.	inserDatiPress
-Sto cercando di dormire almeno 8 ore a notte per mantenere la mia pressione sanguigna sotto controllo.	inserDatiGener
-Hai visto l’ultimo film di Christopher Nolan?	fuoriCont
+Forniscimi tutte le mie misurazioni in un grafico?	richiestaStatsGener
+come una dieta sana può aiutare a gestire l’ipertensione?	spiegazioni
 Potresti mostrarmi le mie letture dell’ultimo mese?	richiestaStatsGener
-quali cambiamenti nello stile di vita posso fare per gestire il mio colesterolo alto?	fuoriContMed
-Hai mai visitato la Costa Amalfitana?	fuoriCont
-Potresti mostrarmi un sommario di tutte le mie misurazioni?	richiestaStatsGener
-Ho appena misurato la mia pressione, è 130/85 e il mio battito cardiaco è 75.	inserDatiTot
-Ho iniziato una nuova dieta ricca di frutta e verdura.	inserDatiGener
-Ho iniziato a meditare per aiutare a gestire lo stress.	inserDatiGener
-Vorrei rivedere i dati sulla frequenza  che ho inserito nell’ultimo mese.	richiestaStatsFreq
-sono molto ansioso per la mia pressione alta.	pazienAllarmato
-La mia ultima misurazione mostra una pressione sanguigna e frequenza cardiaca di 135/85 mmHg e 70 bpm.	inserDatiTot
-Potresti mostrarmi la mia ultima misurazione della frequenza cardiaca?	richiestaStatsFreq
-Dammi le statistiche dell'ultimo mese in un grafico	richiestaStatsGener
+come il peso può influenzare l’ipertensione?	spiegazioni
+120 78	inserDatiPress
+ho iniziato una nuova dieta povera di zuccheri.	inserDatiGener
+fumo da circa 15 anni	inserDatiGener
+Come viene diagnosticato il cancro al seno?	fuoriContMed
+Dammi le misurazioni della settimana in un grafico	richiestaStatsGener
+posso registrare i dati della mia frequenza cardiaca di questo mese?	richiestaInsDati
+Potrei controllare le ultime misurazioni che ho registrato?	richiestaStatsGener
+Mi ricordi l'ultima misurazione fatta sulla frequenza	richiestaStatsFreq
+La mia pressione sanguigna è 125/80.	inserDatiPress
+Posso inserire i dati della mia pressione sanguigna di ieri?	richiestaInsDati
+come l’esercizio fisico può aiutare a gestire il mio diabete?	fuoriContMed
+La mia pressione oggi è 120/80 e la mia frequenza cardiaca è 75 bpm.	inserDatiTot
+Desidero visualizzare i miei dati sulla pressione dell’ultima settimana.	richiestaStatsPress
+Ho iniziato a fare esercizio fisico regolarmente.	inserDatiGener
+sono molto preoccupato per la mia ipertensione.	pazienAllarmato
+ho iniziato a fare yoga per aiutare a gestire lo stress.	inserDatiGener
+Ciao, assistente! Spero che tu possa darmi qualche consiglio utile per la mia ipertensione oggi.	saluti
+Desidero consultare tutte le mie letture della pressione.	richiestaStatsPress
+Mi piacerebbe esaminare i dati registrati negli ultimi 7 giorni	richiestaStatsGener
+non ho nervosismo per la mia pressione alta.	pazienteSereno
+La mia pressione sanguigna è 140/90 e la mia frequenza cardiaca è 80.	inserDatiTot
+buonanotte, assistente! sono pronto per riposare e ricaricarmi per un altro giorno di gestione della mia ipertensione.	saluti
+quali cambiamenti nello stile di vita posso fare per gestire l’ipertensione?	spiegazioni
+Una volta a settimana mangio la pizza	fuoriCont
+Quali sono i rischi per la salute associati all’obesità?	fuoriContMed
+Buonasera, assistente! Spero che tu possa aiutarmi a capire meglio la mia ipertensione.	saluti
+Desidero consultare le registrazioni degli ultimi 7 giorni.	richiestaStatsGener
+mi dici a cosa serve misurare la frequenza?	spiegazioni
+Desidero consultare le mie letture del battito cardiaco dell’ultima settimana.	richiestaStatsFreq
+come il caffè può influenzare l’ipertensione?	spiegazioni
+ho paura che la mia ipertensione possa causare problemi di respirazione.	pazienAllarmato
+Non ho paura della mia pressione alta.	pazienteSereno
+Sono felice di informarti che la mia frequenza cardiaca è stabile e mi sento bene.	pazienteSereno
+come una dieta sana può aiutare a gestire il mio peso?	fuoriContMed
+Ho notato che la mia pressione sanguigna è di 135/80 mmHg.	inserDatiPress
+Hola	saluti
+puoi fornirmi i dati sulla pressione e sulla frequenza?	richiestaStatsGener
+posso inserire i dati della mia pressione sanguigna di stasera?	richiestaInsDati
+Ho misurato la frequenza ed è 80 bpm.	inserDatiFreq
+ciao, assistente! sono pronto per un altro giorno di apprendimento sulla mia ipertensione.	saluti
+Mostrami con un immagine i valori sulla mia pressione?	richiestaStatsPress
+Mio figlio ha la febbre	fuoriContMed
+Ho appena fatto un controllo, la mia pressione è 135/85.	inserDatiPress
+Qual è la mia ultima misurazione visualizzata in un grafico?	richiestaStatsGener
+Quali sono le cause principali dell’ipertensione?	spiegazioni
+come il peso può influenzare il mio diabete?	fuoriContMed
+Vorrei dare un’occhiata alle ultime letture della pressione che ho inserito nell’ultima settimana.	richiestaStatsPress
+la mia pressione sanguigna attuale è 125/80.	inserDatiPress
+ho appena fatto un controllo, la mia pressione è 135/85 e il mio polso è 70.	inserDatiTot
+Sei stato molto preciso	saluti
+posso registrare i dati della mia frequenza cardiaca dell’anno scorso?	richiestaInsDati
+Mostrami la frequenza nell'ultima settimana	richiestaStatsFreq
+Fornisci tutte le mie misurazioni sulla frequenza cardiaca?	richiestaStatsFreq
+La mia pressione sanguigna è 135/85.	inserDatiPress
+Vorrei dare un’occhiata alle ultime letture della frequenza cardiaca che ho inserito nell’ultimo mese.	richiestaStatsFreq
+La mia pressione sanguigna è X/Y e il mio battito cardiaco è 75.	inserDatiTot
+non ho ansia per la mia ipertensione.	pazienteSereno
+Vorrei rivedere i dati sulla pressione che ho inserito negli ultimi sette giorni.	richiestaStatsPress
+come posso prevenire l’ipertensione?	spiegazioni
 ciao, assistente! spero che tu possa darmi qualche consiglio utile per la mia ipertensione oggi.	saluti
-Vorrei sapere se l'andamento della mia pressione è stabile nel tempo	richiestaStatsPress
-Vorrei rivedere i dati più recenti che ho inserito.	richiestaStatsGener
+buongiorno, assistente! sono pronto per affrontare la mia ipertensione con il tuo aiuto.	saluti
+quali sono i sintomi dell’ipertensione?	spiegazioni
+Quali sono i miei dati più recenti sulla pressione sanguigna?	richiestaStatsPress
+quali cambiamenti nello stile di vita posso fare per gestire il mio colesterolo alto?	fuoriContMed
+come si misura la pressione?	spiegazioni
+Desidero consultare le mie letture della pressione dell’ultimo mese.	richiestaStatsPress
+che agitazione! non capisco perchè la misurazioni sulla frequenza mostrano risultati anomali	pazienAllarmato
+mostra i dati su frequenza e pressione più recenti	richiestaStatsGener
+posso inserire i dettagli sulla mia condizione fisica?	richiestaInsDati
+voglio inserirti i dati relativi alla mia pressione.	richiestaInsDati
+Sono molto nervoso per la mia ipertensione.	pazienAllarmato
+Sono pieno di energie	pazienteSereno
+Hai mai provato a dipingere?	fuoriCont
+Mi sento molto preoccupato per la mia pressione alta.	pazienAllarmato
+quali sono i fattori di rischio per l’osteoporosi?	fuoriContMed
+Vorrei dare un’occhiata alle ultime letture della frequenza cardiaca che ho inserito negli ultimi sette giorni.	richiestaStatsFreq
+ho notato che la mia pressione sanguigna aumenta quando sono nervoso.	inserDatiGener
+quali sono i sintomi della depressione?	fuoriContMed
+Salve, come puoi aiutarmi?	saluti
+Quali sono i trattamenti disponibili per l’ipertensione?	spiegazioni
+Sto cercando di evitare cibi ad alto contenuto di grassi saturi per mantenere bassi i livelli di colesterolo.	inserDatiGener
+Posso registrare i dati della mia frequenza cardiaca di questa settimana?	richiestaInsDati
+voglio registrare i miei dati misurati. La pressione è di 120/80 mentre la frequenza 80bpm	inserDatiTot
+Addio, assistente! Grazie per avermi fornito informazioni preziose sulla mia ipertensione.	saluti
+Potrei vedere le ultime misurazioni che ho registrato?	richiestaStatsGener
+ho misurato la frequenza: 90	inserDatiFreq
+La mia pressione sanguigna è di 125/75 mmHg, secondo l’ultima misurazione.	inserDatiPress
+sono molto stressato per i miei livelli di pressione sanguigna.	pazienAllarmato
+Buongiorno, assistente! Spero che tu sia pronto ad aiutarmi a gestire la mia ipertensione oggi.	saluti
+Potrei vedere le misurazioni che ho registrato nell’ultima settimana?	richiestaStatsGener
+Vorrei vedere tutte le misurazioni che ho inserito.	richiestaStatsGener
+posso registrare i dati della mia frequenza cardiaca del mese scorso?	richiestaInsDati
+non ho paura della mia pressione alta.	pazienteSereno
+la mia pressione sanguigna è 135/85.	inserDatiPress
+Potrei vedere l’ultima misurazione del ritmo cardiaco che ho registrato?	richiestaStatsFreq
+Ho notato che la mia pressione sanguigna scende quando sono felice.	inserDatiGener
+Vorrei dare un’occhiata a tutte le letture della frequenza cardiaca che ho inserito.	richiestaStatsFreq
+oggi ho mangiato un buon piatto di pasta	fuoriCont
+Ho notato che la mia pressione sanguigna aumenta quando sono nervoso.	inserDatiGener
+Ho appena misurato la mia frequenza cardiaca, è 75 battiti al minuto.	inserDatiFreq
+Desidero consultare i dati delle ultime 4 settimane	richiestaStatsGener
+vorrei aggiornare i miei dati sulla pressione sanguigna.	richiestaInsDati
+ho iniziato una nuova dieta povera di grassi saturi.	inserDatiGener
 Ricordami l'ultima misurazione inserita sulla pressione?	richiestaStatsPress
-addio, assistente! sono grato per il tuo sostegno nel mio viaggio con l’ipertensione.	saluti
-Mi piacerebbe controllare i dati che ho registrato nell’ultima settimana.	richiestaStatsGener
-sono molto pacifico riguardo alla mia ipertensione.	pazienteSereno
-la mia frequenza cardiaca è 72 battiti al minuto.	inserDatiFreq
+Ultima misurazione	richiestaStatsGener
+La mia pressione sanguigna oggi è X/Y e la mia frequenza cardiaca è Z bpm.	inserDatiTot
+Dammi i dati della frequenza cardiaca nell’ultima settimana	richiestaStatsFreq
+Quali cambiamenti nello stile di vita posso fare per gestire l’ipertensione?	spiegazioni
+La mia pressione sanguigna e frequenza cardiaca più recenti sono di 120/70 mmHg e 71 bpm.	inserDatiTot
+posso registrare i dati della mia frequenza cardiaca del prossimo anno?	richiestaInsDati
+Potresti mostrarmi le mie misurazioni della pressione sanguigna dell’ultima settimana?	richiestaStatsPress
+Vorrei una torta per colazione	fuoriCont
+Come posso prevenire le malattie cardiache?	fuoriContMed
+sono molto preoccupato per i miei livelli di pressione sanguigna.	pazienAllarmato
+Desidero visualizzare le mie letture dell’ultimo mese.	richiestaStatsGener
+Vorrei sapere se l'andamento della mia pressione è stabile nel tempo	richiestaStatsPress
+Qual è la mia ultima statistica registrata?	richiestaStatsGener
+Buonanotte, assistente! Grazie per avermi aiutato a capire meglio la mia ipertensione.	saluti
+Vorrei rivedere i dati sulla frequenza che ho inserito nell’ultima settimana.	richiestaStatsFreq
+Vorrei emmorizzare i miei dati: la pressione sanguigna è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
+posso aggiungere i dati della mia pressione sanguigna di questa mattina?	richiestaInsDati
+buonasera, assistente! spero che tu possa aiutarmi a capire meglio la mia ipertensione.	saluti
+Sono molto pacifico riguardo alla mia ipertensione.	pazienteSereno
+Ho iniziato una nuova dieta povera di zuccheri.	inserDatiGener
+La mia pressione sanguigna è 130/80 e il mio battito cardiaco è 72.	inserDatiTot
+Qual è la mia ultima misurazione della pressione?	richiestaStatsPress
+ho appena misurato la mia frequenza cardiaca, è 75 battiti al minuto.	inserDatiFreq
+Posso registrare i dati della mia frequenza cardiaca di stasera?	richiestaInsDati
+la mia pressione oggi è 120/80 e la mia frequenza cardiaca è 72.	inserDatiTot
+Vorrei rivedere i dati più recenti sulla pressione che ho inserito.	richiestaStatsPress
+La frequenza cardiaca è 80	inserDatiFreq
+vorrei aggiungere i dettagli sulla mia alimentazione.	richiestaInsDati
+la mia frequenza cardiaca oggi è 72 battiti al minuto.	inserDatiFreq
+Potresti mostrarmi le mie letture dell’ultima settimana?	richiestaStatsGener
+Desidero visualizzare i miei dati sulla frequenza cardiaca degli ultimi sette giorni.	richiestaStatsFreq
+potresti farmi visualizzare le registrazioni datte sulla pressione e sulla frequenza cardiaca	richiestaStatsGener
+Potresti mostrarmi tutte le mie misurazioni della pressione?	richiestaStatsPress
+Mi piacerebbe esaminare i dati sulla frequenza che ho registrato nell’ultima settimana.	richiestaStatsFreq
+Sono preoccupato per i miei livelli di pressione sanguigna.	pazienAllarmato
+La mia frequenza cardiaca più recente è di 71 bpm.	inserDatiFreq
+ho appena controllato, la mia frequenza cardiaca è 75 battiti al minuto.	inserDatiFreq
+posso inserire la mia pressione sanguigna di oggi?	richiestaInsDati
+ho iniziato una nuova dieta ricca di frutta e verdura.	inserDatiGener
+ti fornisco i dati relativi alle mie ultime misurazioni. Pressione 120/85 e frequenza 80 bpm	inserDatiTot
+posso inserire i dati della mia pressione sanguigna del prossimo mese?	richiestaInsDati
+La mia pressione sanguigna e frequenza cardiaca attuali sono di 140/85 mmHg e 74 bpm.	inserDatiTot
+Ho fatto le analisi del sangue e ho il valore X fuori range	fuoriContMed
+Ue, assistente! Spero tu possa darmi qualche suggerimento su come gestire la mia ipertensione.	saluti
+ho paura che la mia ipertensione possa causare problemi di concentrazione.	pazienAllarmato
+ciao, assistente! sono pronto per un altro giorno di gestione della mia ipertensione.	saluti
+come la genetica può influenzare il mio rischio di cancro?	fuoriContMed
+Mostra in un grafico le misurazioni della frequenza cardiaca dell’ultimo mese	richiestaStatsFreq
+Quali sono le mie misurazioni della frequenza cardiaca dell’ultimo mese?	richiestaStatsFreq
+Mi piacerebbe esaminare i dati sulla pressione che ho registrato negli ultimi 7 giorni.	richiestaStatsPress
+ho smesso di bere bevande energetiche da un mese.	inserDatiGener
+come il colesterolo può influenzare le mie malattie cardiache?	fuoriContMed
+ho smesso di bere tè nero da due settimane.	inserDatiGener
+La mia pressione oggi è A su B e la mia frequenza cardiaca è X bpm.	inserDatiTot
+la mia pressione sanguigna è 130/85.	inserDatiPress
+vorrei inserire i dati del mio monitoraggio della pressione sanguigna di questa settimana.	richiestaInsDati
 Ho registrato un valore di pressione sanguigna di 140/90 mmHg oggi.	inserDatiPress
 Ho avuto un episodio di mancanza di respiro ieri.	inserDatiGener
-Mi piacerebbe esaminare le letture che ho registrato nell’ultimo mese.	richiestaStatsGener
-Vorrei vedere l’ultima lettura della frequenza che ho registrato.	richiestaStatsFreq
-ho iniziato a prendere un nuovo farmaco per l’ipertensione.	inserDatiGener
-Potresti mostrarmi le mie misurazioni della frequenza cardiaca dell’ultima settimana?	richiestaStatsFreq
-sono molto nervoso per la mia pressione alta.	pazienAllarmato
-X su Y	inserDatiPress
-Quali sono i miei dati più recenti sulla pressione sanguigna?	richiestaStatsPress
-come una dieta sana può aiutare a gestire il mio peso?	fuoriContMed
-Potrei vedere tutte le misurazioni della pressione che ho registrato?	richiestaStatsPress
-non sono preoccupato per la mia pressione alta.	pazienteSereno
-Non ho paura della mia pressione alta.	pazienteSereno
-la mia pressione sanguigna è 125/80.	inserDatiPress
-ho appena misurato la mia pressione, è 130/85 e il mio battito cardiaco è 75.	inserDatiTot
-ho paura che la mia pressione alta possa causare un ictus.	pazienAllarmato
-Mi sento un po' strano, quali sono i miei dati più recenti?	richiestaStatsGener
-Sono molto calmo riguardo alla mia ipertensione.	pazienteSereno
-Ho avuto un episodio di tachicardia la scorsa notte.	inserDatiGener
-la mia pressione sanguigna è 130/80.	inserDatiPress
-la mia pressione sanguigna è 135/85.	inserDatiPress
-mi sento molto sereno riguardo alla mia ipertensione.	pazienteSereno
-Sono preoccupato per i miei livelli di pressione sanguigna.	pazienAllarmato
-Potresti mostrarmi tutte le mie letture che hai registrato?	richiestaStatsGener
-il mio battito cardiaco è 70 battiti al minuto.	inserDatiFreq
-Potresti aiutarmi a registrare le mie nuove letture della pressione sanguigna?	richiestaInsDati
-Ho notato un cambiamento nel mio peso.	fuoriContMed
-Quali sono i trattamenti disponibili per l’ipertensione?	spiegazioni
-come il diabete può influenzare l’ipertensione?	spiegazioni
-come l’età può influenzare la mia memoria?	fuoriContMed
-ho appena misurato la mia pressione, è 130/85.	inserDatiPress
-ho smesso di bere caffè da una settimana.	inserDatiGener
-La mia pressione sanguigna è 130/80.	inserDatiPress
-Potrei controllare le ultime misurazioni della frequenza cardiaca che ho registrato nell’ultimo mese?	richiestaStatsFreq
-Che tipo di musica ti piace ascoltare?	fuoriCont
-Ho iniziato una nuova dieta povera di grassi saturi.	inserDatiGener
-Posso registrare i dati della mia frequenza cardiaca di ieri?	richiestaInsDati
-La mia frequenza cardiaca è di 70 bpm, secondo l’ultima misurazione.	inserDatiFreq
-La mia frequenza cardiaca è 72 battiti al minuto.	inserDatiFreq
-Ho appena finito di fare una corsa, sono pieno di energie.	fuoriCont
-La mia pressione oggi è A su B e la mia frequenza cardiaca è X bpm.	inserDatiTot
-Sono molto preoccupato per i miei livelli di pressione sanguigna.	pazienAllarmato
-Vorrei dare un’occhiata a tutte le letture della pressione che ho inserito.	richiestaStatsPress
-Ho appena misurato la mia pressione sanguigna e i valori sono 120/80 mmHg.	inserDatiPress
-Quali sono stati i valori sulla frequenza cardiaca nell'ultimo mese	richiestaStatsFreq
-la mia pressione sanguigna è 130/80.	inserDatiPress
-ho notato che la mia pressione sanguigna scende quando sono felice.	inserDatiGener
-Ho appena fatto un controllo, il mio polso è 70.	inserDatiFreq
-posso inserire la mia pressione sanguigna di oggi?	richiestaInsDati
-Ho notato che il mio livello di stress è aumentato ultimamente.	inserDatiGener
-Buonasera, assistente! Spero tu possa aiutarmi a capire meglio la mia ipertensione.	saluti
-Quali sono i sintomi dell’ipertensione?	spiegazioni
-la mia pressione sanguigna è 130/80 e il mio battito cardiaco è 70.	inserDatiTot
-Ho appena fatto una lettura e la mia frequenza è di 72 bpm.	inserDatiFreq
-Come posso prevenire l’ipertensione?	spiegazioni
-Quando devo fare un collquio il mio cuore è infermabile.	pazienAllarmato
-La mia pressione sanguigna è 135/85.	inserDatiPress
-Desidero consultare tutte le mie letture della frequenza cardiaca.	richiestaStatsFreq
-Mostra tutte le mie misurazioni tramite un grafico?	richiestaStatsGener
-come la contraccezione ormonale può influenzare il mio ciclo mestruale?	fuoriContMed
-Ho smesso di bere caffè da una settimana.	inserDatiGener
-La mia pressione quando torno a casa dalla famiglia si alza sempre	pazienAllarmato
-Posso aggiungere i dati della mia pressione sanguigna di quest’anno?	richiestaInsDati
-Il mio battito cardiaco è 70 battiti al minuto.	inserDatiFreq
-mostrami le statistiche sulla frequenza 	richiestaStatsFreq
-Dammi il grafico con andamento di pressione arteriosa nell'ultima settimana	richiestaStatsPress
-quali sono le opzioni di trattamento farmacologico per l’ipertensione?	spiegazioni
-Posso aggiungere i dati della mia pressione sanguigna di domani?	richiestaInsDati
-come l’alcol può influenzare l’ipertensione?	spiegazioni
-Ho X anni e ho una dieta equilibrata.	inserDatiGener
-Qual è il tuo poeta preferito?	fuoriCont
-Potrei controllare tutte le misurazioni che ho registrato?	richiestaStatsGener
-posso inserire i dati della mia pressione sanguigna e della mia frequenza cardiaca di oggi?	richiestaInsDati
-hai mai provato a fare yoga?	fuoriCont
-Quando sono a rischio ipertensione?	spiegazioni
-Ho 50 anni e non bevo alcol.	inserDatiGener
-la mia pressione sanguigna è 130/80 e il mio battito cardiaco è 72.	inserDatiTot
-ciao, assistente! sono pronto per un altro giorno di successi nella gestione della mia ipertensione.	saluti
-la mia pressione sanguigna è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
-Ho appena controllato, la mia pressione è 140/85 e la mia frequenza cardiaca è 75.	inserDatiTot
-Vorrei registrare i miei ultimi dati sulla pressione sanguigna.	richiestaInsDati
-Vorrei dare un’occhiata a tutte le letture della frequenza cardiaca che ho inserito.	richiestaStatsFreq
-posso registrare i dati della mia frequenza cardiaca di questa settimana?	richiestaInsDati
-buonasera, assistente! spero che tu possa aiutarmi a capire meglio la mia ipertensione.	saluti
-La mia pressione sanguigna e frequenza cardiaca sono di 125/75 mmHg e 70 bpm, secondo l’ultima misurazione.	inserDatiTot
-Sono molto ansioso per la mia ipertensione.	pazienAllarmato
-Ho iniziato una nuova dieta per ridurre il sale.	inserDatiGener
-Forniscimi tutte le mie misurazioni in un grafico?	richiestaStatsGener
-come il sonno può influenzare la mia ansia?	fuoriContMed
-posso registrare i dati della mia frequenza cardiaca del prossimo mese?	richiestaInsDati
-Come viene diagnosticata l’ipertensione?	spiegazioni
-Potrei vedere le misurazioni che ho registrato nell’ultimo mese?	richiestaStatsGener
-non sono preoccupato per la mia pressione alta.	pazienteSereno
-La mia ultima lettura della frequenza cardiaca era di 68 bpm.	inserDatiFreq
-ho paura che la mia ipertensione possa peggiorare.	pazienAllarmato
-Ho avuto problemi di sonno ultimamente.	fuoriContMed
-Mi sento molto preoccupato per la mia pressione alta.	pazienAllarmato
-Desidero consultare tutte le mie letture della pressione.	richiestaStatsPress
-La mia frequenza cardiaca attuale è 68 battiti al minuto.	inserDatiFreq
-Mi ricordi l'ultima misurazione fatta sulla frequenza 	richiestaStatsFreq
-La mia pressione oggi è 120/80.	inserDatiPress
-hai mai provato a fare surf?	fuoriCont
-Mi sento un po’ ansioso perché la mia pressione sanguigna è salita all’improvviso.	pazienAllarmato
-come la contraccezione ormonale può influenzare l’ipertensione?	spiegazioni
-non ho paura della mia ipertensione.	pazienteSereno
-Vorrei dare un’occhiata alle ultime letture della frequenza cardiaca che ho inserito negli ultimi sette giorni.	richiestaStatsFreq
-ho iniziato a fare passeggiate regolari per aiutare a gestire la mia ipertensione.	inserDatiGener
-sono molto stressato a causa della mia ipertensione.	pazienAllarmato
-Ho avuto un po’ di vertigini oggi, potrebbe essere legato alla mia pressione sanguigna?	pazienAllarmato
-quali sono i fattori di rischio per l’osteoporosi?	fuoriContMed
-La mia frequenza cardiaca oggi è ...bpm.	inserDatiFreq
-La mia pressione sanguigna è 135/85.	inserDatiPress
-Mi sento in forma.	pazienteSereno
-La mia frequenza cardiaca oggi è 75 bpm.	inserDatiFreq
-Sono pieno di energie	pazienteSereno
-Mi piacerebbe esaminare tutte le letture che ho registrato.	richiestaStatsGener
-ho avuto un episodio di mancanza di respiro ieri.	inserDatiGener
-Potrei vedere le ultime misurazioni del ritmo cardiaco che ho registrato nell’ultima settimana?	richiestaStatsFreq
-Ti fornisco i dati: pressione è 130/85 e il mio battito cardiaco è 70.	inserDatiTot
-sono molto ansioso per la mia ipertensione.	pazienAllarmato
-sono molto stressato per i miei livelli di pressione sanguigna.	pazienAllarmato
-Vorrei dare un’occhiata alle ultime letture che ho inserito.	richiestaStatsGener
-La mia ultima misurazione mostra una pressione sanguigna di 135/85 mmHg.	inserDatiPress
-Qual è l'andamento dei miei dati nella settimana	richiestaStatsGener
-hai mai provato a fare paracadutismo?	fuoriCont
-il mio battito cardiaco è 75 battiti al minuto.	inserDatiFreq
-Posso inserire la mia pressione sanguigna di oggi?	richiestaInsDati
-la mia pressione sanguigna è 130/80.	inserDatiPress
-sono molto calmo riguardo alla mia pressione alta.	pazienteSereno
-come il diabete può influenzare la mia vista?	fuoriContMed
-ho iniziato una nuova dieta per ridurre il sale.	inserDatiGener
-ho notato che la mia pressione sanguigna aumenta quando sono nervoso.	inserDatiGener
-Ho bisogno di documentare le mie ultime letture della pressione sanguigna.	richiestaInsDati
-non ho ansia per la mia ipertensione.	pazienteSereno
-come il caffè può influenzare l’ipertensione?	spiegazioni
-ho avuto un episodio di nausea questa mattina.	inserDatiGener
-posso inserire i dettagli sulla mia condizione fisica?	richiestaInsDati
-addio, assistente! grazie per avermi fornito informazioni preziose sulla mia ipertensione.	saluti
-arrivederci, assistente! grazie per avermi aiutato a gestire la mia ipertensione oggi.	saluti
-quali sono i trattamenti disponibili per l’ipertensione?	spiegazioni
-Potresti mostrarmi tutte le mie misurazioni della pressione?	richiestaStatsPress
-Qual è la mia ultima misurazione visualizzata in un grafico?	richiestaStatsGener
-Mi piacerebbe esaminare i dati sulla pressione che ho registrato nell’ultimo mese.	richiestaStatsPress
-Ho smesso di bere tè nero da due settimane.	inserDatiGener
-buonanotte, assistente! sono pronto per riposare e ricaricarmi per un altro giorno di gestione della mia ipertensione.	saluti
-sono molto nervoso per la mia ipertensione.	pazienAllarmato
-Qual è il dato più recente	richiestaStatsGener
-la mia pressione sanguigna è 140/90.	inserDatiPress
-Potrei vedere l’ultima misurazione del ritmo cardiaco che ho registrato?	richiestaStatsFreq
-come il caffè può influenzare il mio sonno?	fuoriContMed
-Potrei controllare le misurazioni dei sette giorni precedenti?	richiestaStatsGener
-Ho iniziato a fare passeggiate regolari per aiutare a gestire la mia ipertensione.	inserDatiGener
-La mia pressione sanguigna attuale è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
-La mia ultima misurazione mostra una frequenza cardiaca di 70 bpm.	inserDatiFreq
-Ho notato che la mia frequenza è di 73 bpm.	inserDatiFreq
-posso aggiungere i dati della mia pressione sanguigna dell’anno scorso?	richiestaInsDati
-ciao, assistente! sono pronto per un altro giorno di apprendimento sulla mia ipertensione.	saluti
-Potrei controllare le ultime misurazioni della pressione che ho registrato nell’ultimo mese?	richiestaStatsPress
-come l’asma può influenzare la mia vita quotidiana?	fuoriContMed
-la mia pressione sanguigna è 140/90 e la mia frequenza cardiaca è 80 battiti al minuto.	inserDatiTot
-vorrei aggiungere i dettagli del mio consumo di caffeina.	richiestaInsDati
-Ho notato che la mia pressione sanguigna aumenta quando sono nervoso.	inserDatiGener
-Ho misurato la frequenza ed è 80 bpm.	inserDatiFreq
-la mia pressione sanguigna è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
-Dammi tutte le mie misurazioni inerenti alla pressione in un grafico	richiestaStatsPress
-ho paura che la mia pressione alta possa causare problemi alla vista.	pazienAllarmato
-La mia pressione oggi è 120/80 e la mia frequenza cardiaca è 75 bpm.	inserDatiTot
-ho iniziato a fare esercizio fisico regolarmente.	inserDatiGener
-Sono molto stressato a causa della mia ipertensione.	pazienAllarmato
-Posso registrare i dati della mia frequenza cardiaca di questo mese?	richiestaInsDati
-vorrei registrare i miei sintomi di oggi.	richiestaInsDati
-Vorrei rivedere le letture che ho inserito nell’ultima settimana.	richiestaStatsGener
-Potresti spiegarmi cosa significa avere la pressione alta?	spiegazioni
-Desidero visualizzare i miei dati sulla pressione dell’ultimo mese.	richiestaStatsPress
-Desidero consultare le mie letture della frequenza cardiaca delle ultime quattro settimane.	richiestaStatsFreq
-come l’ambiente può influenzare la mia asma?	fuoriContMed
-Posso registrare i dati della mia frequenza cardiaca di questa mattina?	richiestaInsDati
-buon pomeriggio, assistente! spero che tu possa aiutarmi a monitorare la mia ipertensione.	saluti
-come la menopausa può influenzare l’ipertensione?	spiegazioni
-Ho smesso di bere alcol da due settimane.	inserDatiGener
-la mia pressione sanguigna è 120/80.	inserDatiPress
-la mia pressione sanguigna è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
-la mia pressione oggi è 120/80 e la mia frequenza cardiaca è 72.	inserDatiTot
-Mi piacerebbe esaminare i dati sulla frequenza che ho registrato nell’ultima settimana.	richiestaStatsFreq
-Potresti mostrarmi le mie misurazioni della pressione sanguigna dell’ultima settimana?	richiestaStatsPress
-hai mai provato a dipingere?	fuoriCont
-Ciao, assistente! Spero che tu possa darmi qualche consiglio utile per la mia ipertensione oggi.	saluti
-Faccio attività fisica regolare	inserDatiGener
-Mi piacerebbe esaminare tutti i dati sulla pressione che ho registrato.	richiestaStatsPress
-Quali sono le possibili conseguenze associate all'ipertensione?	spiegazioni
-Mi sento molto sereno riguardo alla mia ipertensione.	pazienteSereno
-come il fumo può influenzare l’ipertensione?	spiegazioni
-sono preoccupato per i miei livelli di pressione sanguigna.	pazienAllarmato
-Mi piacerebbe controllare tutte le misurazioni che ho registrato.	richiestaStatsGener
-Ho notato che la mia frequenza cardiaca è molto bassa, è normale?	pazienAllarmato
-Ho notato che sto dormendo meglio da quando ho iniziato la nuova dieta.	pazienteSereno
-Ho notato che la mia pressione sanguigna aumenta quando faccio esercizio fisico.	inserDatiGener
-la mia pressione sanguigna è 130/80.	inserDatiPress
-La mia pressione sanguigna e frequenza cardiaca più recenti sono di 120/70 mmHg e 71 bpm.	inserDatiTot
-mi sento molto preoccupato per la mia pressione alta.	pazienAllarmato
-La mia pressione oggi è .../...	inserDatiPress
-quale è il tuo romanzo preferito?	fuoriCont
-Vorrei vedere le letture della frequenza che ho registrato negli ultimi sette giorni.	richiestaStatsFreq
-alla prossima, assistente! sono entusiasta di continuare a lavorare con te sulla mia ipertensione.	saluti
-Il mio battito cardiaco è 72 battiti al minuto.	inserDatiFreq
-Desidero visualizzare i miei dati sulla frequenza cardiaca delle 4 settimane precedenti.	richiestaStatsFreq
-Come l’ipertensione può influenzare la mia vita quotidiana?	spiegazioni
-Ho avuto problemi di udito.	fuoriContMed
-posso inserire i dati della mia pressione sanguigna del mese scorso?	richiestaInsDati
-ho notato che la mia pressione sanguigna aumenta quando faccio esercizio fisico.	inserDatiGener
-Quali sono i trattamenti disponibili per l’ipertensione?	spiegazioni
-Se ho un paziente iperteso, aumenta molto il mio rischio di sviluppare ipertensione?	spiegazioni
-Potrei vedere le ultime misurazioni che ho registrato?	richiestaStatsGener
-La frequenza cardiaca è 80	inserDatiFreq
-sono molto stressato a causa della mia pressione alta.	pazienAllarmato
-come il sale può influenzare l’ipertensione?	spiegazioni
-Che libro stai leggendo al momento?	fuoriCont
-come il clima può influenzare l’ipertensione?	spiegazioni
-la mia pressione sanguigna è 140/90.	inserDatiPress
-non ho ansia per la mia pressione alta.	pazienteSereno
-Sono felice di informarti che la mia frequenza cardiaca è stabile e mi sento bene.	pazienteSereno
-mi sento molto rilassato riguardo alla mia ipertensione.	pazienteSereno
-we, assistente! Spero tu possa aiutarmi oggi con la mia ipertensione.	saluti
-quali sono i rischi per la salute associati all’ipertensione?	spiegazioni
-come il colesterolo può influenzare le mie malattie cardiache?	fuoriContMed
-posso registrare i dati della mia frequenza cardiaca dell’anno scorso?	richiestaInsDati
-Quali cambiamenti nello stile di vita posso fare per gestire l’ipertensione?	spiegazioni
-buongiorno, assistente! spero che tu sia pronto ad aiutarmi a gestire la mia ipertensione oggi.	saluti
-Forniscimi le misurazioni sulla frequenza cardiaca nell’ultimo mese	richiestaStatsFreq
-alla prossima, assistente! sono entusiasta di continuare a lavorare con te sulla mia ipertensione.	saluti
-La frequenza cardiaca misurata è Z bpm.	inserDatiFreq
-Fammi il resoconto dell'ultima settimana	richiestaStatsGener
-Potrei controllare le ultime misurazioni della pressione che ho registrato?	richiestaStatsPress
-Ho avuto un episodio di nausea questa mattina.	inserDatiGener
-Frequenza cardiaca in arrivo... X bpm.	inserDatiFreq
-Addio, assistente! Grazie per avermi fornito informazioni preziose sulla mia ipertensione.	saluti
-La mia pressione stamattina era alta	pazienAllarmato
-Vorrei rivedere i dati sulla pressione che ho inserito negli ultimi sette giorni.	richiestaStatsPress
-Posso inserire i dati della mia pressione sanguigna di stasera?	richiestaInsDati
-Come posso gestire il mio diabete?	fuoriContMed
-Posso registrare i dati della mia frequenza cardiaca di stasera?	richiestaInsDati
-come il peso può influenzare il mio diabete?	fuoriContMed
-la mia pressione sanguigna attuale è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
-ho appena fatto un controllo, il mio polso è 70.	inserDatiFreq
-ho paura che la mia pressione alta possa causare problemi seri.	pazienAllarmato
-Desidero consultare tutte le mie letture registrate.	richiestaStatsGener
-la mia pressione sanguigna è 125/80.	inserDatiPress
-Ho avuto problemi di digestione.	fuoriContMed
-come il sale può influenzare la mia pressione sanguigna?	spiegazioni
-Hai mai provato a fare sci di fondo?	fuoriCont
-Quali sono le cause principali dell’ipertensione?	spiegazioni
-posso inserire i dettagli del mio consumo di alcol?	richiestaInsDati
-arrivederci, assistente! sono grato per il tuo aiuto nel mio viaggio con l’ipertensione.	saluti
-la mia frequenza cardiaca è 68 battiti al minuto.	inserDatiFreq
-mi sento molto rilassato riguardo alla mia pressione alta.	pazienteSereno
-Potresti aggiungere le mie recenti letture della pressione arteriosa al mio profilo?	richiestaInsDati
-Sono rilassato e la mia pressione sanguigna è rimasta costante per tutta la settimana.	pazienteSereno
-Vorrei vedere tutte le letture della pressione che ho registrato.	richiestaStatsPress
-la mia pressione oggi è 120/80.	inserDatiPress
-Vorrei rivedere i dati sulla frequenza che ho inserito nell’ultima settimana.	richiestaStatsFreq
-Pressione misurata è di 135/85 e la mia frequenza cardiaca è 72.	inserDatiTot
-Sono contento di dirti che la mia pressione sanguigna è rimasta entro i limiti normali per tutto il mese.	pazienteSereno
-buonanotte, assistente! grazie per avermi aiutato a capire meglio la mia ipertensione.	saluti
-ho paura che la mia pressione alta possa causare problemi di equilibrio.	pazienAllarmato
-Ho avuto una settimana molto tranquilla e la mia pressione sanguigna è rimasta stabile.	pazienteSereno
-non ho nervosismo per la mia ipertensione.	pazienteSereno
-come lo stress può influenzare la mia depressione?	fuoriContMed
-Potrei vedere le ultime misurazioni della pressione che ho registrato?	richiestaStatsPress
-Quali esami diagnostici dovrei fare per valutare il mio stato di salute associato all'ipertensione?	spiegazioni
-Mostra in un grafico le misurazioni della frequenza cardiaca dell’ultimo mese	richiestaStatsFreq
-Qual è la mia ultima misurazione della pressione arteriosa che ti ho fornito?	richiestaStatsPress
-Mi piacerebbe controllare le ultime letture che ho registrato.	richiestaStatsGener
-Quali sono i valori generali della mia frequenza?	richiestaStatsFreq
-La mia frequenza cardiaca al momento è 120	inserDatiFreq
-Qual è la mia ultima misurazione della frequenza cardiaca visualizzata?	richiestaStatsFreq
-la mia pressione sanguigna è 135/85.	inserDatiPress
-Voglio vedere i dati relativi alla frequenza	richiestaStatsFreq
-Quali sono le mie statistiche dell’ultimo mese?	richiestaStatsGener
-Mi sento molto debole, cosa mi consigli?	pazienAllarmato
-come il peso può influenzare l’ipertensione?	spiegazioni
-Ho appena controllato, la mia frequenza cardiaca è 75 battiti al minuto.	inserDatiFreq
-ho appena fatto un controllo, la mia pressione è 135/85 e il mio polso è 70.	inserDatiTot
-ho iniziato a fare yoga per aiutare a gestire lo stress.	inserDatiGener
-Sono un po’ nervoso, la mia pressione sanguigna è più bassa del solito.	pazienAllarmato
-Potrei controllare le ultime misurazioni che ho registrato?	richiestaStatsGener
-Ho avuto un po’ di nausea e ho notato che la mia pressione sanguigna è bassa, cosa dovrei fare?	pazienAllarmato
-La mia pressione sanguigna è 130/80.	inserDatiPress
-Ho appena misurato la mia frequenza cardiaca e il valore è 72 bpm.	inserDatiFreq
-La mia ultima lettura della pressione sanguigna era di 130/85 mmHg.	inserDatiPress
-quali sono i sintomi dell’ipertensione?	spiegazioni
-alla prossima, assistente! non vedo l’ora di continuare a lavorare con te sulla mia ipertensione.	saluti
-A presto, assistente! Spero che tu possa continuare ad aiutarmi a gestire la mia ipertensione.	saluti
-il mio battito cardiaco è 75 battiti al minuto.	inserDatiFreq
-Ho appena controllato e la mia pressione sanguigna e frequenza cardiaca sono di 130/75 mmHg e 69 bpm.	inserDatiTot
-Ho appena misurato la mia pressione sanguigna e la frequenza cardiaca, i valori sono 120/80 mmHg e 72 bpm.	inserDatiTot
-Vorrei vedere le letture della frequenza cardiaca che ho registrato nell’ultimo mese.	richiestaStatsFreq
-La mia frequenza cardiaca attuale è di 74 bpm.	inserDatiFreq
-La mia pressione sanguigna è 140/90 e la mia frequenza cardiaca è 80.	inserDatiTot
-come lo stress può influenzare l’ipertensione?	spiegazioni
-Potresti mostrarmi tutte le mie misurazioni della frequenza cardiaca?	richiestaStatsFreq
-Ho smesso di bere bevande energetiche da un mese.	inserDatiGener
-Ho avuto un attacco di panico ieri sera.	inserDatiGener
-il mio battito cardiaco è 72 battiti al minuto.	inserDatiFreq
-addio, assistente! sono grato per il tuo sostegno nel mio viaggio con l’ipertensione.	saluti
-Vorrei rivedere tutte le letture che ho inserito.	richiestaStatsGener
-posso registrare i dati della mia frequenza cardiaca del mese scorso?	richiestaInsDati
-Sto cercando di mantenere un peso sano per ridurre il rischio di ipertensione.	inserDatiGener
-La mia frequenza cardiaca oggi è 72 battiti al minuto.	inserDatiFreq
-Desidero conservare le mie recenti letture della pressione arteriosa nel mio registro sanitario.	richiestaInsDati
-Mi piacerebbe esaminare i dati sulla pressione che ho registrato negli ultimi 7 giorni.	richiestaStatsPress
-come il sonno può influenzare l’ipertensione?	spiegazioni
-La mia pressione sanguigna è 140/90.	inserDatiPress
-Vorrei rivedere i dati più recenti sulla pressione che ho inserito.	richiestaStatsPress
-Ho 45 anni e non ho mai fatto attività fisica.	inserDatiGener
-Potrei controllare l’ultima misurazione della frequenza cardiaca che ho registrato?	richiestaStatsFreq
-Ho paura che la mia pressione alta possa causare un ictus.	pazienAllarmato
-Mi piacerebbe controllare le ultime letture della pressione che ho registrato.	richiestaStatsPress
-posso inserire i dati della mia pressione sanguigna di ieri?	richiestaInsDati
-non ho nervosismo per la mia pressione alta.	pazienteSereno
-Desidero visualizzare i miei dati più recenti sulla pressione.	richiestaStatsPress
-Potresti mostrarmi tutte le mie misurazioni della frequenza cardiaca in un grafico?	richiestaStatsFreq
-Buonanotte, è bello fare affidamento su di te	saluti
-Desidero aggiornare il mio registro con le nuove misurazioni della pressione sanguigna.	richiestaInsDati
-Potresti mostrarmi le mie misurazioni della pressione dell’ultimo mese?	richiestaStatsPress
-è possibile fornirti le misurazioni su pressione e frequenza?	richiestaInsDati
-Ho registrato un valore di frequenza cardiaca di 75 bpm oggi.	inserDatiFreq
-Quant è importante tenere sotto traccia l'ipertensione?	spiegazioni
-Mi piacerebbe sapere cosa fare per tenere la pressione sotto controllo	spiegazioni
-La mia pressione sanguigna oggi è X/Y.	inserDatiPress
-Potresti mostrarmi i miei dati più recenti?	richiestaStatsGener
-Ultimo dato inserito sulla frequenza 	richiestaStatsFreq
-la mia pressione sanguigna è 135/85 e la mia frequenza cardiaca è 72.	inserDatiTot
-Ho fatto le analisi del sangue e ho il valore X fuori range	fuoriContMed
-Ho male alla gamba	fuoriContMed
-Desidero visualizzare i miei dati sulla frequenza cardiaca degli ultimi sette giorni.	richiestaStatsFreq
-Mi piacerebbe esaminare i dati sulla frequenza cardiaca che ho registrato nell’ultimo mese.	richiestaStatsFreq
-la mia pressione sanguigna è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
-Desidero consultare le mie letture della pressione dell’ultimo mese.	richiestaStatsPress
-come il colesterolo può influenzare l’ipertensione?	spiegazioni
-Potrei vedere tutte le misurazioni della frequenza cardiaca che ho registrato?	richiestaStatsFreq
-Vorrei rivedere le letture che ho inserito nelle 4 settimane precedenti.	richiestaStatsGener
-posso aggiungere i dati della mia pressione sanguigna di questa mattina?	richiestaInsDati
-Mi piacerebbe esaminare tutti i dati sulla frequenza  che ho registrato.	richiestaStatsFreq
-Ultima misurazione	richiestaStatsGener
-posso aggiungere i dati della mia pressione sanguigna di domani?	richiestaInsDati
-il mio battito cardiaco è 70 battiti al minuto.	inserDatiFreq
-quale è la tua canzone preferita al momento?	fuoriCont
-Vorrei rivedere tutti i dati sulla pressione che ho inserito.	richiestaStatsPress
-Buonanotte, assistente! Grazie per avermi aiutato a capire meglio la mia ipertensione.	saluti
-come la gravidanza può influenzare la mia tiroide?	fuoriContMed
-sono molto calmo riguardo alla mia ipertensione.	pazienteSereno
-Buon pomeriggio, assistente! Spero che tu possa aiutarmi a monitorare la mia ipertensione.	saluti
-Hai mai visitato il Grand Canyon?	fuoriCont
-Vorrei vedere le letture della pressione che ho registrato nell’ultima settimana.	richiestaStatsPress
-Arrivederci, assistente! Grazie per avermi aiutato a gestire la mia ipertensione oggi.	saluti
-La mia pressione sanguigna è 130/80 e il mio battito cardiaco è 70.	inserDatiTot
-Sto cercando di ridurre lo stress attraverso tecniche di rilassamento come lo yoga e la meditazione.	inserDatiGener
-Ho avuto un po’ di affanno dopo una breve passeggiata, dovrei preoccuparmi?	pazienAllarmato
-Ho iniziato una nuova dieta ricca di fibre.	inserDatiGener
-Voglio annotare le mie recenti letture della pressione sanguigna.	richiestaInsDati
-Potresti mostrarmi con un immagine le misurazioni della frequenza cardiaca dell’ultima settimana?	richiestaStatsFreq
-La mia pressione oggi è 120/80 e la mia frequenza cardiaca è 72.	inserDatiTot
-vorrei aggiungere i dettagli sulla mia alimentazione.	richiestaInsDati
-Desidero visualizzare i miei dati più recenti.	richiestaStatsGener
-la mia frequenza cardiaca oggi è 72 battiti al minuto.	inserDatiFreq
-Ho iniziato a fare esercizio fisico regolarmente.	inserDatiGener
-Ciao, assistente! Spero che tu possa darmi qualche suggerimento su come gestire la mia ipertensione.	saluti
-La mia pressione sanguigna è 120/80.	inserDatiPress
-non sono stressato per la mia pressione alta.	pazienteSereno
-Ricordami l'ultima misurazione	richiestaStatsGener
-sono molto preoccupato per i miei livelli di pressione sanguigna.	pazienAllarmato
-la mia pressione sanguigna è 130/85.	inserDatiPress
-Avendo sotto controllo i miei dati mi sento inarrestabile.	pazienteSereno
-quale è il tuo parco nazionale preferito?	fuoriCont
-sono molto tranquillo riguardo alla mia pressione alta.	pazienteSereno
-Vorrei vedere tutte le misurazioni che ho inserito.	richiestaStatsGener
-a presto, assistente! spero che tu possa continuare ad aiutarmi a gestire la mia ipertensione.	saluti
-Sono molto tranquillo riguardo alla mia pressione alta.	pazienteSereno
-Quali sono le opzioni di trattamento farmacologico per l’ipertensione?	spiegazioni
-come il clima può influenzare la mia artrite?	fuoriContMed
-Buongiorno, tutto bene?	saluti
-Frequenza cardiaca di 100	inserDatiFreq
-Vorrei vedere tutte le letture della frequenza cardiaca che ho registrato.	richiestaStatsFreq
-qual è il tuo periodo storico preferito?	fuoriCont
-che tipo di musica ti piace ascoltare?	fuoriCont
-ciao, assistente! sono pronto per un altro giorno di sfide con la mia ipertensione.	saluti
-mi sento molto tranquillo riguardo alla mia pressione alta.	pazienteSereno
-cosa causa l’ipertensione?	spiegazioni
-Non ho paura della mia ipertensione.	pazienteSereno
-non ho ansia per la mia pressione alta.	pazienteSereno
-quale è la tua band preferita?	fuoriCont
-Sto cercando di consumare più frutta e verdura per mantenere una dieta equilibrata.	inserDatiGener
-Ho notato che la mia pressione sanguigna e frequenza cardiaca sono di 135/80 mmHg e 73 bpm.	inserDatiTot
-Dopo un trauma quanto tempo dovrei riposare?	fuoriContMed
-il mio battito cardiaco è 70 battiti al minuto.	inserDatiFreq
-Quali sono i sintomi della depressione?	fuoriContMed
-Mi piacerebbe esaminare il dato più recente sulla frequenza che ho registrato.	richiestaStatsFreq
-Mi sento molto bene oggi, la mia pressione sanguigna è stabile.	pazienteSereno
-Ho notato che la mia pressione sanguigna aumenta quando sono stressato.	inserDatiGener
-La mia pressione sanguigna più recente è di 120/70 mmHg.	inserDatiPress
-Ho appena controllato, la mia pressione è 140/85.	inserDatiPress
-sono molto preoccupato per la mia ipertensione.	pazienAllarmato
-ho notato che la mia pressione sanguigna scende quando dormo bene.	inserDatiGener
-posso registrare la mia frequenza cardiaca di oggi?	richiestaInsDati
-Ho appena misurato la mia frequenza cardiaca, è 75 battiti al minuto.	inserDatiFreq
-la mia pressione sanguigna attuale è 125/80.	inserDatiPress
-Potresti mostrarmi tutte le mie misurazioni della frequenza cardiaca?	richiestaStatsFreq
-La mia pressione sanguigna è X/Y e il mio battito cardiaco è 75.	inserDatiTot
-ho avuto un episodio di palpitazioni ieri.	inserDatiGener
-quali sono i trattamenti disponibili per l’artrite?	fuoriContMed
-Fornisci tutte le mie misurazioni sulla frequenza cardiaca?	richiestaStatsFreq
-Qual è il tuo periodo storico preferito?	fuoriCont
-Desidero visualizzare il mio dato più recente sulla frequenza cardiaca.	richiestaStatsFreq
-sono molto stressato a causa della mia ipertensione.	pazienAllarmato
-ho notato che il mio livello di stress è aumentato ultimamente.	inserDatiGener
-Dammi i dati della frequenza cardiaca nell’ultima settimana	richiestaStatsFreq
-Ho tutti i dolori del mondo	fuoriContMed
-come l’ambiente può influenzare l’ipertensione?	spiegazioni
-Quali sono le mie misurazioni della frequenza cardiaca dell’ultimo mese?	richiestaStatsFreq
-Dammi i dati della frequenza cardiaca nell’ultimo mese	richiestaStatsFreq
-la mia pressione sanguigna è 130/80 e il mio battito cardiaco è 70.	inserDatiTot
-Qual è stata l'ultima misurazione sulla frequenza cardiaca?	richiestaStatsFreq
-Mi piacerebbe controllare tutte le letture della frequenza cardiaca che ho registrato.	richiestaStatsFreq
-Dammi le misurazioni della settimana in un grafico	richiestaStatsGener
-buongiorno, assistente! sono pronto per affrontare la mia ipertensione con il tuo aiuto.	saluti
-come la genetica può influenzare l’ipertensione?	spiegazioni
-ho notato che la mia pressione sanguigna scende quando mi rilasso.	inserDatiGener
-Mi piacerebbe esaminare i dati più recenti sulla pressione che ho registrato.	richiestaStatsPress
-Forniscimi i dati della pressione sanguigna?	richiestaStatsPress
-la mia pressione sanguigna è 140/90 e il mio battito cardiaco è 75.	inserDatiTot
-sono molto preoccupato per la mia ipertensione.	pazienAllarmato
-Ecco i miei dati di oggi: la mia pressione sanguigna è 135/85 e la mia frequenza cardiaca è 72.	inserDatiTot
-Desidero visualizzare tutte le mie letture registrate.	richiestaStatsGener
-Vorrei vedere le misurazioni che ho registrato nell’ultima settimana.	richiestaStatsGener
-Buongiorno, assistente! Spero che tu sia pronto ad aiutarmi a gestire la mia ipertensione oggi.	saluti
-come posso prevenire le malattie cardiache?	fuoriContMed
-posso registrare i dati della mia frequenza cardiaca del prossimo anno?	richiestaInsDati
-ho avuto un episodio di vertigini questa mattina.	inserDatiGener
-ho smesso di bere tè nero da due settimane.	inserDatiGener
-quale è il tuo genere di film preferito?	fuoriCont
-Ho notato che la mia pressione sanguigna scende quando sono felice.	inserDatiGener
-Mostrami con un immagine i valori sulla mia pressione?	richiestaStatsPress
-Sono Sara e ho 15 anni 	inserDatiGener
-la mia frequenza cardiaca è 68 battiti al minuto.	inserDatiFreq
-Quali sono i dati della pressione sanguigna dell’ultimo mese?	richiestaStatsPress
-Vorrei rivedere l’ultimo dato sulla frequenza che ho inserito.	richiestaStatsFreq
-Potrei vedere le misurazioni che ho registrato nell’ultima settimana?	richiestaStatsGener
-Mi piacerebbe esaminare i dati più recenti che ho registrato.	richiestaStatsGener
-buonasera, assistente! spero che tu possa darmi qualche consiglio su come rilassarmi per gestire la mia ipertensione.	saluti
-Potresti mostrarmi le mie misurazioni della frequenza cardiaca dell’ultima settimana?	richiestaStatsFreq
-Quali cambiamenti nello stile di vita posso fare per gestire il mio colesterolo alto?	fuoriContMed
-come l’esercizio fisico può aiutare a gestire l’ipertensione?	spiegazioni
-Potresti mostrarmi le mie letture dell’ultima settimana?	richiestaStatsGener
-La mia pressione oggi è 120/80.	inserDatiPress
-il mio battito cardiaco è 75 battiti al minuto.	inserDatiFreq
-come posso prevenire l’ipertensione?	spiegazioni
-Vorrei dare un’occhiata alle letture che ho inserito negli ultimi 7 giorni.	richiestaStatsGener
-la mia pressione sanguigna è 135/85.	inserDatiPress
-Buonasera, assistente! Spero che tu possa aiutarmi a capire meglio la mia ipertensione.	saluti
-Ho appena controllato e la mia frequenza cardiaca è di 69 bpm.	inserDatiFreq
-hai mai provato a fare immersioni?	fuoriCont
-Alla prossima, assistente! Non vedo l’ora di continuare a lavorare con te sulla mia ipertensione.	saluti
-Non ricordo le statistiche degli ultimi sette giorni 	richiestaStatsGener
-Hai mai pensato di fare un viaggio in mongolfiera?	fuoriCont
-come la razza può influenzare l’ipertensione?	spiegazioni
-Potresti mostrarmi tutti i miei dati?	richiestaStatsGener
-Posso registrare la mia frequenza cardiaca di oggi?	richiestaInsDati
-La mia pressione sanguigna e frequenza cardiaca attuali sono di 140/85 mmHg e 74 bpm.	inserDatiTot
-Qual è la mia ultima statistica registrata?	richiestaStatsGener
-la mia pressione sanguigna è 140/90.	inserDatiPress
-il mio battito cardiaco è 80 battiti al minuto.	inserDatiFreq
-la mia frequenza cardiaca è 72 battiti al minuto.	inserDatiFreq
-la mia pressione sanguigna è 130/80.	inserDatiPress
-Si è rotto il ginocchio	fuoriContMed
-78 125	inserDatiPress
-Potresti mostrarmi le mie ultime misurazioni della pressione?	richiestaStatsPress
-Hola	saluti
-Ho misurato i miei dati: sistolica 120, diastolica 80 e frequenza cardiaca 75	inserDatiTot
-Oggi è freddo e la temperatura è di 10 gradi	fuoriCont
-la mia frequenza cardiaca è 68 battiti al minuto.	inserDatiFreq
-Voglio un riassunto di tutte le mie statistiche?	richiestaStatsGener
-Quali sono le opzioni di trattamento farmacologico per l’ipertensione?	spiegazioni
-Desidero consultare le mie letture più recenti.	richiestaStatsGener
-buonasera, assistente! sono pronto per rilassarmi e riflettere sulla mia giornata con l’ipertensione.	saluti
-Buongiorno, assistente! Spero tu possa darmi qualche consiglio sulla mia ipertensione oggi.	saluti
-come il sesso può influenzare l’ipertensione?	spiegazioni
-Potrei vedere le ultime misurazioni della frequenza che ho registrato nell’ultimo mese?	richiestaStatsFreq
-non ho paura della mia pressione alta.	pazienteSereno
-Ho accompagnato i miei figli a scuola.	fuoriCont
-La mia pressione oggi è 130/90 e la mia frequenza cardiaca è 90 bpm.	inserDatiTot
- ultima misurazione della frequenza cardiaca	richiestaStatsFreq
-La mia pressione sanguigna è 130/85.	inserDatiPress
-Hai mai provato a fare yoga?	fuoriCont
-Potrei vedere le ultime misurazioni della pressione che ho registrato nell’ultimo mese?	richiestaStatsPress
-Qual è la mia ultima misurazione della pressione?	richiestaStatsPress
-ho smesso di bere alcol da due settimane.	inserDatiGener
-la mia pressione sanguigna è 135/85 e la mia frequenza cardiaca è 72.	inserDatiTot
-come la gravidanza può influenzare l’ipertensione?	spiegazioni
-Vorrei vedere le misurazioni più recenti che ho registrato.	richiestaStatsGener
-sono molto ansioso per la mia ipertensione.	pazienAllarmato
-Mi sento un po’ stanco e ho notato che la mia pressione sanguigna è più alta del solito.	pazienAllarmato
-Desidero consultare la mia ultima lettura del battito cardiaco.	richiestaStatsFreq
-Potresti mostrarmi le mie misurazioni della pressione dell’ultima settimana?	richiestaStatsPress
-Quali sono le mie statistiche relative all’ultimo mese?	richiestaStatsGener
-posso inserire i dati della mia pressione sanguigna di questo mese?	richiestaInsDati
-Ho notato che la mia pressione sanguigna è di 135/80 mmHg.	inserDatiPress
-posso inserire le mie ultime misurazioni?	richiestaInsDati
-Mi sento un po’ debole e la mia pressione sanguigna è alta, dovrei andare al pronto soccorso?	pazienAllarmato
-Voglio i dati della frequenza cardiaca dell’ultimo mese	richiestaStatsFreq
-Ho appena fatto un controllo, la mia pressione è 135/85.	inserDatiPress
-Qual è un buon stile di vita che abbassa il rischio di sviluppare ipertensione?	spiegazioni
-Mostrami tutte le mie misurazioni della pressione arteriosa?	richiestaStatsPress
-ho paura che la mia pressione alta possa causare problemi di appetito.	pazienAllarmato
-ho avuto un episodio di sudorazione eccessiva la scorsa notte.	inserDatiGener
-Hai mai provato a fare paracadutismo?	fuoriCont
-Quali sono i dati delle ultime quattro settimane?	richiestaStatsGener
-posso aggiungere i dati della mia pressione sanguigna di quest’anno?	richiestaInsDati
-Ue, assistente! Spero tu possa darmi qualche suggerimento su come gestire la mia ipertensione.	saluti
-non sono stressato per la mia ipertensione.	pazienteSereno
-Mi si è rotta l'auto, cosa posso fare?	fuoriCont
-arrivederci, assistente! sono grato per il tuo aiuto nel mio viaggio con l’ipertensione.	saluti
-Come viene diagnosticata l’ipertensione?	spiegazioni
-ho paura che la mia pressione alta possa causare problemi di sonno.	pazienAllarmato
-Sono molto pacifico riguardo alla mia ipertensione.	pazienteSereno
-Mi sento in forma, ho fatto esercizio fisico regolarmente questa settimana.	pazienteSereno
-Ho bisogno di aiuto urgentemente	pazienAllarmato
-la mia pressione sanguigna è 140/90 e il mio battito cardiaco è 75.	inserDatiTot
-come la razza può influenzare il mio rischio di malattie cardiache?	fuoriContMed
-Buongiorno, mi annoio	saluti
-la mia frequenza cardiaca è 72 battiti al minuto.	inserDatiFreq
-Vorrei rivedere i dati sulla pressione che ho inserito nell’ultimo mese.	richiestaStatsPress
-Desidero visualizzare i miei dati sulla pressione dell’ultima settimana.	richiestaStatsPress
-La mia pressione sanguigna è 125/80.	inserDatiPress
-sono molto tranquillo riguardo alla mia ipertensione.	pazienteSereno
-ciao, assistente! spero che tu possa darmi qualche suggerimento su come gestire la mia ipertensione.	saluti
-Potrei vedere le ultime misurazioni della pressione che ho registrato nell’ultima settimana?	richiestaStatsPress
-come l’esercizio fisico può aiutare a gestire il mio diabete?	fuoriContMed
-Desidero consultare i dati delle ultime 4 settimane	richiestaStatsGener
-la mia frequenza cardiaca è 72 battiti al minuto.	inserDatiFreq
-come la menopausa può influenzare il mio peso?	fuoriContMed
-La mia frequenza cardiaca più recente è di 71 bpm.	inserDatiFreq
-la mia pressione sanguigna è 120/80 e il mio battito cardiaco è 70.	inserDatiTot
-ho paura che la mia ipertensione possa causare problemi di respirazione.	pazienAllarmato
-Quali sono le mie misurazioni della pressione dell’ultimo mese?	richiestaStatsPress
-non sono preoccupato per la mia ipertensione.	pazienteSereno
-Ho iniziato una nuova dieta povera di zuccheri.	inserDatiGener
-Ho smesso di fumare da un anno per migliorare la mia salute cardiovascolare.	inserDatiGener
-Sono riuscito a fare una lunga passeggiata oggi senza affaticarmi.	pazienteSereno
-Vorrei dare un’occhiata alle misurazioni che ho fatto nell’ultimo mese.	richiestaStatsGener
-la mia pressione sanguigna è 130/85 e il mio battito cardiaco è 70.	inserDatiTot
-La mia pressione sanguigna attuale è 125/80.	inserDatiPress
-la mia pressione sanguigna è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
-La mia ultima lettura della pressione sanguigna e della frequenza cardiaca era di 130/85 mmHg e 68 bpm.	inserDatiTot
 Mi sento molto rilassato e la mia pressione sanguigna è ottima.	pazienteSereno
-120 78	inserDatiPress
-Dammi il grafico con andamento di pressione arteriosa nell'ultimo mese	richiestaStatsPress
-ho appena controllato, la mia pressione è 140/85 e la mia frequenza cardiaca è 75.	inserDatiTot
-sono molto pacifico riguardo alla mia ipertensione.	pazienteSereno
-ho iniziato a meditare per aiutare a gestire lo stress.	inserDatiGener
-Hai mai provato a fare surf?	fuoriCont
-come posso gestire il mio diabete?	fuoriContMed
-Mi piacerebbe aggiornare il mio registro sanitario con le mie ultime letture della pressione arteriosa.	richiestaInsDati
-Vorrei rivedere tutti i dati sulla frequenza  che ho inserito.	richiestaStatsFreq
-Fortunatamente mi sento stabile.	pazienteSereno
-Potrei controllare le ultime misurazioni della pressione che ho registrato nell’ultima settimana?	richiestaStatsPress
-Quali sono i fattori di rischio per l’osteoporosi?	fuoriContMed
-come l’età può influenzare l’ipertensione?	spiegazioni
-Non ricordo la traccia dei dati nell'ultimo mese	richiestaStatsGener
-ho iniziato una nuova dieta ricca di fibre.	inserDatiGener
-come una dieta sana può aiutare a gestire l’ipertensione?	spiegazioni
-Non mi sento molto bene, la mia frequenza cardiaca è più alta del solito.	pazienAllarmato
-Desidero visualizzare le mie letture dell’ultimo mese.	richiestaStatsGener
-Ho paura che la mia ipertensione possa peggiorare.	pazienAllarmato
-Qual è il miglior modo per effettuare una corretta misurazione delle pressione?	spiegazioni
-ho iniziato a fare stretching regolare per aiutare a gestire lo stress.	inserDatiGener
-Desidero consultare le mie letture del battito cardiaco dell’ultima settimana.	richiestaStatsFreq
+posso aggiungere i dati della mia pressione sanguigna di domani?	richiestaInsDati
+Arrivederci, assistente! Grazie per avermi aiutato a gestire la mia ipertensione oggi.	saluti
+Hai mai visitato il Grand Canyon?	fuoriCont
+non sono stressato per la mia ipertensione.	pazienteSereno
+La mia ultima lettura della frequenza cardiaca era di 68 bpm.	inserDatiFreq
+non ho nervosismo per la mia ipertensione.	pazienteSereno
+Vorrei tracciare le mie recenti misurazioni della pressione arteriosa.	richiestaInsDati
+Buongiorno, mi annoio	saluti
+Vorrei vedere le letture della pressione che ho registrato nell’ultima settimana.	richiestaStatsPress
+ho smesso di fumare da un mese.	inserDatiGener
+alla prossima, assistente! non vedo l’ora di continuare a lavorare con te sulla mia ipertensione.	saluti
+Sto cercando di limitare la caffeina per evitare picchi di pressione sanguigna.	inserDatiGener
+non sono preoccupato per la mia pressione alta.	pazienteSereno
+Hai mai provato a fare sci di fondo?	fuoriCont
+Cosa causa l’ipertensione?	spiegazioni
+hai mai provato a fare arrampicata?	fuoriCont
+Potresti mostrarmi le mie misurazioni della pressione dell’ultimo mese?	richiestaStatsPress
+hai mai visitato il museo del louvre?	fuoriCont
+Potrei vedere tutte le misurazioni della pressione che ho registrato?	richiestaStatsPress
+La mia frequenza cardiaca oggi è 75 bpm.	inserDatiFreq
+non ho ansia per la mia pressione alta.	pazienteSereno
+ho iniziato a fare esercizio fisico regolarmente.	inserDatiGener
+Posso aggiungere i dati della mia pressione sanguigna di quest’anno?	richiestaInsDati
+Potrei controllare tutte le misurazioni della frequenza cardiaca che ho registrato?	richiestaStatsFreq
+hai mai provato a fare immersioni?	fuoriCont
+Quando devo fare un collquio il mio cuore è infermabile.	pazienAllarmato
+ciao, assistente! sono pronto per un altro giorno di sfide con la mia ipertensione.	saluti
+Ho notato che la mia pressione sanguigna e frequenza cardiaca sono di 135/80 mmHg e 73 bpm.	inserDatiTot
+come l’esercizio fisico può aiutare a gestire l’ipertensione?	spiegazioni
+Ho iniziato a fare yoga per aiutare a gestire lo stress.	inserDatiGener
+il mio battito cardiaco è 72 battiti al minuto.	inserDatiFreq
+Mi piacerebbe controllare l’ultima lettura del battito cardiaco che ho registrato.	richiestaStatsFreq
+ultima misurazione della frequenza cardiaca	richiestaStatsFreq
+come l’ambiente può influenzare la mia asma?	fuoriContMed
+La mia frequenza cardiaca oggi è 72 battiti al minuto.	inserDatiFreq
+Vorrei vedere le misurazioni che ho registrato nell’ultimo mese.	richiestaStatsGener
+Desidero visualizzare i miei dati sulla pressione dell’ultimo mese.	richiestaStatsPress
+La mia pressione sanguigna è 120/80.	inserDatiPress
+A presto, assistente! Spero che tu possa continuare ad aiutarmi a gestire la mia ipertensione.	saluti
+quali sono i trattamenti disponibili per l’ipertensione?	spiegazioni
+Ho appena misurato la mia pressione sanguigna e la frequenza cardiaca, i valori sono 120/80 mmHg e 72 bpm.	inserDatiTot
+ho paura che la mia ipertensione possa peggiorare.	pazienAllarmato
+Potresti aiutarmi a registrare le mie nuove letture della pressione sanguigna?	richiestaInsDati
+Mi sento bene e infatti le misurazioni lo confermano	pazienteSereno
+Vorrei vedere l’ultima lettura della frequenza che ho registrato.	richiestaStatsFreq
+Ho notato che il mio livello di stress è aumentato ultimamente.	inserDatiGener
+Dammi il grafico con andamento di pressione arteriosa nell'ultima settimana	richiestaStatsPress
+Ho appena fatto una lettura e la mia frequenza è di 72 bpm.	inserDatiFreq
+posso registrare i dati della mia frequenza cardiaca di domani?	richiestaInsDati
+Voglio vedere i dati relativi alla frequenza	richiestaStatsFreq
+Ho appena misurato la mia pressione, è 130/85 e il mio battito cardiaco è 75.	inserDatiTot
+Qual è il tuo poeta preferito?	fuoriCont
+qual è il tuo sport preferito?	fuoriCont
+Mi sento molto male, cosa dovrei fare?	pazienAllarmato
+Ho appena misurato la mia pressione sanguigna e i valori sono 120/80 mmHg.	inserDatiPress
+posso aggiungere i dati della mia pressione sanguigna di quest’anno?	richiestaInsDati
+Posso aggiungere i dati della mia pressione sanguigna di questa settimana?	richiestaInsDati
+Si è rotto il ginocchio	fuoriContMed
+ho mal di testa posso misurare la pressione?	spiegazioni
+Ho paura che la mia pressione alta possa causare un attacco di cuore.	pazienAllarmato
+Avendo sotto controllo i miei dati mi sento inarrestabile.	pazienteSereno
+Desidero visualizzare i miei dati più recenti.	richiestaStatsGener
+A B	inserDatiPress
+mi sento molto sereno riguardo alla mia ipertensione.	pazienteSereno
+la mia pressione sanguigna è 140/90 e la mia frequenza cardiaca è 80 battiti al minuto.	inserDatiTot
+ho smesso di bere alcol da due settimane.	inserDatiGener
+posso inserire i dati della mia pressione sanguigna di ieri?	richiestaInsDati
+X su Y	inserDatiPress
+Ho avuto un raffreddore che non sembra migliorare.	fuoriContMed
+La mia pressione sanguigna è 130/80.	inserDatiPress
+Mi si è rotta l'auto, cosa posso fare?	fuoriCont
+Ho letto un libro	fuoriCont
+Rappresenta le misurazioni della pressione arteriosa dell’ultimo mese con un immagine	richiestaStatsPress
+Potresti mostrarmi i miei dati più recenti?	richiestaStatsGener
+Ho appena fatto una lettura e la mia pressione sanguigna e frequenza cardiaca sono di 125/80 mmHg e 72 bpm.	inserDatiTot
+Mostrami le statistiche	richiestaStatsGener
+buon pomeriggio, assistente! spero che tu possa aiutarmi a monitorare la mia ipertensione.	saluti
+Posso registrare la mia frequenza cardiaca di oggi?	richiestaInsDati
+Misurazioni della pressione dell’ultimo mese?	richiestaStatsPress
+Come l’ipertensione può influenzare la mia vita quotidiana?	spiegazioni
+quale è la tua canzone preferita al momento?	fuoriCont
+Vorrei dare un’occhiata alle ultime letture che ho inserito.	richiestaStatsGener
+Frequenza cardiaca di 100	inserDatiFreq
+voglio inserire i dati sulla frequenza	richiestaInsDati
+cosa causa l’ipertensione?	spiegazioni
+ho iniziato a prendere un nuovo farmaco per l’ipertensione.	inserDatiGener
+posso aggiungere i dati della mia pressione sanguigna del prossimo anno?	richiestaInsDati
+ho paura che la mia pressione alta possa causare problemi di equilibrio.	pazienAllarmato
+come il clima può influenzare l’ipertensione?	spiegazioni
+sono molto nervoso per i miei livelli di pressione sanguigna.	pazienAllarmato
+Vorrei dare un’occhiata all’ultima lettura della frequenza cardiaca che ho inserito.	richiestaStatsFreq
+come il sale può influenzare l’ipertensione?	spiegazioni
+quale è il tuo parco nazionale preferito?	fuoriCont
+Quali sono i sintomi della depressione?	fuoriContMed
+Potrei controllare le ultime misurazioni della pressione che ho registrato nell’ultimo mese?	richiestaStatsPress
+vorrei tanto medicare la ferita al braccio di mio figlio, potresti fornirmi dei consigli?	fuoriContMed
+posso registrare i dati della mia frequenza cardiaca di questa settimana?	richiestaInsDati
+Potresti mostrarmi la mia ultima misurazione della frequenza cardiaca?	richiestaStatsFreq
+Posso inserire la mia pressione sanguigna di oggi?	richiestaInsDati
+Qual è l'andamento delle misurazioni sulla pressione?	richiestaStatsPress
+Qual è il tuo piatto italiano preferito?	fuoriCont
+Sono molto rilassato riguardo alla mia ipertensione.	pazienteSereno
+Oggi è freddo e la temperatura è di 10 gradi	fuoriCont
+La mia pressione stamattina era alta	pazienAllarmato
+Hai mai provato a fare paracadutismo?	fuoriCont
+Potrei controllare le ultime misurazioni della pressione che ho registrato?	richiestaStatsPress
+Ho seguito il tuo consiglio e mi sento molto meglio, la mia pressione sanguigna è migliorata.	pazienteSereno
+Mi piacerebbe controllare le ultime letture che ho registrato.	richiestaStatsGener
+Vorrei i dati dell’ultima settimana	richiestaStatsGener
+ho notato che il mio livello di stress è aumentato ultimamente.	inserDatiGener
+posso inserire i dati della mia pressione sanguigna e della mia frequenza cardiaca di oggi?	richiestaInsDati
+Desidero visualizzare tutte le mie letture registrate.	richiestaStatsGener
+hai mai pensato di fare un viaggio in mongolfiera?	fuoriCont
+Quali sono stati i valori sulla frequenza cardiaca nell'ultimo mese	richiestaStatsFreq
+mi fornisci un grafico contenente tutti i dati sulla pressione e sulla frequenza	richiestaStatsGener
+ecco le mie misurazioni. Pressione 110/80	inserDatiPress
+Sono un po’ preoccupato, la mia pressione sanguigna è stata instabile ultimamente.	pazienAllarmato
+quali sono le opzioni di trattamento farmacologico per l’ipertensione?	spiegazioni
+La mia pressione oggi è 120/80.	inserDatiPress
+Potrei vedere tutte le misurazioni della frequenza cardiaca che ho registrato?	richiestaStatsFreq
+arrivederci, assistente! sono grato per il tuo aiuto nel mio viaggio con l’ipertensione.	saluti
+mostrami le statistiche sulla frequenza	richiestaStatsFreq
+vorrei registrare la frequenza, è 80	inserDatiFreq
+misurazioni della pressione sanguigna dell’ultima settimana in un grafico	richiestaStatsPress
+Buongiorno, tutto bene?	saluti
+L'ipertensione ha conseguenze sui polmoni?	spiegazioni
+addio, assistente! grazie per avermi fornito informazioni preziose sulla mia ipertensione.	saluti
+sono molto calmo riguardo alla mia pressione alta.	pazienteSereno
+Ho notato che la mia pressione sanguigna aumenta quando sono stressato.	inserDatiGener
+voglia sia i dati sulla frequenza che sulla pressione	richiestaStatsGener
+Ho iniziato una nuova dieta per ridurre il sale.	inserDatiGener
+Potrei controllare le ultime misurazioni della frequenza cardiaca che ho registrato nell’ultimo mese?	richiestaStatsFreq
+vorrei registrare i miei sintomi di oggi.	richiestaInsDati
+ho avuto un episodio di palpitazioni ieri.	inserDatiGener
+ciao, assistente! sono pronto per un altro giorno di successi nella gestione della mia ipertensione.	saluti
+Mi sento in forma.	pazienteSereno
+Forniscimi i dati della pressione sanguigna?	richiestaStatsPress
+Quali sono i rischi per la salute associati all’ipertensione?	spiegazioni
+ho rimediato una frattura, come dovrei fare per guarire il prima possibile?	fuoriContMed
 a presto, assistente! sono pronto per un altro giorno di successi nella gestione della mia ipertensione.	saluti
 La mia pressione sanguigna è 130/80 e il mio battito cardiaco è 70.	inserDatiTot
-Ho qualche misura di pressione alta ogni tanto, ma immagino sia normale	pazienteSereno
-la mia frequenza cardiaca è 68 battiti al minuto.	inserDatiFreq
-la mia frequenza cardiaca è 72 battiti al minuto.	inserDatiFreq
-Come l’asma può influenzare la mia vita quotidiana?	fuoriContMed
-Vorrei vedere le letture della pressione che ho registrato nell’ultimo mese.	richiestaStatsPress
-come viene diagnosticato il cancro al seno?	fuoriContMed
-Mi piacerebbe controllare tutte le letture della pressione che ho registrato.	richiestaStatsPress
-Alla prossima, assistente! Non vedo l’ora di continuare a lavorare con te sulla mia ipertensione.	saluti
-Arrivederci, assistente! Grazie per avermi aiutato a gestire la mia ipertensione oggi.	saluti
-il mio battito cardiaco è 70 battiti al minuto.	inserDatiFreq
-Sono un po’ preoccupato, la mia pressione sanguigna è stata instabile ultimamente.	pazienAllarmato
-la mia pressione sanguigna è 135/85.	inserDatiPress
-Ho appena fatto una lettura e la mia pressione sanguigna e frequenza cardiaca sono di 125/80 mmHg e 72 bpm.	inserDatiTot
-Potresti mostrarmi le mie statistiche dell’ultima settimana?	richiestaStatsGener
-Cosa causa l’ipertensione?	spiegazioni
-Quali sono i rischi per la salute associati all’ipertensione?	spiegazioni
-Faccio esercizio fisico regolarmente, almeno 30 minuti al giorno.	inserDatiGener
-Come viene diagnosticato il cancro al seno?	fuoriContMed
-Ho appena fatto una lettura e la mia pressione sanguigna è di 125/80 mmHg.	inserDatiPress
-Desidero consultare le mie letture della pressione dell’ultima settimana.	richiestaStatsPress
-La mia pressione sanguigna attuale è di 140/85 mmHg.	inserDatiPress
-Mi piacerebbe controllare le ultime letture della frequenza cardiaca che ho registrato nell’ultimo mese.	richiestaStatsFreq
-posso registrare i dati della mia frequenza cardiaca di quest’anno?	richiestaInsDati
-Mi sento stanco tutto il tempo.	fuoriContMed
-La mia pressione sanguigna è X/Y e la mia frequenza cardiaca è 68.	inserDatiTot
-Oggi mi sento molto rilassato grazie. 	pazienteSereno
-ho notato che la mia pressione sanguigna aumenta quando sono stressato.	inserDatiGener
-sono molto rilassato riguardo alla mia ipertensione.	pazienteSereno
-Come l’ipertensione può influenzare la mia vita quotidiana?	spiegazioni
-Potresti mostrarmi le mie misurazioni della frequenza cardiaca dell’ultima settimana in un grafico?	richiestaStatsFreq
-Ho notato un cambiamento nel mio appetito.	fuoriContMed
-ho appena fatto un controllo, la mia pressione è 135/85.	inserDatiPress
-Mi piacerebbe esaminare i dati registrati negli ultimi 7 giorni	richiestaStatsGener
-Quali cambiamenti nello stile di vita posso fare per gestire l’ipertensione?	spiegazioni
-la mia pressione sanguigna è 125/80.	inserDatiPress
-ultima misurazione della pressione arteriosa	richiestaStatsPress
-Potresti spiegarmi come l’ipertensione può influenzare la mia salute?	spiegazioni
-ho paura che la mia ipertensione possa causare problemi di energia.	pazienAllarmato
-Vorrei dare un’occhiata alle ultime letture della pressione che ho inserito.	richiestaStatsPress
-il mio battito cardiaco è 75 battiti al minuto.	inserDatiFreq
-Sto cercando di evitare cibi ad alto contenuto di grassi saturi per mantenere bassi i livelli di colesterolo.	inserDatiGener
-La mia pressione sanguigna è 140/90 e il mio battito cardiaco è 75.	inserDatiTot
-sono molto calmo riguardo alla mia ipertensione.	pazienteSereno
-ciao, assistente! sono pronto per un altro giorno di monitoraggio della mia ipertensione.	saluti
-Mostrami la frequenza nell'ultima settimana	richiestaStatsFreq
-hai mai visitato il colosseo?	fuoriCont
-Qual è il tuo genere di film preferito?	fuoriCont
-Non ho ansia per la mia pressione alta.	pazienteSereno
-Vorrei dare un’occhiata alle ultime letture della pressione che ho inserito nell’ultimo mese.	richiestaStatsPress
-la mia pressione sanguigna è 140/90 e il mio battito cardiaco è 75.	inserDatiTot
-la mia pressione sanguigna è 135/85 e la mia frequenza cardiaca è 72.	inserDatiTot
-Come posso prevenire l’ipertensione?	spiegazioni
-Mi piacerebbe controllare le ultime letture del battito cardiaco che ho registrato nell’ultima settimana.	richiestaStatsFreq
-hai mai visitato la torre eiffel?	fuoriCont
-Posso inserire i dati della mia pressione sanguigna di ieri?	richiestaInsDati
-il mio battito cardiaco è 70 battiti al minuto.	inserDatiFreq
-Mio figlio ha la febbre	fuoriContMed
-la mia pressione sanguigna è 130/80 e il mio battito cardiaco è 70.	inserDatiTot
-Ho iniziato a seguire una dieta a basso contenuto di sale per aiutare a controllare la mia pressione sanguigna.	inserDatiGener
-Ho avuto un episodio di sudorazione eccessiva la scorsa notte.	inserDatiGener
-La mia pressione sanguigna è 140/90.	inserDatiPress
-Vorrei vedere le misurazioni che ho registrato nell’ultimo mese.	richiestaStatsGener
-non ho paura della mia pressione alta.	pazienteSereno
-Bevo alcol solo con moderazione per evitare picchi di pressione sanguigna.	inserDatiGener
-Qual è la tua città preferita in Italia?	fuoriCont
-Mi piacerebbe controllare le ultime letture della pressione che ho registrato nell’ultima settimana.	richiestaStatsPress
-Ho appena controllato e la mia pressione sanguigna è di 130/75 mmHg.	inserDatiPress
-vorrei inserire i dati del mio monitoraggio della pressione sanguigna di questa settimana.	richiestaInsDati
-non ho paura della mia ipertensione.	pazienteSereno
-La mia pressione sanguigna è 135/85.	inserDatiPress
-Ho letto un libro	fuoriCont
-Ho appena finito di fare una lunga passeggiata, è stata rilassante.	fuoriCont
-Il mio battito cardiaco è 80 battiti al minuto.	inserDatiFreq
-Ho iniziato a prendere un nuovo farmaco per l’ipertensione.	inserDatiGener
-Qual è il tuo compositore classico preferito?	fuoriCont
-Potrei controllare le ultime misurazioni della frequenza cardiaca che ho registrato negli ultimi sette giorni?	richiestaStatsFreq
-Buonanotte, assistente! Grazie per avermi aiutato a capire meglio la mia ipertensione.	saluti
-la mia frequenza cardiaca attuale è 68 battiti al minuto.	inserDatiFreq
-Ho un forte mal di testa, cosa posso fare?	fuoriContMed
-quale è la tua città preferita in italia?	fuoriCont
-hai mai provato a fare arrampicata?	fuoriCont
-sono molto ansioso per i miei livelli di pressione sanguigna.	pazienAllarmato
-quali sono i sintomi della depressione?	fuoriContMed
-Desidero visualizzare tutti i miei dati sulla pressione.	richiestaStatsPress
-Dammi le mie misurazioni sulla pressione dell’ultima settimana?	richiestaStatsPress
-Il mio amico sta male	fuoriContMed
-Riporta le misurazioni della pressione arteriosa dell’ultima settimana graficamente	richiestaStatsPress
-posso registrare i dati della mia frequenza cardiaca di questo mese?	richiestaInsDati
-Ho avuto dolori muscolari.	fuoriContMed
-Ho iniziato a fare stretching regolare per aiutare a gestire lo stress.	inserDatiGener
-La mia pressione sanguigna è 130/80 e il mio battito cardiaco è 72.	inserDatiTot
-Potresti mostrarmi le mie misurazioni della frequenza cardiaca dell’ultimo mese?	richiestaStatsFreq
-La mia pressione sanguigna è 125/80.	inserDatiPress
-Posso registrare i dati della mia frequenza cardiaca di quest’anno?	richiestaInsDati
-Vorrei dare un’occhiata all’ultima lettura della frequenza cardiaca che ho inserito.	richiestaStatsFreq
-ciao, assistente! sono pronto per un altro giorno di gestione della mia ipertensione.	saluti
-L'ipertensione ha conseguenze sui polmoni?	spiegazioni
-posso aggiungere i dati della mia pressione sanguigna del prossimo anno?	richiestaInsDati
-La mia pressione sanguigna oggi è X/Y e la mia frequenza cardiaca è Z bpm.	inserDatiTot
-Qual è il tuo sport preferito?	fuoriCont
-La mia pressione sanguigna è 125/80.	inserDatiPress
-Ho avuto un episodio di vertigini questa mattina.	inserDatiGener
-ho paura che la mia pressione alta possa causare problemi di umore.	pazienAllarmato
-ho paura che la mia ipertensione possa causare problemi di concentrazione.	pazienAllarmato
-Come posso prevenire le malattie cardiache?	fuoriContMed
-Rappresenta le misurazioni della pressione arteriosa dell’ultimo mese con un immagine	richiestaStatsPress
-quali sono le opzioni di trattamento farmacologico per l’ansia?	fuoriContMed
-Quali sono i sintomi dell’ipertensione?	spiegazioni
-ho paura che la mia ipertensione possa causare problemi di memoria.	pazienAllarmato
-Mi piacerebbe controllare i dati registrati nell’ultimo mese.	richiestaStatsGener
-Dammi le mie misurazioni della pressione sanguigna dell’ultimo mese in un grafico	richiestaStatsPress
-ho iniziato una nuova dieta ricca di frutta e verdura.	inserDatiGener
-Vorrei tracciare le mie recenti misurazioni della pressione arteriosa.	richiestaInsDati
-Mi sento molto tranquillo riguardo alla mia pressione alta.	pazienteSereno
-Posso aggiungere i dati della mia pressione sanguigna di questa mattina?	richiestaInsDati
-Ho avuto un raffreddore che non sembra migliorare.	fuoriContMed
-Misurando ho ottenuto una pressione sanguigna di X/Y e la frequenza cardiaca di 72.	inserDatiTot
-Mi sento bene e infatti le misurazioni lo confermano	pazienteSereno
-la mia pressione sanguigna è 140/90.	inserDatiPress
-Una volta a settimana mangio la pizza	fuoriCont
-La mia pressione sanguigna è 140/90.	inserDatiPress
-quali sono i fattori di rischio per l’ipertensione?	spiegazioni
-la mia pressione sanguigna è 125/80.	inserDatiPress
-la mia pressione sanguigna è 140/90.	inserDatiPress
-la mia pressione sanguigna è 130/80 e il mio battito cardiaco è 70.	inserDatiTot
-Hai mai visitato il Colosseo?	fuoriCont
-ho avuto un attacco di panico ieri sera.	inserDatiGener
-Sono un fumatore	inserDatiGener
-Dammi i dati dell'ultimo mese 	richiestaStatsGener
-la mia pressione sanguigna è 135/85 e la mia frequenza cardiaca è 72.	inserDatiTot
-posso registrare i dati della mia frequenza cardiaca di ieri?	richiestaInsDati
-Potresti mostrarmi tutte le mie misurazioni della pressione?	richiestaStatsPress
-a presto, assistente! sono pronto per un altro giorno di successi nella gestione della mia ipertensione.	saluti
-Ho avuto problemi di vista.	fuoriContMed
-Mostrami le statistiche	richiestaStatsGener
-hai mai pensato di fare un viaggio in mongolfiera?	fuoriCont
-sono molto pacifico riguardo alla mia pressione alta.	pazienteSereno
-Ho seguito il tuo consiglio e mi sento molto meglio, la mia pressione sanguigna è migliorata.	pazienteSereno
-Quali sono i rischi per la salute associati all’obesità?	fuoriContMed
-Ho appena misurato la mia pressione, è 130/85.	inserDatiPress
-vorrei aggiornare i miei dati sulla pressione sanguigna.	richiestaInsDati
-ho smesso di fumare da un mese.	inserDatiGener
-La mia pressione sanguigna è di 125/75 mmHg, secondo l’ultima misurazione.	inserDatiPress
-Qual è il tuo piatto italiano preferito?	fuoriCont
-posso inserire i dati della mia pressione sanguigna del prossimo mese?	richiestaInsDati
-Il mio battito cardiaco è 70 battiti al minuto.	inserDatiFreq
-Potrei controllare tutte le misurazioni della pressione che ho registrato?	richiestaStatsPress
-buongiorno, assistente! spero che tu sia carico di energia per aiutarmi con la mia ipertensione oggi.	saluti
-Ho registrato un valore di pressione sanguigna e frequenza cardiaca di 140/90 mmHg e 75 bpm oggi.	inserDatiTot
-Parliamo del tempo, che ne pensi?	fuoriCont
-Posso inserire i dati della mia pressione sanguigna di questo mese?	richiestaInsDati
-Non sono preoccupato per la mia pressione alta.	pazienteSereno
-posso inserire i dati della mia pressione sanguigna di stasera?	richiestaInsDati
-Quali sono i trattamenti disponibili per l’artrite?	fuoriContMed
-Potrei controllare tutte le misurazioni della frequenza cardiaca che ho registrato?	richiestaStatsFreq
-hai mai visitato il museo del louvre?	fuoriCont
-Ho fatto nuove misurazioni: ecco la mia pressione sanguigna è 140/90 e il mio battito cardiaco è 75.	inserDatiTot
-mostrarmi le misurazioni della frequenza cardiaca degli ultimi sette giorni	richiestaStatsFreq
-vorrei registrare la mia ultima frequenza 	richiestaInsDati
-Mi sento molto male, cosa dovrei fare?	pazienAllarmato
-ho paura che la mia ipertensione possa causare danni ai miei reni.	pazienAllarmato
-la mia pressione sanguigna è 140/90 e il mio battito cardiaco è 75.	inserDatiTot
-posso registrare i dati della mia frequenza cardiaca di questa mattina?	richiestaInsDati
-Vorrei emmorizzare i miei dati: la pressione sanguigna è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
-quali sono i rischi per la salute associati all’obesità?	fuoriContMed
-il mio battito cardiaco è 70 battiti al minuto.	inserDatiFreq
-Mi piacerebbe controllare le ultime letture della pressione che ho registrato nell’ultimo mese.	richiestaStatsPress
-La mia pressione sanguigna è 140/90.	inserDatiPress
-posso registrare i dettagli del mio consumo di tabacco?	richiestaInsDati
-Come curo la botta presa alla schiena?	fuoriContMed
-Sono molto rilassato riguardo alla mia ipertensione.	pazienteSereno
-Potresti mostrarmi le mie misurazioni della pressione dell’ultima settimana?	richiestaStatsPress
-Ho iniziato a fare yoga per aiutare a gestire lo stress.	inserDatiGener
-Posso registrare i dati della mia frequenza cardiaca di questa settimana?	richiestaInsDati
-Ho appena fatto un controllo, la mia pressione è 135/85 e il mio polso è 70.	inserDatiTot
-La mia pressione sanguigna è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
-ho iniziato una nuova dieta povera di zuccheri.	inserDatiGener
-Potrei controllare le misurazioni che ho registrato nelle ultime 4 settimane?	richiestaStatsGener
-Sono molto nervoso per la mia ipertensione.	pazienAllarmato
-come l’ipertensione può influenzare la mia vita quotidiana?	spiegazioni
-il mio battito cardiaco è 70 battiti al minuto.	inserDatiFreq
-il mio battito cardiaco è 75 battiti al minuto.	inserDatiFreq
-Mi piacerebbe controllare l’ultima lettura del battito cardiaco che ho registrato.	richiestaStatsFreq
-come l’alcol può influenzare il mio fegato?	fuoriContMed
-La mia pressione oggi è 140/90.	inserDatiPress
- misurazioni della pressione sanguigna dell’ultima settimana in un grafico	richiestaStatsPress
-mi sento molto sereno riguardo alla mia pressione alta.	pazienteSereno
-Ue, assistente! Sono pronto per un altro giorno di monitoraggio della mia pressione sanguigna.	saluti
-A presto, assistente! Spero tu possa continuare ad aiutarmi a gestire la mia ipertensione.	saluti
-la mia pressione sanguigna è 140/90.	inserDatiPress
-la mia pressione sanguigna è 125/80.	inserDatiPress
-Qual è l'andamento delle misurazioni sulla pressione?	richiestaStatsPress
-la mia frequenza cardiaca è 68 battiti al minuto.	inserDatiFreq
-posso aggiungere i dati della mia pressione sanguigna di questa settimana?	richiestaInsDati
-La mia pressione sanguigna è 120/80 e il mio battito cardiaco è 70.	inserDatiTot
-la mia pressione sanguigna è 130/80.	inserDatiPress
-posso registrare i dati della mia frequenza cardiaca di stasera?	richiestaInsDati
-posso registrare i dati della mia frequenza cardiaca di domani?	richiestaInsDati
-la mia pressione sanguigna è 135/85 e la mia frequenza cardiaca è 72.	inserDatiTot
-Desidero consultare le mie letture più recenti della pressione.	richiestaStatsPress
-sono molto tranquillo riguardo alla mia pressione alta.	pazienteSereno
-qual è il tuo sport preferito?	fuoriCont
-la mia frequenza cardiaca è 72 battiti al minuto.	inserDatiFreq
-Dammi l'ultimo dato sulla frequenza cardiaca	richiestaStatsFreq
-Ho 4 figli 	inserDatiGener
-Salve, come puoi aiutarmi?	saluti
-Ciao, come stai?	saluti
-Ho paura che la mia pressione alta possa causare problemi seri.	pazienAllarmato
 Ho fatto un incidente da giovane.	inserDatiGener
+Voglio annotare le mie recenti letture della pressione sanguigna.	richiestaInsDati
+Potresti mostrarmi tutte le mie misurazioni della frequenza cardiaca?	richiestaStatsFreq
+Sto cercando di consumare più frutta e verdura per mantenere una dieta equilibrata.	inserDatiGener
+Mi piacerebbe esaminare i dati sulla frequenza cardiaca che ho registrato nell’ultimo mese.	richiestaStatsFreq
+Ho appena misurato la mia frequenza cardiaca e il valore è 72 bpm.	inserDatiFreq
+come il diabete può influenzare la mia vista?	fuoriContMed
+La mia pressione oggi è 120/80 e la mia frequenza cardiaca è 72.	inserDatiTot
+Hai mai pensato di fare un viaggio in mongolfiera?	fuoriCont
+ho fatto una misurazione. Frequenza 80 e pressione 130/90	inserDatiTot
+Ho bisogno di inserire i miei ultimi valori di pressione arteriosa.	richiestaInsDati
+ho notato che la mia pressione sanguigna scende quando dormo bene.	inserDatiGener
+voglio sia i dati sulla pressione che sulla frequenza	richiestaStatsGener
+Ho smesso di bere alcol da due settimane.	inserDatiGener
+Ho bisogno di documentare le mie ultime letture della pressione sanguigna.	richiestaInsDati
+Come posso prevenire l’ipertensione?	spiegazioni
+Vorrei vedere le letture più recenti della pressione che ho registrato.	richiestaStatsPress
+Potresti mostrarmi le mie statistiche dell’ultima settimana?	richiestaStatsGener
+Potrei controllare le misurazioni che ho registrato nelle ultime 4 settimane?	richiestaStatsGener
+Vorrei vedere le misurazioni più recenti che ho registrato.	richiestaStatsGener
+Mostrami tutte le mie misurazioni della pressione arteriosa?	richiestaStatsPress
+Riporta le misurazioni della pressione arteriosa dell’ultima settimana graficamente	richiestaStatsPress
+Sai che oggi ho visto un film molto bello?	fuoriCont
+ho notato che la mia pressione sanguigna aumenta quando faccio esercizio fisico.	inserDatiGener
+come viene diagnosticato il cancro al seno?	fuoriContMed
+mi sento molto rilassato riguardo alla mia pressione alta.	pazienteSereno
+non sono stressato per la mia pressione alta.	pazienteSereno
+hai mai provato a fare paracadutismo?	fuoriCont
+Mi sento molto sereno riguardo alla mia ipertensione.	pazienteSereno
+Potrei controllare le ultime misurazioni della frequenza cardiaca che ho registrato negli ultimi sette giorni?	richiestaStatsFreq
+come viene diagnosticata l’ipertensione?	spiegazioni
+sono molto pacifico riguardo alla mia pressione alta.	pazienteSereno
+pressione di A su B.	inserDatiPress
+La mia pressione sanguigna oggi è X/Y.	inserDatiPress
+come la gravidanza può influenzare la mia tiroide?	fuoriContMed
+riportami le misurazioni su pressione e frequnza nell'ultima settimana	richiestaStatsGener
+Qual è il tuo genere di film preferito?	fuoriCont
+Mi piacerebbe esaminare il dato più recente sulla frequenza che ho registrato.	richiestaStatsFreq
+Ho avuto un po’ di affanno dopo una breve passeggiata, dovrei preoccuparmi?	pazienAllarmato
+ho paura che la mia ipertensione possa causare problemi di memoria.	pazienAllarmato
+Sto cercando di ridurre lo stress attraverso tecniche di rilassamento come lo yoga e la meditazione.	inserDatiGener
+Vorrei rivedere tutte le letture che ho inserito.	richiestaStatsGener
+Desidero visualizzare tutti i miei dati sulla pressione.	richiestaStatsPress
+Che tipo di musica ti piace ascoltare?	fuoriCont
+ho avuto un episodio di tachicardia la scorsa notte.	inserDatiGener
+A presto, assistente! Spero tu possa continuare ad aiutarmi a gestire la mia ipertensione.	saluti
+arrivederci, assistente! grazie per avermi aiutato a gestire la mia ipertensione oggi.	saluti
+la mia frequenza cardiaca è 68 battiti al minuto.	inserDatiFreq
+Vorrei dare un’occhiata alle misurazioni che ho fatto nell’ultimo mese.	richiestaStatsGener
+Misurando ho ottenuto una pressione sanguigna di X/Y e la frequenza cardiaca di 72.	inserDatiTot
+Potrei vedere le ultime misurazioni della frequenza che ho registrato nell’ultimo mese?	richiestaStatsFreq
+ho fatto delle misurazioni e quello che ho rilevato è una pressione di 130/90	inserDatiPress
+la mia pressione sanguigna è 140/90.	inserDatiPress
+Potresti aggiungere le mie recenti letture della pressione arteriosa al mio profilo?	richiestaInsDati
+posso registrare i dettagli del mio consumo di tabacco?	richiestaInsDati
+Posso registrare i dati della mia frequenza cardiaca di quest’anno?	richiestaInsDati
+Vorrei vedere le letture della frequenza cardiaca che ho registrato nell’ultimo mese.	richiestaStatsFreq
+potresti ricordarmi i dati su pressione e frequenza registrati?	richiestaStatsGener
+sono molto ansioso per la mia ipertensione.	pazienAllarmato
+ho notato che la mia pressione sanguigna scende quando mi rilasso.	inserDatiGener
+Ho appena fatto un controllo, il mio polso è 70.	inserDatiFreq
+Mi piacerebbe esaminare i dati più recenti sulla pressione che ho registrato.	richiestaStatsPress
+Buonanotte, è bello fare affidamento su di te	saluti
+Mi piacerebbe controllare le ultime letture della pressione che ho registrato nell’ultima settimana.	richiestaStatsPress
+Quali sono i valori generali della mia frequenza?	richiestaStatsFreq
+La mia frequenza cardiaca è di 70 bpm, secondo l’ultima misurazione.	inserDatiFreq
+Mi piacerebbe controllare le ultime letture della pressione che ho registrato nell’ultimo mese.	richiestaStatsPress
+Ho paura che la mia ipertensione possa peggiorare.	pazienAllarmato
 Ho un forte dolore al collo.	fuoriContMed
-Desidero visualizzare tutti i miei dati sulla frequenza.	richiestaStatsFreq
-quali cambiamenti nello stile di vita posso fare per gestire l’ipertensione?	spiegazioni
+Vorrei vedere tutte le letture della frequenza cardiaca che ho registrato.	richiestaStatsFreq
+Sono rilassato e la mia pressione sanguigna è rimasta costante per tutta la settimana.	pazienteSereno
+puoi dirmi il giusto metodo per misurare la pressione?	spiegazioni
+Qual è la tua città preferita in Italia?	fuoriCont
+Mi sento molto debole, cosa mi consigli?	pazienAllarmato
+La mia pressione sanguigna è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
+Potresti mostrarmi le mie misurazioni della frequenza cardiaca dell’ultimo mese?	richiestaStatsFreq
+La mia ultima misurazione mostra una frequenza cardiaca di 70 bpm.	inserDatiFreq
+Ho avuto problemi di udito.	fuoriContMed
+Dammi le statistiche dell'ultimo mese in un grafico	richiestaStatsGener
+La mia pressione sanguigna è 140/90 e il mio battito cardiaco è 75.	inserDatiTot
+Potresti mostrarmi le mie misurazioni della frequenza cardiaca dell’ultima settimana in un grafico?	richiestaStatsFreq
+Hai visto l’ultimo film di Christopher Nolan?	fuoriCont
+Quali sono le opzioni di trattamento farmacologico per l’ansia?	fuoriContMed
+mi puoi dare i dati su pressione e frequenza dell'ultimo mese	richiestaStatsGener
+Potresti mostrarmi tutte le mie letture che hai registrato?	richiestaStatsGener
+Come viene diagnosticata l’ipertensione?	spiegazioni
+Desidero aggiornare il mio registro con le nuove misurazioni della pressione sanguigna.	richiestaInsDati
+sono molto nervoso per la mia ipertensione.	pazienAllarmato
+Sono un fumatore	inserDatiGener
+come il caffè può influenzare il mio sonno?	fuoriContMed
+Ho paura che la mia pressione alta possa causare problemi seri.	pazienAllarmato
+ho avuto un attacco di panico ieri sera.	inserDatiGener
+Qual è il tuo periodo storico preferito?	fuoriCont
+Buonasera, assistente! Spero tu possa aiutarmi a capire meglio la mia ipertensione.	saluti
+Vorrei rivedere i dati più recenti che ho inserito.	richiestaStatsGener
+Mi piacerebbe esaminare i dati sulla pressione che ho registrato nell’ultimo mese.	richiestaStatsPress
+hai mai visitato la torre eiffel?	fuoriCont
+Ciao, assistente! Spero che tu possa darmi qualche suggerimento su come gestire la mia ipertensione.	saluti
+sono molto stressato a causa della mia ipertensione.	pazienAllarmato
+Quali cambiamenti nello stile di vita posso fare per gestire il mio colesterolo alto?	fuoriContMed
+Ho notato un cambiamento nel mio appetito.	fuoriContMed
+qual è il tuo periodo storico preferito?	fuoriCont
+Vorrei vedere le letture della pressione che ho registrato nell’ultimo mese.	richiestaStatsPress
+mi puoi dire a cosa serve tenere sotto controllo la pressione?	spiegazioni
+Sono molto ansioso per la mia ipertensione.	pazienAllarmato
+Posso registrare i dati della mia frequenza cardiaca di questa mattina?	richiestaInsDati
+sono molto tranquillo riguardo alla mia pressione alta.	pazienteSereno
+Potresti spiegarmi come l’ipertensione può influenzare la mia salute?	spiegazioni
+come l’età può influenzare l’ipertensione?	spiegazioni
+Potrei vedere le ultime misurazioni della pressione che ho registrato nell’ultimo mese?	richiestaStatsPress
+Ho notato che la mia pressione sanguigna scende quando mi rilasso.	inserDatiGener
+Mi sento un po’ stanco e ho notato che la mia pressione sanguigna è più alta del solito.	pazienAllarmato
+mi sento molto tranquillo riguardo alla mia pressione alta.	pazienteSereno
+ho paura che la mia pressione alta possa causare problemi alla vista.	pazienAllarmato
+Mi piacerebbe controllare tutte le letture della pressione che ho registrato.	richiestaStatsPress
+La mia ultima misurazione mostra una pressione sanguigna di 135/85 mmHg.	inserDatiPress
+La mia frequenza cardiaca al momento è 120	inserDatiFreq
+Dammi il grafico con andamento di pressione arteriosa nell'ultimo mese	richiestaStatsPress
+Potrei vedere le ultime misurazioni della pressione che ho registrato?	richiestaStatsPress
+Mi piacerebbe controllare i dati registrati nell’ultimo mese.	richiestaStatsGener
+quali sono i rischi per la salute associati all’obesità?	fuoriContMed
+Desidero conservare le mie recenti letture della pressione arteriosa nel mio registro sanitario.	richiestaInsDati
+Vorrei vedere le misurazioni che ho registrato nell’ultima settimana.	richiestaStatsGener
+la mia pressione sanguigna è 140/90 e il mio battito cardiaco è 75.	inserDatiTot
+memorizza la frequenza di 85 bpm	inserDatiFreq
+puoi fornirmi tutti i dati registrati sulla pressione e sulla frequenza?	richiestaStatsGener
+che tipo di musica ti piace ascoltare?	fuoriCont
+il mio battito cardiaco è 80 battiti al minuto.	inserDatiFreq
+Hai mai visitato la Costa Amalfitana?	fuoriCont
+ho fatto nuove misurazioni. La pressione è di 120/80 mentre la frequenza indicata è 90bpm	inserDatiTot
+Ho bisogno di aiuto urgentemente	pazienAllarmato
+non sono preoccupato per la mia ipertensione.	pazienteSereno
+Ho registrato un valore di pressione sanguigna e frequenza cardiaca di 140/90 mmHg e 75 bpm oggi.	inserDatiTot
+Ho appena controllato, la mia pressione è 140/85 e la mia frequenza cardiaca è 75.	inserDatiTot
+la mia pressione sanguigna è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
+ho paura che la mia pressione alta possa causare problemi seri.	pazienAllarmato
+la mia frequenza cardiaca attuale è 68 battiti al minuto.	inserDatiFreq
+mi sento molto rilassato riguardo alla mia ipertensione.	pazienteSereno
+posso registrare i dati della mia frequenza cardiaca di stasera?	richiestaInsDati
+Desidero consultare le mie letture della frequenza cardiaca delle ultime quattro settimane.	richiestaStatsFreq
+Ho avuto mal di testa frequenti.	fuoriContMed
+Fammi il resoconto dell'ultima settimana	richiestaStatsGener
+buongiorno, assistente! spero che tu sia carico di energia per aiutarmi con la mia ipertensione oggi.	saluti
+Mi sento in forma, ho fatto esercizio fisico regolarmente questa settimana.	pazienteSereno
+Non ricordo le statistiche degli ultimi sette giorni	richiestaStatsGener
+la mia pressione sanguigna è 120/80 e il mio battito cardiaco è 70.	inserDatiTot
+Sono contento di dirti che la mia pressione sanguigna è rimasta entro i limiti normali per tutto il mese.	pazienteSereno
+posso aggiungere i dati della mia pressione sanguigna di questa settimana?	richiestaInsDati
+Qual è il tuo museo d’arte preferito?	fuoriCont
+Desidero consultare le mie letture più recenti della pressione.	richiestaStatsPress
+Ho iniziato a prendere un nuovo farmaco per l’ipertensione.	inserDatiGener
+Ho avuto un episodio di sudorazione eccessiva la scorsa notte.	inserDatiGener
+Quali sono i dati delle ultime quattro settimane?	richiestaStatsGener
+come il colesterolo può influenzare l’ipertensione?	spiegazioni
+Mi piacerebbe esaminare i dati più recenti che ho registrato.	richiestaStatsGener
+Potresti mostrarmi tutti i miei dati?	richiestaStatsGener
+Ho 45 anni e non ho mai fatto attività fisica.	inserDatiGener
+posso registrare i dati della mia frequenza cardiaca di quest’anno?	richiestaInsDati
+sono molto pacifico riguardo alla mia ipertensione.	pazienteSereno
+Qual è la mia ultima misurazione della pressione arteriosa che ti ho fornito?	richiestaStatsPress
+Qual è la mia ultima misurazione della frequenza cardiaca visualizzata?	richiestaStatsFreq
+Il mio amico sta male	fuoriContMed
+Dammi i dati dell'ultimo mese	richiestaStatsGener
+Ho accompagnato i miei figli a scuola.	fuoriCont
+mostrarmi le misurazioni della frequenza cardiaca degli ultimi sette giorni	richiestaStatsFreq
+ho fatto una misurazione sulla frequenza: 80 bpm	inserDatiFreq
+quali sono le opzioni di trattamento farmacologico per l’ansia?	fuoriContMed
+Ho appena controllato e la mia pressione sanguigna è di 130/75 mmHg.	inserDatiPress
+Sono molto tranquillo riguardo alla mia pressione alta.	pazienteSereno
+posso inserire le mie ultime misurazioni?	richiestaInsDati
+ho fatto nuove misurazioni, posso inviartele?	richiestaInsDati
+Posso registrare i dati della mia frequenza cardiaca di ieri?	richiestaInsDati
+Ho avuto un episodio di vertigini questa mattina.	inserDatiGener
+Desidero visualizzare le mie letture dell’ultima settimana.	richiestaStatsGener
+quale è il tuo genere di film preferito?	fuoriCont
+Posso inserire i dati della mia pressione sanguigna di questo mese?	richiestaInsDati
+la mia pressione sanguigna è 130/85 e il mio battito cardiaco è 70.	inserDatiTot
+Mi piacerebbe aggiornare il mio registro sanitario con le mie ultime letture della pressione arteriosa.	richiestaInsDati
+Mi sento stanco tutto il tempo.	fuoriContMed
+Qual è il miglior modo per effettuare una corretta misurazione delle pressione?	spiegazioni
+Desidero consultare tutte le mie letture della frequenza cardiaca.	richiestaStatsFreq
+Ho 50 anni e non bevo alcol.	inserDatiGener
+come posso gestire il mio diabete?	fuoriContMed
+quale è il tuo romanzo preferito?	fuoriCont
+Ho appena finito di fare una corsa, sono pieno di energie.	fuoriCont
+ho smesso di bere caffè da una settimana.	inserDatiGener
+Sono riuscito a fare una lunga passeggiata oggi senza affaticarmi.	pazienteSereno
+Ho X anni e ho una dieta equilibrata.	inserDatiGener
+Parliamo del tempo, che ne pensi?	fuoriCont
+sono molto nervoso per la mia pressione alta.	pazienAllarmato
+Vorrei dare un’occhiata alle ultime letture della pressione che ho inserito nell’ultimo mese.	richiestaStatsPress
+Ho iniziato a seguire una dieta a basso contenuto di sale per aiutare a controllare la mia pressione sanguigna.	inserDatiGener
+il mio battito cardiaco è 75 battiti al minuto.	inserDatiFreq
+Vorrei registrare i miei ultimi dati sulla pressione sanguigna.	richiestaInsDati
+posso registrare i dati della mia frequenza cardiaca di questa mattina?	richiestaInsDati
+La mia pressione oggi è 140/90.	inserDatiPress
+Posso aggiungere i dati della mia pressione sanguigna di questa mattina?	richiestaInsDati
+Mi sento molto tranquillo riguardo alla mia pressione alta.	pazienteSereno
+Hai mai provato a fare surf?	fuoriCont
+La mia pressione oggi è .../...e la mia frequenza cardiaca è ... bpm.	inserDatiTot
+Ho smesso di bere bevande energetiche da un mese.	inserDatiGener
 la mia pressione sanguigna è 130/80 e il mio battito cardiaco è 70.	inserDatiTot
-Hai mai provato a dipingere?	fuoriCont
-Vorrei dare un’occhiata alle ultime letture della frequenza cardiaca che ho inserito nell’ultimo mese.	richiestaStatsFreq
+ho iniziato una nuova dieta per ridurre il sale.	inserDatiGener
+Mi piacerebbe controllare tutte le letture della frequenza cardiaca che ho registrato.	richiestaStatsFreq
+Se ho un paziente iperteso, aumenta molto il mio rischio di sviluppare ipertensione?	spiegazioni
+Quali sono le opzioni di trattamento farmacologico per l’ipertensione?	spiegazioni
+Come posso gestire il mio diabete?	fuoriContMed
+Ho male alla gamba	fuoriContMed
+Quali sono i dati della pressione sanguigna dell’ultimo mese?	richiestaStatsPress
+buonasera, assistente! spero che tu possa darmi qualche consiglio su come rilassarmi per gestire la mia ipertensione.	saluti
+Vorrei dare un’occhiata alle letture che ho inserito negli ultimi 7 giorni.	richiestaStatsGener
+sono molto rilassato riguardo alla mia ipertensione.	pazienteSereno
+come la genetica può influenzare l’ipertensione?	spiegazioni
+Ho un forte mal di testa, cosa posso fare?	fuoriContMed
+La mia pressione sanguigna più recente è di 120/70 mmHg.	inserDatiPress
+come il sesso può influenzare il mio rischio di osteoporosi?	fuoriContMed
+Pressione misurata è di 135/85 e la mia frequenza cardiaca è 72.	inserDatiTot
+Non mi sento particolarmente bene. Le ultime misurazioni mi stanno preoccupando	pazienAllarmato
+posso registrare i dati della mia frequenza cardiaca del prossimo mese?	richiestaInsDati
+Ho iniziato una nuova dieta ricca di fibre.	inserDatiGener
+La mia frequenza cardiaca oggi è ...bpm.	inserDatiFreq
+La mia pressione sanguigna è 130/85.	inserDatiPress
+La mia frequenza cardiaca è 72 battiti al minuto.	inserDatiFreq
+vorrei le letture su frequenza e pressione delle ultime due settimane	richiestaStatsGener
+Potresti spiegarmi cosa significa avere la pressione alta?	spiegazioni
+hai mai visitato il colosseo?	fuoriCont
+la mia pressione oggi è 120/80.	inserDatiPress
+Ho smesso di fumare da un mese.	inserDatiGener
+Quali sono le possibili conseguenze associate all'ipertensione?	spiegazioni
+Ho avuto un attacco di panico ieri sera.	inserDatiGener
+come lo stress può influenzare la mia depressione?	fuoriContMed
+posso registrare la mia frequenza cardiaca di oggi?	richiestaInsDati
+Ho avuto problemi di sonno ultimamente.	inserDatiGener
+La mia frequenza cardiaca attuale è 68 battiti al minuto.	inserDatiFreq
+Quali sono i fattori di rischio per l’ipertensione?	spiegazioni
+ho paura che la mia pressione alta possa causare problemi di sonno.	pazienAllarmato
+dimmi le regole per misurare correttamente la pressione	spiegazioni
+come la gravidanza può influenzare l’ipertensione?	spiegazioni
+buongiorno, assistente! spero che tu sia pronto ad aiutarmi a gestire la mia ipertensione oggi.	saluti
+Mostra tutte le mie misurazioni tramite un grafico?	richiestaStatsGener
+Ho registrato un valore di frequenza cardiaca di 75 bpm oggi.	inserDatiFreq
+Qual è l'andamento dei miei dati nella settimana	richiestaStatsGener
+a presto, assistente! spero che tu possa continuare ad aiutarmi a gestire la mia ipertensione.	saluti
+hai mai provato a dipingere?	fuoriCont
+ho avuto un episodio di mancanza di respiro ieri.	inserDatiGener
+Buon pomeriggio, assistente! Spero che tu possa aiutarmi a monitorare la mia ipertensione.	saluti
+Ciao	saluti
+come il fumo può influenzare le mie malattie cardiache?	fuoriContMed
+Sono un po’ nervoso, la mia pressione sanguigna è più bassa del solito.	pazienAllarmato
+ho paura che la mia pressione alta possa causare problemi di appetito.	pazienAllarmato
+Potrei vedere tutte le misurazioni che ho fatto?	richiestaStatsGener
+sono molto ansioso per la mia pressione alta.	pazienAllarmato
+mi sento molto preoccupato per la mia pressione alta.	pazienAllarmato
+ho fatto una nuova misurazione, la frequenza cardiaca è 70	inserDatiFreq
+Ho fatto nuove misurazioni: ecco la mia pressione sanguigna è 140/90 e il mio battito cardiaco è 75.	inserDatiTot
+la mia pressione sanguigna è 135/85 e la mia frequenza cardiaca è 72.	inserDatiTot
+La mia pressione oggi è .../...	inserDatiPress
+registrami questa frequenza. Il valore è di 85	inserDatiFreq
+la mia pressione sanguigna attuale è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
+Desidero visualizzare i miei dati più recenti sulla pressione.	richiestaStatsPress
+ho avuto un episodio di nausea questa mattina.	inserDatiGener
+Qual è un buon stile di vita che abbassa il rischio di sviluppare ipertensione?	spiegazioni
+Ho appena controllato e la mia pressione sanguigna e frequenza cardiaca sono di 130/75 mmHg e 69 bpm.	inserDatiTot
+Non sono preoccupato per la mia pressione alta.	pazienteSereno
+ho appena fatto un controllo, la mia pressione è 135/85.	inserDatiPress
+Alla prossima, assistente! Non vedo l’ora di continuare a lavorare con te sulla mia ipertensione.	saluti
+Ho appena controllato e la mia frequenza cardiaca è di 69 bpm.	inserDatiFreq
+Forniscimi le misurazioni sulla frequenza cardiaca nell’ultimo mese	richiestaStatsFreq
+Vorrei rivedere tutti i dati sulla frequenza  che ho inserito.	richiestaStatsFreq
+Ue, assistente! Sono pronto per un altro giorno di monitoraggio della mia pressione sanguigna.	saluti
+Fortunatamente mi sento stabile.	pazienteSereno
+come l’asma può influenzare la mia vita quotidiana?	fuoriContMed
+Ultimo dato inserito sulla frequenza	richiestaStatsFreq
+mi sento molto sereno riguardo alla mia pressione alta.	pazienteSereno
+sono molto tranquillo riguardo alla mia ipertensione.	pazienteSereno
+Desidero visualizzare il mio dato più recente sulla frequenza cardiaca.	richiestaStatsFreq
+mi sento bene avendo tutti i miei dati sotto controllo	pazienteSereno
+La mia pressione quando torno a casa dalla famiglia si alza sempre	pazienAllarmato
+Ho iniziato una nuova dieta ricca di frutta e verdura.	inserDatiGener
+Hai mai provato a fare yoga?	fuoriCont
+Ho misurato i miei dati: sistolica 120, diastolica 80 e frequenza cardiaca 75	inserDatiTot
+ho appena controllato, la mia pressione è 140/85 e la mia frequenza cardiaca è 75.	inserDatiTot
+Vorrei rivedere tutti i dati sulla pressione che ho inserito.	richiestaStatsPress
+Quali esami diagnostici dovrei fare per valutare il mio stato di salute associato all'ipertensione?	spiegazioni
+La mia ultima misurazione mostra una pressione sanguigna e frequenza cardiaca di 135/85 mmHg e 70 bpm.	inserDatiTot
+Mi piacerebbe sapere cosa fare per tenere la pressione sotto controllo	spiegazioni
+Ho avuto dolori muscolari.	fuoriContMed
+Non ho paura della mia ipertensione.	pazienteSereno
+ultima misurazione della pressione arteriosa	richiestaStatsPress
+Ho appena controllato, la mia pressione è 140/85.	inserDatiPress
+come il sonno può influenzare la mia ansia?	fuoriContMed
+è possibile fornirti le misurazioni su pressione e frequenza?	richiestaInsDati
+Ho avuto un po’ di nausea e ho notato che la mia pressione sanguigna è bassa, cosa dovrei fare?	pazienAllarmato
+Mi sento un po' strano, quali sono i miei dati più recenti?	richiestaStatsGener
 ho paura che la mia pressione alta possa causare un attacco di cuore.	pazienAllarmato
-Addio, assistente! Grazie per avermi fornito informazioni preziose sulla mia ipertensione.	saluti
+ho paura che la mia ipertensione possa causare danni ai miei reni.	pazienAllarmato
+Posso aggiungere i dati della mia pressione sanguigna di domani?	richiestaInsDati
+Vorrei rivedere l’ultimo dato sulla frequenza che ho inserito.	richiestaStatsFreq
+Ho tutti i dolori del mondo	fuoriContMed
+A/B	inserDatiPress
+Dammi le mie misurazioni della pressione sanguigna dell’ultimo mese in un grafico	richiestaStatsPress
+ho paura che la mia pressione alta possa causare problemi di umore.	pazienAllarmato
+hai mai provato a fare surf?	fuoriCont
+Vorrei rivedere i dati sulla frequenza  che ho inserito nell’ultimo mese.	richiestaStatsFreq
+ecco i dati registrati. Pressione 120/80 e frequenza 77	inserDatiTot
+quale è la tua città preferita in italia?	fuoriCont
+Vorrei rivedere le letture che ho inserito nelle 4 settimane precedenti.	richiestaStatsGener
+Ho iniziato una nuova dieta povera di grassi saturi.	inserDatiGener
+Ecco i miei dati di oggi: la mia pressione sanguigna è 135/85 e la mia frequenza cardiaca è 72.	inserDatiTot
+Potresti mostrarmi le mie misurazioni della pressione dell’ultima settimana?	richiestaStatsPress
+Ho avuto problemi di vista.	fuoriContMed
+ciao, assistente! sono pronto per affrontare la mia ipertensione con il tuo aiuto.	saluti
+il mio battito cardiaco è 70 battiti al minuto.	inserDatiFreq
+Vorrei vedere tutte le letture della pressione che ho registrato.	richiestaStatsPress
+Ho notato che la mia frequenza cardiaca è molto bassa, è normale?	pazienAllarmato
+addio, assistente! sono grato per il tuo sostegno nel mio viaggio con l’ipertensione.	saluti
+Potresti mostrarmi le mie ultime misurazioni della pressione?	richiestaStatsPress
+Ho smesso di bere tè nero da due settimane.	inserDatiGener
+Come l’asma può influenzare la mia vita quotidiana?	fuoriContMed
+Potrei controllare le ultime misurazioni della pressione che ho registrato nell’ultima settimana?	richiestaStatsPress
+La mia frequenza cardiaca attuale è di 74 bpm.	inserDatiFreq
+Vorrei vedere le letture della frequenza che ho registrato negli ultimi sette giorni.	richiestaStatsFreq
+quali sono i fattori di rischio per l’ipertensione?	spiegazioni
+Qual è il tuo sport preferito?	fuoriCont
+ho iniziato a meditare per aiutare a gestire lo stress.	inserDatiGener
+Oggi mi sento molto rilassato grazie.	pazienteSereno
+Sto cercando di mantenere un peso sano per ridurre il rischio di ipertensione.	inserDatiGener
+Vorrei rivedere le letture che ho inserito nell’ultima settimana.	richiestaStatsGener
+Sono molto preoccupato per i miei livelli di pressione sanguigna.	pazienAllarmato
+Posso registrare i dati della mia frequenza cardiaca di questo mese?	richiestaInsDati
+Ho appena finito di fare una lunga passeggiata, è stata rilassante.	fuoriCont
+Potrei controllare tutte le misurazioni che ho registrato?	richiestaStatsGener
+Ho avuto un episodio di nausea questa mattina.	inserDatiGener
+La mia ultima lettura della pressione sanguigna era di 130/85 mmHg.	inserDatiPress
+Ho appena fatto un controllo, la mia pressione è 135/85 e il mio polso è 70.	inserDatiTot
+Dammi i dati della frequenza cardiaca nell’ultimo mese	richiestaStatsFreq
+La mia ultima lettura della pressione sanguigna e della frequenza cardiaca era di 130/85 mmHg e 68 bpm.	inserDatiTot
+Ho paura che la mia pressione alta possa causare un ictus.	pazienAllarmato
+Ho avuto una settimana molto tranquilla e la mia pressione sanguigna è rimasta stabile.	pazienteSereno
+Ho avuto un po’ di vertigini oggi, potrebbe essere legato alla mia pressione sanguigna?	pazienAllarmato
+Ho notato che sto dormendo meglio da quando ho iniziato la nuova dieta.	pazienteSereno
+Qual è stata l'ultima misurazione sulla frequenza cardiaca?	richiestaStatsFreq
+come l’ambiente può influenzare l’ipertensione?	spiegazioni
+Faccio attività fisica regolare	inserDatiGener
+Posso inserire i dati della mia pressione sanguigna di stasera?	richiestaInsDati
+come la razza può influenzare l’ipertensione?	spiegazioni
+Ricordami l'ultima misurazione	richiestaStatsGener
+Desidero visualizzare tutti i miei dati sulla frequenza.	richiestaStatsFreq
+quali sono i trattamenti disponibili per l’artrite?	fuoriContMed
+Ho qualche misura di pressione alta ogni tanto, ma immagino sia normale	pazienteSereno
+Ho notato un cambiamento nel mio peso.	fuoriContMed
+vorrei aggiungere i dettagli del mio consumo di caffeina.	richiestaInsDati
+Quali sono le mie statistiche dell’ultimo mese?	richiestaStatsGener
+La mia pressione sanguigna e frequenza cardiaca sono di 125/75 mmHg e 70 bpm, secondo l’ultima misurazione.	inserDatiTot
+Qual è l'ultimo dato sulla pressione sanguigna?	richiestaStatsPress
+Ho 4 figli	inserDatiGener
+ho avuto un episodio di vertigini questa mattina.	inserDatiGener
+come posso prevenire le malattie cardiache?	fuoriContMed
+Frequenza cardiaca in arrivo... X bpm.	inserDatiFreq
+ho avuto un episodio di sudorazione eccessiva la scorsa notte.	inserDatiGener
+voglio che mi fornisci sia i dati sulla frequenza che i dati sulla pressione.	richiestaStatsGener
+Quali sono i fattori di rischio per l’osteoporosi?	fuoriContMed
+Il mio battito cardiaco è 72 battiti al minuto.	inserDatiFreq
+Mi piacerebbe esaminare le letture che ho registrato nell’ultimo mese.	richiestaStatsGener
+Mi piacerebbe controllare tutte le misurazioni che ho registrato.	richiestaStatsGener
+La frequenza cardiaca misurata è Z bpm.	inserDatiFreq
+Voglio un riassunto di tutte le mie statistiche?	richiestaStatsGener
+come il sonno può influenzare l’ipertensione?	spiegazioni
+buonanotte, assistente! grazie per avermi aiutato a capire meglio la mia ipertensione.	saluti
+Potrei controllare tutte le misurazioni della pressione che ho registrato?	richiestaStatsPress
+Ho smesso di bere caffè da una settimana.	inserDatiGener
+come la menopausa può influenzare l’ipertensione?	spiegazioni
+Mi sento un po’ debole e la mia pressione sanguigna è alta, dovrei andare al pronto soccorso?	pazienAllarmato
+ho paura che la mia ipertensione possa causare problemi di energia.	pazienAllarmato
+ho notato che la mia pressione sanguigna scende quando sono felice.	inserDatiGener
+come la contraccezione ormonale può influenzare il mio ciclo mestruale?	fuoriContMed
+come l’ipertensione può influenzare la mia vita quotidiana?	spiegazioni
+quali sono i rischi per la salute associati all’ipertensione?	spiegazioni
+78 125	inserDatiPress
+Dopo un trauma quanto tempo dovrei riposare?	fuoriContMed
+come l’età può influenzare la mia memoria?	fuoriContMed
+ciao, assistente! sono pronto per un altro giorno di monitoraggio della mia ipertensione.	saluti
+La mia pressione sanguigna è 120/80 e il mio battito cardiaco è 70.	inserDatiTot
+Ho smesso di fumare da un anno per migliorare la mia salute cardiovascolare.	inserDatiGener
+Non ricordo la traccia dei dati nell'ultimo mese	richiestaStatsGener
+Vorrei inserire le misurazioni fatte	richiestaInsDati
+Quali sono le mie misurazioni della pressione dell’ultimo mese?	richiestaStatsPress
+Ho iniziato a meditare per aiutare a gestire lo stress.	inserDatiGener
+Dammi l'ultimo dato sulla frequenza cardiaca	richiestaStatsFreq
+ho paura che la mia pressione alta possa causare un ictus.	pazienAllarmato
+Buongiorno, assistente! Spero tu possa darmi qualche consiglio sulla mia ipertensione oggi.	saluti
+la mia pressione sanguigna è 130/80.	inserDatiPress
+come la contraccezione ormonale può influenzare l’ipertensione?	spiegazioni
+La mia pressione sanguigna attuale è 125/80.	inserDatiPress
+we, assistente! Spero tu possa aiutarmi oggi con la mia ipertensione.	saluti
+Ho iniziato a fare passeggiate regolari per aiutare a gestire la mia ipertensione.	inserDatiGener
+Quali sono i sintomi dell’ipertensione?	spiegazioni
+Faccio esercizio fisico regolarmente, almeno 30 minuti al giorno.	inserDatiGener
+la mia frequenza cardiaca è 72 battiti al minuto.	inserDatiFreq
+Ciao, come stai?	saluti
+Voglio i dati della frequenza cardiaca dell’ultimo mese	richiestaStatsFreq
+come l’alcol può influenzare il mio fegato?	fuoriContMed
+posso inserire i dati della mia pressione sanguigna del mese scorso?	richiestaInsDati
+Bevo alcol solo con moderazione per evitare picchi di pressione sanguigna.	inserDatiGener
+Mi sento molto bene oggi, la mia pressione sanguigna è stabile.	pazienteSereno
+Ho appena misurato la mia pressione, è 130/85.	inserDatiPress
+Desidero consultare la mia ultima lettura del battito cardiaco.	richiestaStatsFreq
+ho iniziato a fare passeggiate regolari per aiutare a gestire la mia ipertensione.	inserDatiGener
+non ho paura della mia ipertensione.	pazienteSereno
+sono preoccupato per i miei livelli di pressione sanguigna.	pazienAllarmato
+Potresti mostrarmi le mie misurazioni della frequenza cardiaca dell’ultima settimana?	richiestaStatsFreq
+Desidero consultare tutte le mie letture registrate.	richiestaStatsGener
+come il fumo può influenzare l’ipertensione?	spiegazioni
+Ho notato che la mia pressione sanguigna aumenta quando faccio esercizio fisico.	inserDatiGener
+La mia pressione oggi è 130/90 e la mia frequenza cardiaca è 90 bpm.	inserDatiTot
+Sono Sara e ho 15 anni	inserDatiGener
+Dammi tutte le mie misurazioni inerenti alla pressione in un grafico	richiestaStatsPress
+Ti fornisco i dati: pressione è 130/85 e il mio battito cardiaco è 70.	inserDatiTot
+Mi piacerebbe controllare le ultime letture della pressione che ho registrato.	richiestaStatsPress
+come il diabete può influenzare l’ipertensione?	spiegazioni
+Potrei controllare le misurazioni dei sette giorni precedenti?	richiestaStatsGener
+Desidero visualizzare i miei dati sulla frequenza cardiaca delle 4 settimane precedenti.	richiestaStatsFreq
+Desidero consultare le mie letture più recenti.	richiestaStatsGener
+Quali sono i trattamenti disponibili per l’artrite?	fuoriContMed
+posso inserire i dettagli del mio consumo di alcol?	richiestaInsDati
+La mia pressione sanguigna attuale è 125/80 e la mia frequenza cardiaca è 68.	inserDatiTot
+Il mio battito cardiaco è 80 battiti al minuto.	inserDatiFreq
+Vorrei rivedere i dati sulla pressione che ho inserito nell’ultimo mese.	richiestaStatsPress
+Sono molto stressato a causa della mia ipertensione.	pazienAllarmato
+ho appena controllato, la mia pressione è 140/85.	inserDatiPress
+sono molto stressato a causa della mia pressione alta.	pazienAllarmato
+la mia pressione sanguigna è 120/80.	inserDatiPress
+Qual è il tuo compositore classico preferito?	fuoriCont
+Desidero consultare le mie letture della pressione dell’ultima settimana.	richiestaStatsPress
+Che libro stai leggendo al momento?	fuoriCont
+ho iniziato una nuova dieta ricca di fibre.	inserDatiGener
+Ho avuto un episodio di tachicardia la scorsa notte.	inserDatiGener
+Mi piacerebbe controllare le ultime letture della frequenza cardiaca che ho registrato nell’ultimo mese.	richiestaStatsFreq
+ciao, assistente! spero che tu possa darmi qualche suggerimento su come gestire la mia ipertensione.	saluti
+Il mio battito cardiaco è 70 battiti al minuto.	inserDatiFreq
+Potrei vedere le ultime misurazioni della pressione che ho registrato nell’ultima settimana?	richiestaStatsPress
+La mia pressione sanguigna è X/Y e la mia frequenza cardiaca è 68.	inserDatiTot
+Non mi sento molto bene, la mia frequenza cardiaca è più alta del solito.	pazienAllarmato
+Sto cercando di dormire almeno 8 ore a notte per mantenere la mia pressione sanguigna sotto controllo.	inserDatiGener
+ho appena fatto un controllo, il mio polso è 70.	inserDatiFreq
+Ho iniziato a fare stretching regolare per aiutare a gestire lo stress.	inserDatiGener
+Potrei vedere le ultime misurazioni del ritmo cardiaco che ho registrato nell’ultima settimana?	richiestaStatsFreq
+buonasera, assistente! sono pronto per rilassarmi e riflettere sulla mia giornata con l’ipertensione.	saluti
+ho notato che la mia pressione sanguigna aumenta quando sono stressato.	inserDatiGener
+Potresti mostrarmi tutte le mie misurazioni della frequenza cardiaca in un grafico?	richiestaStatsFreq
+alla prossima, assistente! sono entusiasta di continuare a lavorare con te sulla mia ipertensione.	saluti
+Come curo la botta presa alla schiena?	fuoriContMed
+Mi piacerebbe esaminare tutte le letture che ho registrato.	richiestaStatsGener
+La mia pressione sanguigna è 140/90.	inserDatiPress
+ho appena misurato la mia pressione, è 130/85 e il mio battito cardiaco è 75.	inserDatiTot
+la mia pressione sanguigna è 130/80 e il mio battito cardiaco è 72.	inserDatiTot
+Ho appena controllato, la mia frequenza cardiaca è 75 battiti al minuto.	inserDatiFreq
+posso inserire i dati della mia pressione sanguigna di questo mese?	richiestaInsDati
+Quando sono a rischio ipertensione?	spiegazioni
+Mi sento un po’ ansioso perché la mia pressione sanguigna è salita all’improvviso.	pazienAllarmato
+La mia pressione sanguigna attuale è di 140/85 mmHg.	inserDatiPress
+Mi piacerebbe controllare i dati che ho registrato nell’ultima settimana.	richiestaStatsGener
+ecco la frequenza: 85	inserDatiFreq
+Vorrei dare un’occhiata alle ultime letture della pressione che ho inserito.	richiestaStatsPress
+Aiutami, c'è qualcosa che non va	pazienAllarmato
+hai mai provato a fare yoga?	fuoriCont
+la mia pressione sanguigna è 125/80.	inserDatiPress
+Qual è il dato più recente	richiestaStatsGener
+Ho avuto problemi di digestione.	fuoriContMed
+Sono molto calmo riguardo alla mia ipertensione.	pazienteSereno
+come il sesso può influenzare l’ipertensione?	spiegazioni
+vorrei registrare la mia ultima frequenza	richiestaInsDati
+Potresti mostrarmi un sommario di tutte le mie misurazioni?	richiestaStatsGener
+Potrei vedere le misurazioni che ho registrato nell’ultimo mese?	richiestaStatsGener
+come la menopausa può influenzare il mio peso?	fuoriContMed
+Ho notato che la mia pressione sanguigna scende quando dormo bene.	inserDatiGener
+sono molto calmo riguardo alla mia ipertensione.	pazienteSereno
+posso aggiungere i dati della mia pressione sanguigna dell’anno scorso?	richiestaInsDati
+ho appena misurato la mia pressione, è 130/85.	inserDatiPress
+non sono sereno date le mie ultime misurazioni	pazienAllarmato
+Posso inserire le mie ultime misurazioni?	richiestaInsDati
+Quant è importante tenere sotto traccia l'ipertensione?	spiegazioni
+come il clima può influenzare la mia artrite?	fuoriContMed
+Dammi le mie misurazioni sulla pressione dell’ultima settimana?	richiestaStatsPress
+Mi piacerebbe esaminare tutti i dati sulla frequenza  che ho registrato.	richiestaStatsFreq
+quale è la tua band preferita?	fuoriCont
+Hai mai visitato il Colosseo?	fuoriCont
+come lo stress può influenzare l’ipertensione?	spiegazioni
+Vorrei dare un’occhiata a tutte le letture della pressione che ho inserito.	richiestaStatsPress
+Ho notato che la mia frequenza è di 73 bpm.	inserDatiFreq
+Mi piacerebbe esaminare tutti i dati sulla pressione che ho registrato.	richiestaStatsPress
+come il sale può influenzare la mia pressione sanguigna?	spiegazioni
+potresti indicarmi tutti i dati registrati sulla pressione e sulla frequenza?	richiestaStatsGener
+come l’alcol può influenzare l’ipertensione?	spiegazioni
+sono molto ansioso per i miei livelli di pressione sanguigna.	pazienAllarmato
+Non ho ansia per la mia pressione alta.	pazienteSereno
+come la razza può influenzare il mio rischio di malattie cardiache?	fuoriContMed
+Ho appena fatto una lettura e la mia pressione sanguigna è di 125/80 mmHg.	inserDatiPress
+la mia alimentazione non è mai stata curata.	inserDatiGener
+Potrei controllare l’ultima misurazione della frequenza cardiaca che ho registrato?	richiestaStatsFreq
+Potresti mostrarmi con un immagine le misurazioni della frequenza cardiaca dell’ultima settimana?	richiestaStatsFreq
+Vorrei dare un’occhiata a tutte le letture che ho inserito.	richiestaStatsGener
+ho iniziato a fare stretching regolare per aiutare a gestire lo stress.	inserDatiGener
+Quali sono le mie statistiche relative all’ultimo mese?	richiestaStatsGener
+Mi piacerebbe controllare le ultime letture del battito cardiaco che ho registrato nell’ultima settimana.	richiestaStatsFreq
+posso registrare i dati della mia frequenza cardiaca di ieri?	richiestaInsDaticiao sono Giovanni
+ciao	saluti
+vorrei tanto darti i dati sulla mia frequenza	richiestaInsDati
+sono sotto stress da tanti anni	inserDatiGener
+il mio lavoro è molto stancante	inserDatiGener
+sono felice quando torno a casa e trovo il mio piatto preferito	fuoriCont
+tieni i miei dati sulla frequenza registrata: 70	inserDatiFreq
+ho misurato la frequenza ed è di 80	inserDatiFreq
+mi fa male la testa, cosa mi consigli?	fuoriContMed
+oggi ho visto un cane bellissimo	fuoriCont
+vabbene	saluti
+ok	saluti
+perfetto	saluti
+tutto chiaro	saluti
+puoi darmi i dati sulla mia pressione e sulla frequenza?	richiestaStatsGener
+vorrei avere i valori della pressione	richiestaStatsPress
+mi fornisci i dati sulla frequenza registrati?	richiestaStatsFreq
+potresti darmi i dati più recenti della su frequenza e pressione?	richiestaStatsGener
+ecco i miei dati sulla frequenza: 70	inserDatiFreq
+ho misurato la pressione e il valore è 120/90	inserDatiPress
+la pressione è 130/70 mentre la frequenza 90 bpm	inserDatiTot
+quando torno a casa la mia pressione si alza sempre	pazienAllarmato
+prima di andare a lavoro i battiti del mio cuore aumentano	pazienAllarmato
+mi sento bene quando sto a casa a riposare	pazienteSereno
+bene	pazienteSereno
+ti saluto	saluti
+male	pazienAllarmato
