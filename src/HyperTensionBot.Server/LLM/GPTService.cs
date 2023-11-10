@@ -28,7 +28,7 @@ namespace HyperTensionBot.Server.LLM {
         private void AnalysisTime() {
             this.calculateDays = new List<ChatMessage> {
                 new ChatMessage(ChatMessageRole.User, "A input che si basano su richieste inerenti ai dati su frequenza o pressione devi rispondere con il solo valore numerico" +
-                    " che indica il numero di giorni indicato dalla frase data. Per richieste che indicano tutti i dati l'output deve essere -1, per richieste su dati recenti " +
+                    " che indica il numero di giorni indicato dalla frase data. Per richieste che indicano tutti i dati anche implicitamente l'output deve essere -1, per richieste su dati recenti " +
                     "il valore è 1, mentre per le richieste sull'ultimo valore l'output è 0"),
                 new ChatMessage(ChatMessageRole.Assistant, "Certo."),
                 new ChatMessage(ChatMessageRole.User, "Dammi tutti i dati registrati"),

@@ -4,6 +4,7 @@ namespace HyperTensionBot.Server.Bot {
             TelegramId = telegramId;
             LastConversationUpdate = DateTime.UtcNow;
             Measurements = new();
+            GeneralInfo = new();
         }
 
         public long TelegramId { get; init; }
@@ -27,6 +28,16 @@ namespace HyperTensionBot.Server.Bot {
                 }
 
                 return Measurements[Measurements.Count - 1];
+            }
+        }
+
+        public Measurement? FirstMeasurement {
+            get {
+                if (Measurements.Count == 0) {
+                    return null;
+                }
+
+                return Measurements[0];
             }
         }
 

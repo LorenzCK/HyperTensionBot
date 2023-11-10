@@ -171,29 +171,8 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
     }
     else if (update.CallbackQuery?.Data != null && update.CallbackQuery?.Message?.Chat != null) {
         await Context.ValuteMeasurement(update.CallbackQuery.Data, update.CallbackQuery.From, update.CallbackQuery.Message.Chat, bot, memory);
+        await Request.ManageRequest(update.CallbackQuery.Data, memory, update.CallbackQuery.Message.Chat, bot);
         } else return Results.NotFound();
-
-    /*
-    await HandleCallbacks(update, bot, memory, state, logger);
-    await HandleConversation(update, bot, memory, state, logger);
-
-    // Handle direct data updates
-    var measurementMatch = measurementRegex.Match(update.Message?.Text ?? string.Empty);
-    if(measurementMatch.Success) {
-        logger.LogDebug("Incoming message matches measurement regex");
-        var v1 = measurementMatch.GetIntMatch("v1");
-        var v2 = measurementMatch.GetIntMatch("v2");
-        var v3 = measurementMatch.GetOptionalIntMatch("v3");
-
-        var systolic = Math.Max(v1, v2);
-        var diastolic = Math.Min(v1, v2);
-
-       y
-
-        return Results.Ok();
-    }
-    */
-    // Default
 
     return Results.Ok();
 });

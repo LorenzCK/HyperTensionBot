@@ -5,7 +5,7 @@ using Telegram.Bot.Types;
 namespace HyperTensionBot.Server.Services {
     public class Memory {
 
-        private readonly ConcurrentDictionary<long, UserInformation> _userMemory = new();
+        public ConcurrentDictionary<long, UserInformation> UserMemory { get; } = new();
         private readonly ConcurrentDictionary<long, ConversationInformation> _chatMemory = new();
 
         private readonly ILogger<Memory> _logger;
@@ -18,13 +18,13 @@ namespace HyperTensionBot.Server.Services {
 
         public ConversationState HandleUpdate(User? from, Chat chat) {
             if (from != null) {
-                if (!_userMemory.TryGetValue(from.Id, out var userInformation)) {
+                if (!UserMemory.TryGetValue(from.Id, out var userInformation)) {
                     userInformation = new UserInformation(from.Id);
                 }
                 userInformation.FirstName = from.FirstName;
                 userInformation.LastName = from.LastName;
                 userInformation.LastConversationUpdate = DateTime.UtcNow;
-                _userMemory.AddOrUpdate(from.Id, userInformation, (_, _) => userInformation);
+                UserMemory.AddOrUpdate(from.Id, userInformation, (_, _) => userInformation);
                 _logger.LogTrace("Updated user memory");
             }
 
@@ -64,7 +64,7 @@ namespace HyperTensionBot.Server.Services {
 
             var newValue = new UserInformation(from.Id);
             newValue.Measurements.Add(chatInformation.TemporaryMeasurement);
-            _userMemory.AddOrUpdate(from.Id, newValue, (_, existing) => {
+            UserMemory.AddOrUpdate(from.Id, newValue, (_, existing) => {
                 existing.Measurements.Add(chatInformation.TemporaryMeasurement);
                 return existing;
             });
