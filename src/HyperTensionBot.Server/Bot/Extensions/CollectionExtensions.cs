@@ -1,4 +1,4 @@
-namespace HyperTensionBot.Server.Bot {
+namespace HyperTensionBot.Server.Bot.Extensions {
     public static class CollectionExtensions {
         public static T PickRandom<T>(this IEnumerable<T> collection) {
             var rnd = new Random();

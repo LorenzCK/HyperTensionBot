@@ -812,43 +812,4 @@ Vorrei dare un’occhiata a tutte le letture che ho inserito.	richiestaStatsGene
 ho iniziato a fare stretching regolare per aiutare a gestire lo stress.	inserDatiGener
 Quali sono le mie statistiche relative all’ultimo mese?	richiestaStatsGener
 Mi piacerebbe controllare le ultime letture del battito cardiaco che ho registrato nell’ultima settimana.	richiestaStatsFreq
-posso registrare i dati della mia frequenza cardiaca di ieri?	richiestaInsDaticiao sono Giovanni
-ciao	saluti
-vorrei tanto darti i dati sulla mia frequenza	richiestaInsDati
-sono sotto stress da tanti anni	inserDatiGener
-il mio lavoro è molto stancante	inserDatiGener
-sono felice quando torno a casa e trovo il mio piatto preferito	fuoriCont
-tieni i miei dati sulla frequenza registrata: 70	inserDatiFreq
-ho misurato la frequenza ed è di 80	inserDatiFreq
-mi fa male la testa, cosa mi consigli?	fuoriContMed
-oggi ho visto un cane bellissimo	fuoriCont
-vabbene	saluti
-ok	saluti
-perfetto	saluti
-tutto chiaro	saluti
-puoi darmi i dati sulla mia pressione e sulla frequenza?	richiestaStatsGener
-vorrei avere i valori della pressione	richiestaStatsPress
-mi fornisci i dati sulla frequenza registrati?	richiestaStatsFreq
-potresti darmi i dati più recenti della su frequenza e pressione?	richiestaStatsGener
-ecco i miei dati sulla frequenza: 70	inserDatiFreq
-ho misurato la pressione e il valore è 120/90	inserDatiPress
-la pressione è 130/70 mentre la frequenza 90 bpm	inserDatiTot
-quando torno a casa la mia pressione si alza sempre	pazienAllarmato
-prima di andare a lavoro i battiti del mio cuore aumentano	pazienAllarmato
-mi sento bene quando sto a casa a riposare	pazienteSereno
-bene	pazienteSereno
-ti saluto	saluti
-male	pazienAllarmato
-fammi vedere i dati sulla frequenza e la pressione	richiestaStatsGener
-Grafico di tutte le misurazioni	richiestaStatsGener
-Pressione misurata 100/70	inserDatiPress
-Grafico di tutte le misurazioni	richiestaStatsGener
-Grafico pressione	richiestaStatsPress
-Grafico frequenza	richiestaStatsFreq
-120/80	inserDatiPress
-90	inserDatiFreq
-X/Y	inserDatiPress
-Z	inserDatiFreq
-Inserisco la pressione di 140/100	inserDatiPress
-Inserisco la frequenza di 90	inserDatiFreq
-Pressione 140/90 frequenza 120bpm	inserDatiTot
+posso registrare i dati della mia frequenza cardiaca di ieri?	richiestaInsDati

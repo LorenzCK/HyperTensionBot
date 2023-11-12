@@ -1,7 +1,6 @@
 using System.Text.RegularExpressions;
-using Telegram.Bot.Types;
 
-namespace HyperTensionBot.Server.Bot {
+namespace HyperTensionBot.Server.Bot.Extensions {
     public static class RegexExtensions {
         public static int GetIntMatch(this Match match, string groupName) {
             return match.GetOptionalIntMatch(groupName) ?? throw new ArgumentException($"Group {groupName} not matched or not convertible to integer");

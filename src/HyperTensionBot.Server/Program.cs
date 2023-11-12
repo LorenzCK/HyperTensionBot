@@ -1,4 +1,5 @@
 using HyperTensionBot.Server.Bot;
+using HyperTensionBot.Server.Bot.Extensions;
 using HyperTensionBot.Server.LLM;
 using HyperTensionBot.Server.ModelML;
 using HyperTensionBot.Server.Services;
@@ -54,7 +55,7 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
             );
 
             // manage operations
-            await Context.ControlFlow(bot, gpt, memory, result, messageText, chat, update.Message!.Date);
+            await Context.ControlFlow(bot, gpt, memory, result, messageText, chat, update.Message!.Date.ToLocalTime());
         }
         
     }

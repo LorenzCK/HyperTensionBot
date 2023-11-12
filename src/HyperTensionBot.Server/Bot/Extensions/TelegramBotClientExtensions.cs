@@ -1,7 +1,7 @@
 using Telegram.Bot;
 using Telegram.Bot.Types.Enums;
 
-namespace HyperTensionBot.Server.Bot {
+namespace HyperTensionBot.Server.Bot.Extensions {
     public static class TelegramBotClientExtensions {
         public static WebApplicationBuilder ConfigureTelegramBot(this WebApplicationBuilder builder) {
             var confBot = builder.Configuration.GetSection("Bot");

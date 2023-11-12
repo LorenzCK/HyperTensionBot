@@ -5,6 +5,7 @@ using HyperTensionBot.Server.Services;
 using System.Drawing;
 using ScottPlot;
 using System.Text;
+using HyperTensionBot.Server.Bot.Extensions;
 
 namespace HyperTensionBot.Server.Bot {
     public static class Request {
@@ -69,12 +70,11 @@ namespace HyperTensionBot.Server.Bot {
                     await bot.SendTextMessageAsync(chat.Id, "Vorrei fornirti le tue misurazioni ma non sono ancora state registrate, ricordati di farlo quotidianamente.😢\n\n" +
                         "(Pss..💕) Mi è stato riferito che il dottore non vede l'ora di studiare la tua situazione😁");
                 }
-                catch (Exception) {
+                catch (ExceptionExtensions.InsufficientData) {
                     await bot.SendTextMessageAsync(chat.Id, "Per poterti generare il grafico necessito di almeno due misurazioni, ricordati di fornirmi giornalmente i tuoi dati.😢\n\n" +
                         "(Pss..💕) Mi è stato riferito che il dottore non vede l'ora di studiare la tua situazione😁");
                 }
             }
-
         }
 
         private static List<Measurement> ProcessesRequest(UserInformation i, Predicate<Measurement> p) {
@@ -98,7 +98,7 @@ namespace HyperTensionBot.Server.Bot {
                 plot.AddScatterLines(date, diastolic.Where(d => d.HasValue).Select(d => d!.Value).ToArray(),
                     System.Drawing.Color.Blue, 1, LineStyle.Solid, "Pressione Diastolica");
             }
-            else throw new Exception();
+            else throw new ExceptionExtensions.InsufficientData();
 
             plot.XAxis.DateTimeFormat(true);
             plot.YLabel("Pressione (mmHg)");
@@ -118,7 +118,7 @@ namespace HyperTensionBot.Server.Bot {
                 plot.AddScatterLines(date, frequence.Where(d => d.HasValue).Select(d => d!.Value).ToArray(),
                     System.Drawing.Color.Red, 1, LineStyle.Solid, "frequenza cardiaca");
             else
-                throw new Exception();
+                throw new ExceptionExtensions.InsufficientData();
                 
             plot.XAxis.DateTimeFormat(true);
             plot.YLabel("Frequenza (bpm)");
@@ -144,7 +144,7 @@ namespace HyperTensionBot.Server.Bot {
                 plot.AddScatterLines(date, frequence.Where(d => d.HasValue).Select(d => d!.Value).ToArray(),
                     System.Drawing.Color.Yellow, 1, LineStyle.Solid, "frequenza cardiaca");
             }
-            else throw new Exception();
+            else throw new ExceptionExtensions.InsufficientData();
                 
 
             plot.XAxis.DateTimeFormat(true);
@@ -175,7 +175,7 @@ namespace HyperTensionBot.Server.Bot {
 
             foreach (var m in measurements) {
                 if (m.SystolicPressure != null && m.DiastolicPressure != null) 
-                    sb.AppendLine($"Pressione {m.SystolicPressure}/{m.DiastolicPressure} mmgh");
+                    sb.AppendLine($"Pressione {m.SystolicPressure}/{m.DiastolicPressure} mmgh misurata il {m.Date}");
             }
             await bot.SendTextMessageAsync(chat.Id, sb.ToString());
         }
@@ -186,7 +186,7 @@ namespace HyperTensionBot.Server.Bot {
 
             foreach (var m in measurements) {
                 if (m.HeartRate != null)
-                sb.AppendLine($"Pressione {m.HeartRate} bpm");
+                sb.AppendLine($"Frequenza {m.HeartRate} bpm misurata il {m.Date}");
             }
             await bot.SendTextMessageAsync(chat.Id, sb.ToString());
         }
