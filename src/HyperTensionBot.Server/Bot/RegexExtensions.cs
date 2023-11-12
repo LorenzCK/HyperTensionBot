@@ -21,7 +21,7 @@ namespace HyperTensionBot.Server.Bot {
         }
 
         public static double[] ExtractPressure(string message) {
-            var match = Regex.Match(message, @"(?<v1>\b\d{1,3}(\.\d{1,})?\b)[^0-9]*(?<v2>\d{1,3}(\.\d{1,})?)");
+            var match = Regex.Match(message, @"(?<v1>\d{2,3})\D+(?<v2>\d{2,3})");
             if (!match.Success) {
                 throw new ArgumentException("Il messaggio non contiene due numeri decimali.");
             }
@@ -31,7 +31,7 @@ namespace HyperTensionBot.Server.Bot {
         }
 
         public static double ExtractFreq(string message) {
-            var match = Regex.Match(message, @"(\b\d{1,3}(\.\d+)?\b)");
+            var match = Regex.Match(message, @"(\d{2,3}(\.\d+)?)");
             if (!match.Success) {
                 throw new ArgumentException("Il messaggio non contiene due numeri decimali.");
             }
@@ -39,7 +39,7 @@ namespace HyperTensionBot.Server.Bot {
         }
 
         public static double[] ExtractMeasurement(string message) {
-            var match = Regex.Match(message, @"(?<v1>\b\d{1,3}(\.\d+)?\b).*(?<v2>\b\d{1,3}(\.\d+)?\b).*(?<v3>\b\d{1,3}(\.\d+)?\b)");
+            var match = Regex.Match(message, @"(?<v1>\d{2,3})\D+(?<v2>\d{2,3})\D+(?<v3>\d{2,3})");
             if (!match.Success) {
                 throw new ArgumentException("Il messaggio non contiene tre numeri decimali.");
             }

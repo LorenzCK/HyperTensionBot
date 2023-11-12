@@ -839,6 +839,16 @@ mi sento bene quando sto a casa a riposare	pazienteSereno
 bene	pazienteSereno
 ti saluto	saluti
 male	pazienAllarmato
-Ho fatto delle misurazioni, la mia pressione è 140/100 mentre la frequenza 80 bpm
-Ho fatto delle misurazioni, la mia pressione è 130/90 mentre la frequenza 90 bpm
-Vorrei io grafico sulla frequenza
+fammi vedere i dati sulla frequenza e la pressione	richiestaStatsGener
+Grafico di tutte le misurazioni	richiestaStatsGener
+Pressione misurata 100/70	inserDatiPress
+Grafico di tutte le misurazioni	richiestaStatsGener
+Grafico pressione	richiestaStatsPress
+Grafico frequenza	richiestaStatsFreq
+120/80	inserDatiPress
+90	inserDatiFreq
+X/Y	inserDatiPress
+Z	inserDatiFreq
+Inserisco la pressione di 140/100	inserDatiPress
+Inserisco la frequenza di 90	inserDatiFreq
+Pressione 140/90 frequenza 120bpm	inserDatiTot

@@ -9,22 +9,22 @@ using Telegram.Bot.Types.ReplyMarkups;
 namespace HyperTensionBot.Server.Bot {
     public static class Context {
 
-        public static async Task ControlFlow(TelegramBotClient bot, GPTService gpt, Memory memory, Intent conmessage, string message, Chat chat) {
-            switch (conmessage) {
+        public static async Task ControlFlow(TelegramBotClient bot, GPTService gpt, Memory memory, Intent context, string message, Chat chat, DateTime date) {
+            switch (context) {
                 // take time frame and elaborate request 
                 case Intent.richiestaStatsFreq:
                     await Request.FilterRequest(bot, gpt, chat,
-                        "Ti fornisco i dati sulla frequenza cardiaca come richiesto.\nScegli ure il formato che preferisci😊",
+                        message,
                         new string[] {"Voglio il grafico", "grafFreq", "Creami la lista", "listaFreq"});
                     break;
                 case Intent.richiestaStatsPress:
                     await Request.FilterRequest(bot, gpt, chat,
-                        "Ti fornisco i dati sulla pressione arteriosa come richiesto.\nScegli ure il formato che preferisci😊",
+                        message,
                         new string[] { "Voglio il grafico", "grafPress", "Creami la lista", "listaPress" });
                     break;
                 case Intent.richiestaStatsGener:
                     await Request.FilterRequest(bot, gpt, chat,
-                        "Ti fornisco i dati sulla frequenza cardiaca e sulla pressione arteriosa come richiesto.\nScegli ure il formato che preferisci😊",
+                        message,
                         new string[] { "Voglio il grafico", "grafTot", "Creami la lista", "listaTot" });
                     break;
 
@@ -34,13 +34,13 @@ namespace HyperTensionBot.Server.Bot {
                         chat.Id, "Metodo non ancora disponibile!");
                     break;
                 case Intent.inserDatiPress:
-                    StorageDataPress(bot, message, chat, memory);
+                    StorageDataPress(bot, message, chat, memory, date);
                     break;
                 case Intent.inserDatiFreq:
-                    StorageDataFreq(bot, message, chat, memory);
+                    StorageDataFreq(bot, message, chat, memory, date);
                     break;
                 case Intent.inserDatiTot:
-                    StorageDataTot(bot, message, chat, memory);
+                    StorageDataTot(bot, message, chat, memory, date);
                     break;
 
                 // chat.Idn
@@ -68,7 +68,7 @@ namespace HyperTensionBot.Server.Bot {
         }
 
         // manage meuserment
-        private static void StorageDataTot(TelegramBotClient bot, string message, Chat chat, Memory memory) {
+        private static void StorageDataTot(TelegramBotClient bot, string message, Chat chat, Memory memory, DateTime date) {
             // Match values
             try {
                 var measurement = RegexExtensions.ExtractMeasurement(message);
@@ -77,11 +77,11 @@ namespace HyperTensionBot.Server.Bot {
                     SystolicPressure = measurement[0],
                     DiastolicPressure = measurement[1],
                     HeartRate = measurement[2],
-                    Date = DateTime.Now
+                    Date = date
                 });
 
-                string text = $"Grazie per avermi inviato pressione e frequenza\\.\n\n🔺 Pressione sistolica: *{measurement[0].ToString("F2")}* mmHg\n🔻 Pressione diastolica: *{measurement[1].ToString("F2")}* mmHg\n" +
-                    $"❤️ Frequenza: *{measurement[2].ToString("F2")}* bpm\n\nHo capito bene?Ho capito bene?";
+                string text = $"Grazie per avermi inviato pressione e frequenza.\n\n🔺 Pressione sistolica: {measurement[0].ToString("F2")} mmHg\n🔻 Pressione diastolica: {measurement[1].ToString("F2")} mmHg\n" +
+                    $"❤️ Frequenza: {measurement[2].ToString("F2")} bpm\n\nHo capito bene?";
 
                 SendButton(bot, text, chat, new string[] { "Sì, registra!", "yes", "No", "no" });
 
@@ -92,7 +92,7 @@ namespace HyperTensionBot.Server.Bot {
 
         }
 
-        private static void StorageDataPress(TelegramBotClient bot, string message, Chat chat, Memory memory) {
+        private static void StorageDataPress(TelegramBotClient bot, string message, Chat chat, Memory memory, DateTime date) {
             // Match values
             try {
                 var pressure = RegexExtensions.ExtractPressure(message);
@@ -101,10 +101,10 @@ namespace HyperTensionBot.Server.Bot {
                     SystolicPressure = pressure[0],
                     DiastolicPressure = pressure[1],
                     HeartRate = null,
-                    Date = DateTime.Now
+                    Date = date
                 });
 
-                string text = $"Grazie per avermi inviato la tua pressione\\.\n\n🔺 Pressione sistolica: *{pressure[0].ToString("F2")}* mmHg\n🔻 Pressione diastolica: *{pressure[1].ToString("F2")}* mmHg\n" +
+                string text = $"Grazie per avermi inviato la tua pressione.\n\n🔺 Pressione sistolica: {pressure[0].ToString("F2")} mmHg\n🔻 Pressione diastolica: {pressure[1].ToString("F2")} mmHg\n" +
                     $"Ho capito bene?";
 
                 SendButton(bot, text, chat, new string[] { "Sì, registra!", "yes", "No", "no" });
@@ -115,7 +115,7 @@ namespace HyperTensionBot.Server.Bot {
             
         }
 
-        private static void StorageDataFreq(TelegramBotClient bot, string message, Chat chat, Memory memory) {
+        private static void StorageDataFreq(TelegramBotClient bot, string message, Chat chat, Memory memory, DateTime date) {
             // Match values
             try {
                 var freq = RegexExtensions.ExtractFreq(message);
@@ -125,10 +125,10 @@ namespace HyperTensionBot.Server.Bot {
                     SystolicPressure = null,
                     DiastolicPressure = null,
                     HeartRate = freq,
-                    Date = DateTime.Now
+                    Date = date
                 });
 
-                string text = $"Grazie per avermi inviato la tua frequenza\\.\n\n❤️ Frequenza: *{freq.ToString("F2")}* bpm\nHo capito bene?";
+                string text = $"Grazie per avermi inviato la tua frequenza.\n\n❤️ Frequenza: {freq.ToString("F2")} bpm\nHo capito bene?";
 
                 SendButton(bot, text, chat, new string[] { "Sì, registra!", "yes", "No", "no"});
 

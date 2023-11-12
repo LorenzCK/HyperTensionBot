@@ -31,12 +31,14 @@ namespace HyperTensionBot.Server.LLM {
                     " che indica il numero di giorni indicato dalla frase data. Per richieste che indicano tutti i dati anche implicitamente l'output deve essere -1, per richieste su dati recenti " +
                     "il valore è 1, mentre per le richieste sull'ultimo valore l'output è 0"),
                 new ChatMessage(ChatMessageRole.Assistant, "Certo."),
-                new ChatMessage(ChatMessageRole.User, "Dammi tutti i dati registrati"),
+                new ChatMessage(ChatMessageRole.User, "Dammi i dati registrati"),
                 new ChatMessage(ChatMessageRole.Assistant, "-1"),
                 new ChatMessage(ChatMessageRole.User, "Dammi i dati dell'ultimo mese"),
                 new ChatMessage(ChatMessageRole.Assistant, "30"),
                 new ChatMessage(ChatMessageRole.User, "Voglio i dati più recenti sulla pressione "),
                 new ChatMessage(ChatMessageRole.Assistant, "1"),
+                new ChatMessage(ChatMessageRole.User, "Dammi l'ultima misurazione"),
+                new ChatMessage(ChatMessageRole.Assistant, "0"),
             };
         }
 

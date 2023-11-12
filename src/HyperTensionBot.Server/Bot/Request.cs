@@ -4,18 +4,20 @@ using Telegram.Bot;
 using HyperTensionBot.Server.Services;
 using System.Drawing;
 using ScottPlot;
+using System.Text;
 
 namespace HyperTensionBot.Server.Bot {
     public static class Request {
 
         private static int days;
+        private static List<Measurement> measurements = new();
 
         // manage request
 
         public static async Task FilterRequest(TelegramBotClient bot, GPTService gpt, Chat chat, string message, string[] button) {
             int.TryParse(await gpt.CallGpt(message, TypeConversation.Analysis), out days);
             Context.SendButton(bot,
-                "Ti fornirò i dati come richiesto. Scegli pure il formato😊",
+                $"Ti fornirò i dati degli ultimi {days} giorni come richiesto. Scegli pure il formato😊",
                 chat,
                 button);
         }
@@ -24,6 +26,7 @@ namespace HyperTensionBot.Server.Bot {
             // recoverd data in a list and send plot/text in the chat
 
             mem.UserMemory.TryGetValue(chat.Id, out var info);
+
             if (info?.FirstMeasurement != null) {
                 if (days == -1) {
                     days = DateTime.Now.Subtract(info.FirstMeasurement.Date).Days;
@@ -31,57 +34,71 @@ namespace HyperTensionBot.Server.Bot {
                 try {
                     switch (resp) {
                         case "grafFreq":
-                            var freq = ProcessesRequest(info, x => x.HeartRate != null && x.Date >= DateTime.Now.AddDays(-days));
-                            await SendPlot(bot, chat, FrequencyPlot(freq));
+                            measurements = ProcessesRequest(info, x => x.HeartRate != null && x.Date >= DateTime.Now.Date.AddDays(-days));
+                            await SendPlot(bot, chat, FrequencyPlot(measurements));
                             break;
                         case "listaFreq":
-                            ProcessesRequest(info, x => x.HeartRate != null && x.Date >= DateTime.Now.AddDays(-days));
+                            measurements = ProcessesRequest(info, x => x.HeartRate != null && x.Date >= DateTime.Now.Date.AddDays(-days));
+                            await SendListFreq(bot, chat, measurements);
                             break;
                         case "grafPress":
-                            var press = ProcessesRequest(info,
-                                    x => x.SystolicPressure != null && x.DiastolicPressure != null && x.Date >= DateTime.Now.AddDays(-days));
-                            await SendPlot(bot, chat, PressionPlot(press));
+                            measurements = ProcessesRequest(info,
+                                    x => x.SystolicPressure != null && x.DiastolicPressure != null && x.Date >= DateTime.Now.Date.AddDays(-days));
+                            await SendPlot(bot, chat, PressionPlot(measurements));
                             break;
                         case "listaPress":
-                            ProcessesRequest(info,
-                                x => x.SystolicPressure != null && x.DiastolicPressure != null && x.Date >= DateTime.Now.AddDays(-days));
+                            measurements = ProcessesRequest(info,
+                                x => x.SystolicPressure != null && x.DiastolicPressure != null && x.Date >= DateTime.Now.Date.AddDays(-days));
+                            await SendListPress(bot, chat, measurements);
                             break;
                         case "grafTot":
-                            var measurements = ProcessesRequest(info,
-                                x => x.SystolicPressure != null && x.DiastolicPressure != null &&
-                                x.HeartRate != null && x.Date >= DateTime.Now.AddDays(-days));
+                            measurements = ProcessesRequest(info,
+                                x => (x.SystolicPressure != null && x.DiastolicPressure != null) ||
+                                x.HeartRate != null && x.Date >= DateTime.Now.Date.AddDays(-days));
                             await SendPlot(bot, chat, TotalPlot(measurements));
                             break;
                         case "listaTot":
-                            ProcessesRequest(info,
-                                    x => x.SystolicPressure != null && x.DiastolicPressure != null &&
-                                    x.HeartRate != null && x.Date >= DateTime.Now.AddDays(-days));
+                            measurements = ProcessesRequest(info,
+                                    x => (x.SystolicPressure != null && x.DiastolicPressure != null) ||
+                                    x.HeartRate != null && x.Date >= DateTime.Now.Date.AddDays(-days));
+                            await SendListTot(bot, chat, measurements);
                             break;
                     }
-                } catch(ArgumentNullException) {
-                    await bot.SendTextMessageAsync(chat.Id, "Non sono presenti misurazioni per generare la tua richiesta!😢");
+                }
+                catch (ArgumentNullException) {
+                    await bot.SendTextMessageAsync(chat.Id, "Vorrei fornirti le tue misurazioni ma non sono ancora state registrate, ricordati di farlo quotidianamente.😢\n\n" +
+                        "(Pss..💕) Mi è stato riferito che il dottore non vede l'ora di studiare la tua situazione😁");
+                }
+                catch (Exception) {
+                    await bot.SendTextMessageAsync(chat.Id, "Per poterti generare il grafico necessito di almeno due misurazioni, ricordati di fornirmi giornalmente i tuoi dati.😢\n\n" +
+                        "(Pss..💕) Mi è stato riferito che il dottore non vede l'ora di studiare la tua situazione😁");
                 }
             }
+
         }
 
         private static List<Measurement> ProcessesRequest(UserInformation i, Predicate<Measurement> p) {
-            return i.Measurements.FindAll(p); 
+            var result =  i.Measurements.FindAll(p);
+            if (result is null || result.Count == 0) {
+                throw new ArgumentNullException();
+            }
+            return result;
         }
 
         private static Plot PressionPlot(List<Measurement> m) {
             var plot = new Plot(600, 400);
 
             double[] date = m.Select(x => x.Date.ToOADate()).ToArray();
-            double?[] systolic = m.Select(m => m.SystolicPressure).ToArray();
-            double?[] diastolic = m.Select(m => m.DiastolicPressure).ToArray();
+            double?[] systolic = m.Select(m => m.SystolicPressure).Where(x => x != null).ToArray();
+            double?[] diastolic = m.Select(m => m.DiastolicPressure).Where(x => x != null).ToArray();
 
-            if (systolic != null && diastolic != null) {
-                plot.AddScatterLines(date, systolic.Where(d => d.HasValue).Select(d => d.Value).ToArray(),
+            if (systolic.Length > 1 && diastolic.Length > 1) {
+                plot.AddScatterLines(date, systolic.Where(d => d.HasValue).Select(d => d!.Value).ToArray(),
                     System.Drawing.Color.Red, 1, LineStyle.Solid, "Pressione Sistolica");
-                plot.AddScatterLines(date, diastolic.Where(d => d.HasValue).Select(d => d.Value).ToArray(),
+                plot.AddScatterLines(date, diastolic.Where(d => d.HasValue).Select(d => d!.Value).ToArray(),
                     System.Drawing.Color.Blue, 1, LineStyle.Solid, "Pressione Diastolica");
             }
-            else throw new ArgumentNullException();
+            else throw new Exception();
 
             plot.XAxis.DateTimeFormat(true);
             plot.YLabel("Pressione (mmHg)");
@@ -95,14 +112,14 @@ namespace HyperTensionBot.Server.Bot {
             var plot = new Plot(600, 400);
 
             double[] date = m.Select(x => x.Date.ToOADate()).ToArray();
-            double?[] frequence = m.Select(m => m.HeartRate).ToArray();
+            double?[] frequence = m.Select(m => m.HeartRate).Where(x => x != null).ToArray();
 
-            if (frequence != null) {
-                plot.AddScatterLines(date, frequence.Where(d => d.HasValue).Select(d => d.Value).ToArray(),
+            if (frequence.Length > 1)
+                plot.AddScatterLines(date, frequence.Where(d => d.HasValue).Select(d => d!.Value).ToArray(),
                     System.Drawing.Color.Red, 1, LineStyle.Solid, "frequenza cardiaca");
-            }
-            else throw new ArgumentNullException();
-
+            else
+                throw new Exception();
+                
             plot.XAxis.DateTimeFormat(true);
             plot.YLabel("Frequenza (bpm)");
             plot.XLabel("Data");
@@ -115,19 +132,20 @@ namespace HyperTensionBot.Server.Bot {
             var plot = new Plot(600, 400);
 
             double[] date = m.Select(x => x.Date.ToOADate()).ToArray();
-            double?[] systolic = m.Select(m => m.SystolicPressure).ToArray();
-            double?[] diastolic = m.Select(m => m.DiastolicPressure).ToArray();
-            double?[] frequence = m.Select(m => m.HeartRate).ToArray();
+            double?[] systolic = m.Select(m => m.SystolicPressure).Where(x => x != null).ToArray();
+            double?[] diastolic = m.Select(m => m.DiastolicPressure).Where(x => x != null).ToArray();
+            double?[] frequence = m.Select(m => m.HeartRate).Where(x => x != null).ToArray();
 
-            if (systolic != null && diastolic != null && frequence != null) {
-                plot.AddScatterLines(date, systolic.Where(d => d.HasValue).Select(d => d.Value).ToArray(),
+            if (systolic.Length > 1 && diastolic.Length > 1 && frequence.Length > 1) {
+                plot.AddScatterLines(date, systolic.Where(d => d.HasValue).Select(d => d!.Value).ToArray(),
                     System.Drawing.Color.Red, 1, LineStyle.Solid, "Pressione Sistolica");
-                plot.AddScatterLines(date, diastolic.Where(d => d.HasValue).Select(d => d.Value).ToArray(),
+                plot.AddScatterLines(date, diastolic.Where(d => d.HasValue).Select(d => d!.Value).ToArray(),
                     System.Drawing.Color.Blue, 1, LineStyle.Solid, "Pressione Diastolica");
-                plot.AddScatterLines(date, frequence.Where(d => d.HasValue).Select(d => d.Value).ToArray(),
+                plot.AddScatterLines(date, frequence.Where(d => d.HasValue).Select(d => d!.Value).ToArray(),
                     System.Drawing.Color.Yellow, 1, LineStyle.Solid, "frequenza cardiaca");
             }
-            else throw new ArgumentNullException();
+            else throw new Exception();
+                
 
             plot.XAxis.DateTimeFormat(true);
             plot.YLabel("Pressione (mmHg) e Frequenza (bpm)");
@@ -144,6 +162,33 @@ namespace HyperTensionBot.Server.Bot {
                 ms.Position = 0;
                 await bot.SendPhotoAsync(chat.Id, new InputFileStream(ms));
             }
+        }
+
+        private static async Task SendListTot(TelegramBotClient bot, Chat chat, List<Measurement> measurements) {
+            await SendListFreq(bot, chat, measurements);
+            await SendListPress(bot, chat, measurements);
+        }
+
+        private static async Task SendListPress(TelegramBotClient bot, Chat chat, List<Measurement> measurements) {
+            var sb = new StringBuilder();
+            await bot.SendTextMessageAsync(chat.Id, "Ecco la lista richiesta sulle misurazioni della pressione\n\n ");
+
+            foreach (var m in measurements) {
+                if (m.SystolicPressure != null && m.DiastolicPressure != null) 
+                    sb.AppendLine($"Pressione {m.SystolicPressure}/{m.DiastolicPressure} mmgh");
+            }
+            await bot.SendTextMessageAsync(chat.Id, sb.ToString());
+        }
+
+        private static async Task SendListFreq(TelegramBotClient bot, Chat chat, List<Measurement> measurements) {
+            var sb = new StringBuilder();
+            await bot.SendTextMessageAsync(chat.Id, "Ecco la lista richiesta sulle misurazioni della frequenza😊\n\n ");
+
+            foreach (var m in measurements) {
+                if (m.HeartRate != null)
+                sb.AppendLine($"Pressione {m.HeartRate} bpm");
+            }
+            await bot.SendTextMessageAsync(chat.Id, sb.ToString());
         }
     }
 }
