@@ -35,7 +35,7 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
 
     User? from = update.Message?.From ?? update.CallbackQuery?.From;
     Chat chat = update.Message?.Chat ?? update.CallbackQuery?.Message?.Chat ?? throw new Exception("Unable to detect chat ID");
-    var state = memory.HandleUpdate(from, chat);
+    memory.HandleUpdate(from, chat);
 
     logger.LogInformation("Chat {0} incoming {1}", chat.Id, update.Type switch {
         UpdateType.Message => $"message with text: {update.Message?.Text}",

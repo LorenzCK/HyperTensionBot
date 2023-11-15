@@ -1,8 +1,8 @@
 namespace HyperTensionBot.Server.ModelML {
     public enum Intent {
-        richiestaStatsGener = 1,
-        richiestaStatsPress = 2,
-        richiestaStatsFreq = 3,
+        richiestaDatTot = 1,
+        richiestaDatPress = 2,
+        richiestaDatFreq = 3,
         inserDatiGener = 4,
         inserDatiPress = 5,
         inserDatiFreq = 6,
@@ -14,5 +14,9 @@ namespace HyperTensionBot.Server.ModelML {
         spiegazioni = 12,
         fuoriContMed = 13,
         richiestaInsDati = 14,
+        richiestaDatGener = 15,
+        richiestaMediaTot = 16,
+        richiestaMediaPress = 17,
+        richiestaMediaFreq = 18,
     }
 }

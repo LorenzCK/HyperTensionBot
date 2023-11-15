@@ -21,15 +21,15 @@ namespace HyperTensionBot.Server.Bot {
 
         private void Check(double? systolicPressure, double? diastolicPressure, double? heartRate) {
             if (systolicPressure != null &&
-                (systolicPressure < 40 || systolicPressure > 350))
+                (systolicPressure < 50 || systolicPressure > 250))
                 throw new ExceptionExtensions.ImpossibleSystolic();
 
             if (diastolicPressure != null &&
-                (diastolicPressure < 10 || diastolicPressure > 180))
+                (diastolicPressure < 40 || diastolicPressure > 150))
                 throw new ExceptionExtensions.ImpossibleDiastolic();
 
             if (heartRate != null &&
-                (heartRate < 20 || heartRate > 221))
+                (heartRate < 30 || heartRate > 200))
                 throw new ExceptionExtensions.ImpossibleSystolic();
         }
     }
