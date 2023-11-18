@@ -2,7 +2,6 @@ using HyperTensionBot.Server.Bot.Extensions;
 using HyperTensionBot.Server.LLM;
 using HyperTensionBot.Server.ModelML;
 using HyperTensionBot.Server.Services;
-using OpenAI_API.Chat;
 using System.Text;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -10,49 +9,12 @@ using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
 
 namespace HyperTensionBot.Server.Bot {
-    public static class Context {
-
+    public static class Context { 
         public static async Task ControlFlow(TelegramBotClient bot, GPTService gpt, Memory memory, Intent context, string message, Chat chat, DateTime date) {
-
             try {
                 switch (context) {
-                    // take time frame and elaborate request 
-                    case Intent.richiestaDatFreq:
-                        await Request.FilterRequest(bot, gpt, chat,
-                            message,
-                            new string[] { "Voglio il grafico", "grafFreq", "Creami la lista", "listaFreq" });
-                        break;
-                    case Intent.richiestaDatPress:
-                        await Request.FilterRequest(bot, gpt, chat,
-                            message,
-                            new string[] { "Voglio il grafico", "grafPress", "Creami la lista", "listaPress" });
-                        break;
-                    case Intent.richiestaDatTot:
-                        await Request.FilterRequest(bot, gpt, chat,
-                            message,
-                            new string[] { "Voglio il grafico", "grafTot", "Creami la lista", "listaTot" });
-                        break;
-                    case Intent.richiestaDatGener:
-                        await Request.SendGeneralInfo(bot, memory, chat);
-                        break;
-                    case Intent.richiestaMediaTot:
-                        int.TryParse(await gpt.CallGpt(TypeConversation.Analysis, message), out var daysTot);
-                        List<double?> averageTot = Request.AverageData(memory, chat, daysTot, true, true);
-                        await bot.SendTextMessageAsync(chat.Id, $"Ecco le medie richieste negli ultimi {daysTot} giorni:\n" +
-                            $"🔻 Pressione arteriosa: {averageTot[0]}/{averageTot[1]} bpm\n" +
-                            $"❤️ Frequenza cardiaca media media: {averageTot[2]} mmHg");
-                        break;
-                    case Intent.richiestaMediaPress:
-                        int.TryParse(await gpt.CallGpt(TypeConversation.Analysis, message), out var daysPress);
-                        List<double?> averagePress = Request.AverageData(memory, chat, daysPress, true, false);
-                        await bot.SendTextMessageAsync(chat.Id, $"🔻Ecco le media sulla pressione arteriosa negli ultimi {daysPress} giorni:\n" +
-                            $"🔻 Pressione arteriosa media: {averagePress[0]}/{averagePress[1]} mmHg");
-                        break;
-                    case Intent.richiestaMediaFreq:
-                        int.TryParse(await gpt.CallGpt(TypeConversation.Analysis, message), out var daysFreq);
-                        List<double?> averageFreq = Request.AverageData(memory, chat, daysFreq, false, true);
-                        await bot.SendTextMessageAsync(chat.Id, $"Ecco le media sulla frequenza cardiaca negli ultimi {daysFreq} giorni:\n" +
-                            $"❤️ Frequenza cardiaca media: {averageFreq[0]} bpm\n");
+                    case Intent.Richiesta:
+                        await Request.ManageRequest(message, memory, chat, bot, gpt);
                         break;
 
                     // ask conferme and storage data 
@@ -69,28 +31,19 @@ namespace HyperTensionBot.Server.Bot {
                         await StorageDataTot(bot, message, chat, memory, date);
                         break;
 
-                    // chat.Idn
-                    case Intent.pazienAllarmato:
-                    case Intent.pazienteSereno:
+                    case Intent.Umore:
                         await bot.SendTextMessageAsync(
                             chat.Id, await gpt.CallGpt(TypeConversation.Communication,
-                                conversation: memory.AddMessageLLM(chat, "Rispondi a questo messaggio in pochissime parole: " + message)));
-                        await CheckAverage(Request.AverageData(memory, chat, 30, true, false), bot, chat);
+                                conversation: memory.AddMessageLLM(chat, "Rispondi a questo messaggio con poche parole: " + message)));
+                        memory.UserMemory.TryGetValue(chat.Id, out var info);
+                        if (info?.FirstMeasurement != null)
+                            await CheckAverage(Request.AverageData(memory, chat, 30, true, false), bot, chat);
                         break;
 
                     // gpt 
-                    case Intent.saluti:
-                    case Intent.fuoriCont:
-                    case Intent.spiegazioni:
-                    case Intent.fuoriContMed:
+                    case Intent.Generale:
                         await bot.SendTextMessageAsync(
                             chat.Id, await gpt.CallGpt(TypeConversation.Communication, conversation: memory.AddMessageLLM(chat, message)));
-                        break;
-                    case Intent.richiestaInsDati:
-                        await bot.SendTextMessageAsync(
-                            chat.Id,
-                            "Certo. Registra pure le tue misurazioni, io farò il resto! Ti ricordo che potrai inserire " +
-                            "misurazioni sulla pressione, sulla frequenza o entrambi!");
                         break;
                 }
             }
@@ -130,8 +83,8 @@ namespace HyperTensionBot.Server.Bot {
                 date: date
             ));
 
-            string text = $"Grazie per avermi inviato pressione e frequenza.\n\n🔺 Pressione sistolica: {measurement[0].ToString("F2")} mmHg\n🔻 Pressione diastolica: {measurement[1].ToString("F2")} mmHg\n" +
-                $"❤️ Frequenza: {measurement[2].ToString("F2")} bpm\n\nHo capito bene?";
+            string text = $"Grazie per avermi inviato pressione e frequenza.\n\n🔺 Pressione sistolica: {measurement[0].ToString("F0")} mmHg\n🔻 Pressione diastolica: {measurement[1].ToString("F0")} mmHg\n" +
+                $"❤️ Frequenza: {measurement[2].ToString("F0")} bpm\n\nHo capito bene?";
 
             await SendButton(bot, text, chat, new string[] { "Sì, registra!", "yes", "No", "no" });
 
@@ -148,7 +101,7 @@ namespace HyperTensionBot.Server.Bot {
                 date: date
             ));
 
-            string text = $"Grazie per avermi inviato la tua pressione.\n\n🔺 Pressione sistolica: {pressure[0].ToString("F2")} mmHg\n🔻 Pressione diastolica: {pressure[1].ToString("F2")} mmHg\n" +
+            string text = $"Grazie per avermi inviato la tua pressione.\n\n🔺 Pressione sistolica: {pressure[0].ToString("F0")} mmHg\n🔻 Pressione diastolica: {pressure[1].ToString("F0")} mmHg\n" +
                 $"Ho capito bene?";
 
             await SendButton(bot, text, chat, new string[] { "Sì, registra!", "yes", "No", "no" });
@@ -166,7 +119,7 @@ namespace HyperTensionBot.Server.Bot {
                 date: date
             ));
 
-            string text = $"Grazie per avermi inviato la tua frequenza.\n\n❤️ Frequenza: {freq.ToString("F2")} bpm\nHo capito bene?";
+            string text = $"Grazie per avermi inviato la tua frequenza.\n\n❤️ Frequenza: {freq.ToString()} bpm\nHo capito bene?";
 
             await SendButton(bot, text, chat, new string[] { "Sì, registra!", "yes", "No", "no" });
 
@@ -187,7 +140,7 @@ namespace HyperTensionBot.Server.Bot {
                 await HandleConfirmRegisterMeasurement(from, chat, bot, memory);
                 memory.UserMemory.TryGetValue(chat.Id, out var info);
                 if (info?.LastMeasurement?.DiastolicPressure != null) {
-                    List<double?> average = Request.AverageData(memory, chat, 30, true, false);
+                    List<int?> average = Request.AverageData(memory, chat, 30, true, false);
                     await CheckAverage(average, bot, chat);
                 }
             }
@@ -196,12 +149,12 @@ namespace HyperTensionBot.Server.Bot {
             }
         }
 
-        private static async Task CheckAverage(List<double?> average, TelegramBotClient bot, Chat chat) {
+        public static async Task CheckAverage(List<int?> average, TelegramBotClient bot, Chat chat) {
             // check sulla media nell'ultimo mese dopo un inserimento delle nuove misure
             StringBuilder sb = new();
-            sb.Append("Dopo quest'ultimo inserimento ho analizzato le nuove medie registrate:\n");
+            sb.Append("Ho analizzato le nuove medie registrate:\n");
             if (average[0] < 135 && average[1] < 85) 
-                await bot.SendTextMessageAsync(chat.Id, $"La media sulla pressione è {average[0]}/{average[1]}, che rientra sotto i parametri ottimali di salute😁");
+                await bot.SendTextMessageAsync(chat.Id, $"La media sulla pressione è {average[0]}/{average[1]} che rientra sotto i parametri ottimali di salute😁");
             else
                 await bot.SendTextMessageAsync(chat.Id, $"La media sulla pressione è {average[0]}/{average[1]}, e le consiglio di consultare il medico per analizzare la situazione in maneira più approfondita🧑🏽‍⚕️");
         }

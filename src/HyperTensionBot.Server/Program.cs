@@ -61,7 +61,6 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
     }
     else if (update.CallbackQuery?.Data != null && update.CallbackQuery?.Message?.Chat != null) {
         await Context.ValuteMeasurement(update.CallbackQuery.Data, update.CallbackQuery.From, update.CallbackQuery.Message.Chat, bot, memory);
-        await Request.ManageRequest(update.CallbackQuery.Data, memory, update.CallbackQuery.Message.Chat, bot);
         } else return Results.NotFound();
 
     return Results.Ok();

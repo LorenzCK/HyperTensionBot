@@ -25,18 +25,22 @@ namespace HyperTensionBot.Server.LLM {
 
         private void AnalysisTime() {
             this.calculateDays = new List<ChatMessage> {
-                new ChatMessage(ChatMessageRole.User, "A input che si basano su richieste inerenti ai dati o medie su frequenza e/o pressione devi rispondere con il solo valore numerico" +
-                    " che indica il numero di giorni indicato dalla frase data. Per richieste che indicano tutti i dati anche implicitamente l'output deve essere -1, per richieste sugli ultimi dati " +
-                    "o su dati recenti il valore è 1, mentre per le richieste sull'ultimo valore l'output è 0"),
+                new ChatMessage(ChatMessageRole.User, "devi analizzare e produrre esclusivamente con 3 etichette (Mostrate fra '..' ma dovrai riportare solo la parola senza nient'altro). La prima etichetta descrive il contesto richiesta" +
+                    "'PRESSIONE', 'FREQUENZA', 'ENTRAMBI' (quando la richiesta indica sia pressione che frequenza o è generico), 'GENERALE' (per richieste sui dati personali diverse da misurazioni e medie). " +
+                    "Il secondo parametro è l'arco temporale espresso in giorni sempre positivi: eccezione fanno i dati recenti con risposta 1, e la totalità dei dati o richieste non specifiche con -1. " +
+                    "Il terzo parametro indica il formato che potrà essere 'MEDIA' 'GRAFICO' (esplicitamente o implicitamente con richieste di rappresentazioni e andamenti), 'LISTA' (Per l'etichetta 1 GENERALE è sempre lista)" +
+                    "Il tuo output da questo momento in poi deve essere con le sole 3 etichette senza virgole punti o altro."),
                 new ChatMessage(ChatMessageRole.Assistant, "Certo."),
-                new ChatMessage(ChatMessageRole.User, "Dammi i dati registrati"),
-                new ChatMessage(ChatMessageRole.Assistant, "-1"),
-                new ChatMessage(ChatMessageRole.User, "Dammi i dati dell'ultimo mese"),
-                new ChatMessage(ChatMessageRole.Assistant, "30"),
-                new ChatMessage(ChatMessageRole.User, "Voglio i dati più recenti sulla pressione "),
-                new ChatMessage(ChatMessageRole.Assistant, "1"),
-                new ChatMessage(ChatMessageRole.User, "Dammi l'ultima misurazione"),
-                new ChatMessage(ChatMessageRole.Assistant, "0"),
+                new ChatMessage(ChatMessageRole.User, "Dammi i dati"),
+                new ChatMessage(ChatMessageRole.Assistant, "ENTRAMBI -1 LISTA"),
+                new ChatMessage(ChatMessageRole.User, "Mostra l'andamento dei dati sulla frequenza più recenti "),
+                new ChatMessage(ChatMessageRole.Assistant, "FREQUENZA 1 GRAFICO"),
+                new ChatMessage(ChatMessageRole.User, "Riportami il valore medio sulla pressione dell'ultimo mese"),
+                new ChatMessage(ChatMessageRole.Assistant, "PRESSIONE 30 MEDIA"),
+                new ChatMessage(ChatMessageRole.User, "voglio ricontrollare i dati. Dammi una rappresentazione"),
+                new ChatMessage(ChatMessageRole.Assistant, "ENTRAMBI -1 GRAFICO"),
+                new ChatMessage(ChatMessageRole.User, "Dammi le mie informazioni personali"),
+                new ChatMessage(ChatMessageRole.Assistant, "GENERALE -1 LISTA"),
             };
         }
 

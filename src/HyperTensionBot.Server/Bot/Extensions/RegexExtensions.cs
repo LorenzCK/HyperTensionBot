@@ -47,5 +47,13 @@ namespace HyperTensionBot.Server.Bot.Extensions {
             double frequence = double.Parse(match.Groups["v3"].Value);
             return new[] { sistolyc, diastolic, frequence };
         }
+
+        public static string[] ExtractParameters(string message) {
+            var match = Regex.Match(message, @"(?<v1>\w+)\s*(?<v2>[\+\-]?\d+)\s*(?<v3>\w+)");
+            if (!match.Success) {
+                throw new ArgumentException("L'output non contiene tre parametri.");
+            }
+            return new[] { match.Groups["v1"].Value, match.Groups["v2"].Value, match.Groups["v3"].Value };
+        }
     }
 }
