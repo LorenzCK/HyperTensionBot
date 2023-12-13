@@ -49,10 +49,7 @@ app.MapPost("/webhook", async (HttpContext context, TelegramBotClient bot, Memor
             var input = new ModelInput { Sentence = messageText };
             var result = model.Predict(input);
 
-            await bot.SendTextMessageAsync(
-                chat.Id,
-                text: $"Il messaggio matcha con {result.ToString()}"
-            );
+            logger.LogInformation("Incoming message matches intent {0}", result);
 
             // manage operations
             await Context.ControlFlow(bot, gpt, memory, result, messageText, chat, update.Message!.Date.ToLocalTime());
