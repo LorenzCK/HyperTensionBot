@@ -3,7 +3,6 @@ using Microsoft.ML;
 namespace HyperTensionBot.Server.ModelML {
     // model for classification a user message
     public class ClassificationModel {
-
         private readonly MLContext mlContext;
         private ITransformer? model;
         private ModelTrainer trainer;
@@ -26,8 +25,8 @@ namespace HyperTensionBot.Server.ModelML {
 
             var confModel = builder.Configuration.GetSection("ClassificationModel");
             if (confModel.Exists() && !string.IsNullOrEmpty(confModel["trainingData"]) && !string.IsNullOrEmpty(confModel["model"])) {
-                this.pathFile = confModel["trainingData"];
-                this.pathModel = confModel["model"] ?? throw new ArgumentException("Configuration model: path model is not set");
+                pathFile = confModel["trainingData"];
+                pathModel = confModel["model"] ?? throw new ArgumentException("Configuration model: path model is not set");
                 // delete old folder and create new
                 if (Directory.Exists(pathModel)) {
                     Directory.Delete(pathModel, true);
@@ -43,14 +42,6 @@ namespace HyperTensionBot.Server.ModelML {
             var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(model);
             // update training set with new input
             var result = predictionEngine.Predict(input).PredictedLabel;
-            if (pathFile != null) {
-                using (StreamWriter file = new StreamWriter(pathFile, true)) {
-                    
-                    file.WriteLine(input.Sentence + "\t"+ result);
-                }
-                    
-
-            }
             return (Intent)Enum.Parse(typeof(Intent), result);
         }
     }
