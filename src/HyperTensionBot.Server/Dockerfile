@@ -16,4 +16,5 @@ RUN dotnet publish "HyperTensionBot.Server.csproj" -c Release -o /app/publish /p
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY --from=build /src/ModelML/trainingData.tsv /data/trainingData.tsv
 ENTRYPOINT ["dotnet", "HyperTensionBot.Server.dll"]
