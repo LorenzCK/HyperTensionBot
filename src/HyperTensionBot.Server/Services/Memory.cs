@@ -1,10 +1,12 @@
+using HyperTensionBot.Server.Bot;
+using OpenAI_API.Chat;
 using System.Collections.Concurrent;
 using Telegram.Bot.Types;
 
 namespace HyperTensionBot.Server.Services {
     public class Memory {
 
-        private readonly ConcurrentDictionary<long, UserInformation> _userMemory = new();
+        public ConcurrentDictionary<long, UserInformation> UserMemory { get; } = new();
         private readonly ConcurrentDictionary<long, ConversationInformation> _chatMemory = new();
 
         private readonly ILogger<Memory> _logger;
@@ -15,15 +17,15 @@ namespace HyperTensionBot.Server.Services {
             _logger = logger;
         }
 
-        public ConversationState HandleUpdate(User? from, Chat chat) {
+        public void HandleUpdate(User? from, Chat chat) {
             if (from != null) {
-                if (!_userMemory.TryGetValue(from.Id, out var userInformation)) {
+                if (!UserMemory.TryGetValue(from.Id, out var userInformation)) {
                     userInformation = new UserInformation(from.Id);
                 }
                 userInformation.FirstName = from.FirstName;
                 userInformation.LastName = from.LastName;
                 userInformation.LastConversationUpdate = DateTime.UtcNow;
-                _userMemory.AddOrUpdate(from.Id, userInformation, (_, _) => userInformation);
+                UserMemory.AddOrUpdate(from.Id, userInformation, (_, _) => userInformation);
                 _logger.LogTrace("Updated user memory");
             }
 
@@ -33,16 +35,6 @@ namespace HyperTensionBot.Server.Services {
             chatInformation.LastConversationUpdate = DateTime.UtcNow;
             _chatMemory.AddOrUpdate(chat.Id, chatInformation, (_, _) => chatInformation);
             _logger.LogTrace("Updated chat memory");
-
-            return chatInformation.State;
-        }
-
-        public void SetState(Chat chat, ConversationState state) {
-            _chatMemory.AddOrUpdate(chat.Id, new ConversationInformation(chat.Id) { State = state }, (_, existing) => {
-                existing.State = state;
-                return existing;
-            });
-            _logger.LogTrace("Updated conversation state to {0} for chat {1}", state, chat.Id);
         }
 
         public void SetTemporaryMeasurement(Chat chat, Measurement measurement) {
@@ -63,16 +55,26 @@ namespace HyperTensionBot.Server.Services {
 
             var newValue = new UserInformation(from.Id);
             newValue.Measurements.Add(chatInformation.TemporaryMeasurement);
-            _userMemory.AddOrUpdate(from.Id, newValue, (_, existing) => {
+            UserMemory.AddOrUpdate(from.Id, newValue, (_, existing) => {
                 existing.Measurements.Add(chatInformation.TemporaryMeasurement);
                 return existing;
             });
 
             _chatMemory.AddOrUpdate(chat.Id, new ConversationInformation(chat.Id), (_, existing) => {
-                existing.State = ConversationState.Idle;
                 existing.TemporaryMeasurement = null;
                 return existing;
             });
+        }
+
+        public List<string> GetGeneralInfo(Chat chat) {
+            UserMemory.TryGetValue(chat.Id, out var chatInformation);
+            return chatInformation!.GeneralInfo;
+        }
+
+        public List<ChatMessage> AddMessageLLM(Chat chat, string message) {
+            UserMemory.TryGetValue(chat.Id, out var chatInformation);
+            chatInformation!.ChatMessages.Add(new ChatMessage(ChatMessageRole.User, message));
+            return chatInformation!.ChatMessages;
         }
     }
 }
